@@ -1,15 +1,15 @@
 //
 //  TableViewSelectableCellBuilder.swift
-//  Meu Alelo
+//  TableViewFactory
 //
-//  Copyright © 2018 Alelo. All rights reserved.
+//  Copyright © 2019 Dextra. All rights reserved.
 //
        
 import UIKit
 
-typealias SelectableCell = UITableViewCell & SelectableTableViewCell
+public typealias SelectableCell = UITableViewCell & SelectableTableViewCell
 
-protocol TableViewSelectableCellBuilder {
+public protocol TableViewSelectableCellBuilder {
 
     var cellHeight: CGFloat { get }
     
@@ -21,7 +21,7 @@ protocol TableViewSelectableCellBuilder {
     
 }
 
-extension TableViewSelectableCellBuilder {
+public extension TableViewSelectableCellBuilder {
     func tableViewDidSelectCell(_ tableView: UITableView) { }
     
     func tableViewShouldSelectCell(_ tableView: UITableView) -> Bool {

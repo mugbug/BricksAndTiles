@@ -1,15 +1,15 @@
 //
 //  EditableCellActionFactory.swift
-//  MeuAlelo
+//  TableViewFactory
 //
-//  Copyright © 2019 Alelo. All rights reserved.
+//  Copyright © 2019 Dextra. All rights reserved.
 //
 
 import UIKit
 
-struct EditableCellActionFactory {
+public struct EditableCellActionFactory {
 
-    typealias HandlerType = (@escaping () -> Void) -> Void
+    public typealias HandlerType = (@escaping () -> Void) -> Void
 
     enum ActionType {
         case delete
@@ -21,7 +21,7 @@ struct EditableCellActionFactory {
     let backgroundColor: UIColor
     let actionCompletion: () -> Void
 
-    func make(with handler: @escaping HandlerType) -> UITableViewRowAction {
+    public func make(with handler: @escaping HandlerType) -> UITableViewRowAction {
         let action = UITableViewRowAction(style: style, title: title) { _, _ in
             handler(self.actionCompletion)
         }

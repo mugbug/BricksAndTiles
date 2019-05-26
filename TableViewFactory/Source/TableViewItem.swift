@@ -1,11 +1,13 @@
 //
 //  TableViewItem.swift
-//  MeuAlelo
+//  TableViewFactory
 //
-//  Copyright © 2019 Alelo. All rights reserved.
+//  Copyright © 2019 Dextra. All rights reserved.
 //
 
 import Foundation
+
+public typealias DisplayItemBlockType = (TableViewItem) -> Void
 
 public enum TableViewItem {
     case cell

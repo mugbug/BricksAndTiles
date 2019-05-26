@@ -1,8 +1,8 @@
 //
 //  TableViewCellBuilder.swift
-//  Meu Alelo
+//  TableViewFactory
 //
-//  Copyright © 2018 Alelo. All rights reserved.
+//  Copyright © 2019 Dextra. All rights reserved.
 //
 
 import UIKit

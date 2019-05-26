@@ -35,7 +35,7 @@ extension SimpleTableViewCell: ViewCodeProtocol {
     }
 }
 
-class SimpleCellBuilder: TableViewCellBuilder {
+class SimpleCellBuilder: TableViewArrangeableCellBuilder {
 
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
@@ -58,14 +58,15 @@ class SimpleCellBuilder: TableViewCellBuilder {
 class TableViewFactory {
 
     func make() -> [TableViewSection] {
-        let section = StaticSection(
+        let section = ArrangeableSection(
             cellBuilders: cellBuilders(),
-            header: header()
+            header: header(),
+            moveRowCompletion: { _, _ in }
         )
         return [section]
     }
 
-    func cellBuilders() -> [TableViewCellBuilder] {
+    func cellBuilders() -> [TableViewArrangeableCellBuilder] {
         return (0...5).map { _ in SimpleCellBuilder() }
     }
 
@@ -112,14 +113,13 @@ final class MyViewController: UIViewController {
              view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),]
         }
 
-        viewModel.setupDataSource(in: tableView)    }
+        viewModel.setupDataSource(in: tableView)
+    }
 }
 
-PlaygroundPage.current.liveView = MyViewController()
-
-//PlaygroundPage.current.liveView = playgroundController(
-//    for: MyViewController(),
-//    device: .phone4_7inch,
-//    orientation: .portrait,
-//    traits: .init(preferredContentSizeCategory: .medium)
-//)
+PlaygroundPage.current.liveView = playgroundController(
+    for: MyViewController(),
+    device: .phone4inch,
+    orientation: .portrait,
+    traits: .init(preferredContentSizeCategory: .medium)
+)

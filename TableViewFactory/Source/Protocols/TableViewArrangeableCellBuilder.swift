@@ -1,15 +1,15 @@
 //
 //  TableViewArrangeableCellBuilder.swift
-//  MeuAlelo
+//  TableViewFactory
 //
-//  Copyright © 2019 Alelo. All rights reserved.
+//  Copyright © 2019 Dextra. All rights reserved.
 //
 
-protocol TableViewArrangeableCellBuilder: TableViewCellBuilder {
+public protocol TableViewArrangeableCellBuilder: TableViewCellBuilder {
     func canMove() -> Bool
 }
 
-extension TableViewArrangeableCellBuilder {
+public extension TableViewArrangeableCellBuilder {
     func canMove() -> Bool {
         return true
     }
