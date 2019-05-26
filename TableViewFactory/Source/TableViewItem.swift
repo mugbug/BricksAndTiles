@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TableViewItem {
+public enum TableViewItem {
     case cell
     case footer
     case header

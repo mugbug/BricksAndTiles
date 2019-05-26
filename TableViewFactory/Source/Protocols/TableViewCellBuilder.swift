@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol TableViewCellBuilder {
+public protocol TableViewCellBuilder {
     
     var cellHeight: CGFloat { get }
     
@@ -18,6 +18,6 @@ protocol TableViewCellBuilder {
     func tableViewDidSelectCell(_ tableView: UITableView)
 }
 
-extension TableViewCellBuilder {
+public extension TableViewCellBuilder {
     func tableViewDidSelectCell(_ tableView: UITableView) { }
 }

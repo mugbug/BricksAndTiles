@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol TableViewSection {
+public protocol TableViewSection {
     var numberOfRows: Int { get }
     
     func registerCells(in tableView: UITableView)
@@ -51,7 +51,7 @@ protocol TableViewSection {
                    shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool
 }
 
-extension TableViewSection {
+public extension TableViewSection {
     func tableViewCell(_ tableView: UITableView, didSelectCellAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
