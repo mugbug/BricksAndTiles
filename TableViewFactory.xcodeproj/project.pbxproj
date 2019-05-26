@@ -59,7 +59,7 @@
 		EBF15B0D229B3B190055DF69 /* EditableCellActionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableCellActionFactory.swift; sourceTree = "<group>"; };
 		EBF15B0E229B3B190055DF69 /* TableViewArrangeableCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrangeableCellBuilder.swift; sourceTree = "<group>"; };
 		EBF15B3C229B3D800055DF69 /* UITableView+DeleteRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DeleteRows.swift"; sourceTree = "<group>"; };
-		EBF15B99229B48910055DF69 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EBF15B99229B48910055DF69 /* Example.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Example.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EBF15B9A229B4BF30055DF69 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		EBF15B9E229B4C5D0055DF69 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +86,7 @@
 		EBF15AD5229B3A630055DF69 = {
 			isa = PBXGroup;
 			children = (
-				EBF15B99229B48910055DF69 /* MyPlayground.playground */,
+				EBF15B99229B48910055DF69 /* Example.playground */,
 				EBF15AE1229B3A630055DF69 /* TableViewFactory */,
 				EBF15AEC229B3A630055DF69 /* TableViewFactoryTests */,
 				EBF15AE0229B3A630055DF69 /* Products */,
