@@ -22,16 +22,18 @@ class SimpleTableViewCell: UITableViewCell, Identifiable {
 
 extension SimpleTableViewCell: ViewCodeProtocol {
     func setupHierarchy() {
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
     }
 
     func setupConstraints() {
+
         titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)]
+            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
         }
+        contentView.backgroundColor = .gray
     }
 }
 
@@ -97,6 +99,7 @@ final class MyViewController: UIViewController {
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 40
         tableView.backgroundColor = .white
+        tableView.isEditing = true
         return tableView
     }()
 
