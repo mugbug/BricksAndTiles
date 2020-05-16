@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
 
-    public func dequeueReusableCell<T: UITableViewCell & Identifiable>(for indexPath: IndexPath) -> T {
+    func dequeueReusableCell<T: UITableViewCell & Identifiable>(for indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as? T else {
             fatalError("Cell is not registered - call tableView.register(Cell.Type) to register first before using.")
         }
@@ -18,7 +18,7 @@ extension UITableView {
         return cell
     }
 
-    public func register<T: UITableViewCell & Identifiable>(_: T.Type = T.self) {
+    func register<T: UITableViewCell & Identifiable>(_: T.Type = T.self) {
         register(T.self, forCellReuseIdentifier: T.identifier)
     }
 }
