@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow()
 
-        let viewController = DragableExampleViewController()
+        let viewController = ExampleListViewController()
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
         

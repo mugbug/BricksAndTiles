@@ -1,14 +1,14 @@
 //
-//  DragableExampleViewController.swift
+//  ExampleListViewController.swift
 //  Example
 //
-//  Created by Pedro Zaroni on 16/05/20.
-//  Copyright © 2020 Pedro Zaroni. All rights reserved.
+//  Created by Pedro M. Zaroni on 16/05/20.
+//  Copyright © 2020 Dextra. All rights reserved.
 //
 
 import UIKit
 
-final class DragableExampleViewController: UIViewController {
+final class ExampleListViewController: UIViewController {
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -17,13 +17,11 @@ final class DragableExampleViewController: UIViewController {
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 40
         tableView.backgroundColor = .white
-
-        /// Use this to enable drag n drop
-        tableView.isEditing = true
+//        tableView.isEditing = true
         return tableView
     }()
 
-    private let presenter = DragableExamplePresenter()
+    private let presenter = ExampleListPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,26 +37,3 @@ final class DragableExampleViewController: UIViewController {
         presenter.setupDataSource(in: tableView)
     }
 }
-
-//#if canImport(SwiftUI) && DEBUG
-//import SwiftUI
-//struct DragableViewRepresentable: UIViewRepresentable {
-//
-//    var currentViewController = DragableExampleViewController()
-//
-//    func makeUIView(context: Context) -> UIView {
-//        return currentViewController.view!
-//    }
-//
-//    func updateUIView(_ view: UIView, context: Context) {
-//
-//    }
-//}
-//
-//@available(iOS 13.0, *)
-//struct DragableViewController_Preview: PreviewProvider {
-//    static var previews: some View {
-//        DragableViewRepresentable()
-//    }
-//}
-//#endif

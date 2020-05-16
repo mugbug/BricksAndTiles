@@ -19,5 +19,7 @@ public protocol TableViewCellBuilder {
 }
 
 public extension TableViewCellBuilder {
-    func tableViewDidSelectCell(_ tableView: UITableView) { }
+    func tableViewDidSelectCell(_ tableView: UITableView) {
+        print("Default implementation")
+    }
 }
