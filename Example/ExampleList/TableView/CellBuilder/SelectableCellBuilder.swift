@@ -11,9 +11,12 @@ import TableViewFactory
 
 class SelectableCellBuilder: TableViewCellBuilder {
 
+    private let type: ExampleType
     private let didSelect: () -> Void
 
-    init(didSelect: @escaping () -> Void) {
+    init(type: ExampleType,
+         didSelect: @escaping () -> Void) {
+        self.type = type
         self.didSelect = didSelect
     }
 
@@ -27,7 +30,7 @@ class SelectableCellBuilder: TableViewCellBuilder {
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
         let cell: SelectableExampleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        // configuration
+        cell.configure(forType: type)
         return cell
     }
 

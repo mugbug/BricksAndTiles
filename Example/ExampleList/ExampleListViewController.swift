@@ -17,7 +17,6 @@ final class ExampleListViewController: UIViewController {
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 40
         tableView.backgroundColor = .white
-//        tableView.isEditing = true
         return tableView
     }()
 
@@ -25,7 +24,7 @@ final class ExampleListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter.view = self
         self.view.addSubview(tableView)
         tableView.constraint { view in
             [view.topAnchor.constraint(equalTo: self.view.topAnchor),
@@ -35,5 +34,12 @@ final class ExampleListViewController: UIViewController {
         }
 
         presenter.setupDataSource(in: tableView)
+    }
+}
+
+extension ExampleListViewController: ExampleListViewDelegate {
+    func showDragableExample() {
+        let dragableExample = DragableExampleViewController()
+        self.navigationController?.pushViewController(dragableExample, animated: true)
     }
 }

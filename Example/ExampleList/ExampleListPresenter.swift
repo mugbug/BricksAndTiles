@@ -9,15 +9,32 @@
 import UIKit
 import TableViewFactory
 
+protocol ExampleListViewDelegate: AnyObject {
+    func showDragableExample()
+}
+
 class ExampleListPresenter {
+
+    private let exampleNames = ExampleType.allCases
     var dataSource: TableViewDataSource?
+
+    weak var view: ExampleListViewDelegate?
 
     func setupDataSource(in tableView: UITableView) {
         self.dataSource = TableViewDataSource(
-            sections: ExampleListTableViewFactory(didSelect: { index in
-                print("Cell at \(index) selected! Yay!")
+            sections: ExampleListTableViewFactory(didSelect: { [weak self] type in
+                self?.showExample(for: type)
             }).make(),
             tableView: tableView
         )
+    }
+
+    private func showExample(for type: ExampleType) {
+        switch type {
+        case .dragable:
+            view?.showDragableExample()
+        default:
+            break
+        }
     }
 }

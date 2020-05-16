@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7342B34E247082A000644987 /* TableViewFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; };
 		7342B34F247082A000644987 /* TableViewFactory.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7342B35E2470873400644987 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B35C2470873400644987 /* ViewCodeProtocol.swift */; };
+		7342B35F2470873400644987 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B35D2470873400644987 /* UIView+Constraints.swift */; };
+		7342B362247089D000644987 /* ExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B361247089D000644987 /* ExampleType.swift */; };
 		73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */; };
 		73AB8FA12470726B000A7BF5 /* ExampleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA02470726B000A7BF5 /* ExampleListPresenter.swift */; };
 		73AB8FA4247072AB000A7BF5 /* ExampleListTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA3247072AB000A7BF5 /* ExampleListTableViewFactory.swift */; };
@@ -24,8 +27,6 @@
 		73D12D8124706960008B0AB9 /* DragableExampleTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12D8024706960008B0AB9 /* DragableExampleTableViewFactory.swift */; };
 		73D12D85247069AD008B0AB9 /* DragableExampleCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12D84247069AD008B0AB9 /* DragableExampleCellBuilder.swift */; };
 		73D12D8724706A15008B0AB9 /* DragableExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12D8624706A15008B0AB9 /* DragableExampleTableViewCell.swift */; };
-		73D12DA324706AE8008B0AB9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12DA224706AE8008B0AB9 /* UIView+Constraints.swift */; };
-		73D12DA524706AEE008B0AB9 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12DA424706AEE008B0AB9 /* ViewCodeProtocol.swift */; };
 		EBF15AE9229B3A630055DF69 /* TableViewFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; };
 		EBF15AEE229B3A630055DF69 /* TableViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15AED229B3A630055DF69 /* TableViewFactoryTests.swift */; };
 		EBF15AF0229B3A630055DF69 /* TableViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF15AE2229B3A630055DF69 /* TableViewFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +94,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7342B35C2470873400644987 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewCodeProtocol.swift; path = Example/Utils/ViewCodeHelper/ViewCodeProtocol.swift; sourceTree = SOURCE_ROOT; };
+		7342B35D2470873400644987 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Constraints.swift"; path = "Example/Utils/ViewCodeHelper/UIView+Constraints.swift"; sourceTree = SOURCE_ROOT; };
+		7342B361247089D000644987 /* ExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleType.swift; path = Example/ExampleList/Entity/ExampleType.swift; sourceTree = SOURCE_ROOT; };
 		73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListViewController.swift; path = Example/ExampleList/ExampleListViewController.swift; sourceTree = SOURCE_ROOT; };
 		73AB8FA02470726B000A7BF5 /* ExampleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListPresenter.swift; path = Example/ExampleList/ExampleListPresenter.swift; sourceTree = SOURCE_ROOT; };
 		73AB8FA3247072AB000A7BF5 /* ExampleListTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListTableViewFactory.swift; path = Example/ExampleList/TableView/ExampleListTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
@@ -112,8 +116,6 @@
 		73D12D8024706960008B0AB9 /* DragableExampleTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragableExampleTableViewFactory.swift; path = Example/DragableExample/TableView/DragableExampleTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
 		73D12D84247069AD008B0AB9 /* DragableExampleCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragableExampleCellBuilder.swift; path = Example/DragableExample/TableView/CellBuilder/DragableExampleCellBuilder.swift; sourceTree = SOURCE_ROOT; };
 		73D12D8624706A15008B0AB9 /* DragableExampleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DragableExampleTableViewCell.swift; path = Example/DragableExample/TableView/CellBuilder/DragableExampleTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		73D12DA224706AE8008B0AB9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Constraints.swift"; path = "Example/ViewCodeHelper/UIView+Constraints.swift"; sourceTree = SOURCE_ROOT; };
-		73D12DA424706AEE008B0AB9 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewCodeProtocol.swift; path = Example/ViewCodeHelper/ViewCodeProtocol.swift; sourceTree = SOURCE_ROOT; };
 		EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TableViewFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF15AE2229B3A630055DF69 /* TableViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewFactory.h; sourceTree = "<group>"; };
 		EBF15AE3229B3A630055DF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -179,9 +181,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7342B353247086BA00644987 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				73D12DA124706ADC008B0AB9 /* ViewCodeHelper */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7342B360247089C700644987 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7342B361247089D000644987 /* ExampleType.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		73AB8F9D2470716F000A7BF5 /* ExampleList */ = {
 			isa = PBXGroup;
 			children = (
+				7342B360247089C700644987 /* Entity */,
 				73AB8FA224707290000A7BF5 /* TableView */,
 				73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */,
 				73AB8FA02470726B000A7BF5 /* ExampleListPresenter.swift */,
@@ -210,8 +229,8 @@
 		73D12D4B2470675D008B0AB9 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				7342B353247086BA00644987 /* Utils */,
 				73AB8F9D2470716F000A7BF5 /* ExampleList */,
-				73D12DA124706ADC008B0AB9 /* ViewCodeHelper */,
 				73D12D7A247068A6008B0AB9 /* DragableExample */,
 				73D12D4C2470675D008B0AB9 /* AppDelegate.swift */,
 				73D12D522470675F008B0AB9 /* Assets.xcassets */,
@@ -272,8 +291,8 @@
 		73D12DA124706ADC008B0AB9 /* ViewCodeHelper */ = {
 			isa = PBXGroup;
 			children = (
-				73D12DA224706AE8008B0AB9 /* UIView+Constraints.swift */,
-				73D12DA424706AEE008B0AB9 /* ViewCodeProtocol.swift */,
+				7342B35D2470873400644987 /* UIView+Constraints.swift */,
+				7342B35C2470873400644987 /* ViewCodeProtocol.swift */,
 			);
 			path = ViewCodeHelper;
 			sourceTree = "<group>";
@@ -565,12 +584,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7342B362247089D000644987 /* ExampleType.swift in Sources */,
 				73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */,
+				7342B35E2470873400644987 /* ViewCodeProtocol.swift in Sources */,
 				73D12D7E2470690E008B0AB9 /* DragableExamplePresenter.swift in Sources */,
-				73D12DA524706AEE008B0AB9 /* ViewCodeProtocol.swift in Sources */,
+				7342B35F2470873400644987 /* UIView+Constraints.swift in Sources */,
 				73D12D8124706960008B0AB9 /* DragableExampleTableViewFactory.swift in Sources */,
 				73D12D85247069AD008B0AB9 /* DragableExampleCellBuilder.swift in Sources */,
-				73D12DA324706AE8008B0AB9 /* UIView+Constraints.swift in Sources */,
 				73D12D4D2470675D008B0AB9 /* AppDelegate.swift in Sources */,
 				73AB8FA72470737A000A7BF5 /* SelectableTableViewCell.swift in Sources */,
 				73D12D8724706A15008B0AB9 /* DragableExampleTableViewCell.swift in Sources */,

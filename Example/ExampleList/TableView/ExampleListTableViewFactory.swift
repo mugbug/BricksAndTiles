@@ -9,9 +9,11 @@
 import TableViewFactory
 
 class ExampleListTableViewFactory {
-    private let didSelect: (Int) -> Void
+    typealias SelectedExample = (ExampleType) -> Void
+    
+    private let didSelect: SelectedExample
 
-    init(didSelect: @escaping (Int) -> Void) {
+    init(didSelect: @escaping SelectedExample) {
         self.didSelect = didSelect
     }
 
@@ -24,9 +26,9 @@ class ExampleListTableViewFactory {
     }
 
     func cellBuilders() -> [TableViewCellBuilder] {
-        return (0...5).map { index in
-            SelectableCellBuilder {
-                self.didSelect(index)
+        return ExampleType.allCases.map { type in
+            SelectableCellBuilder(type: type) {
+                self.didSelect(type)
             }
         }
     }
