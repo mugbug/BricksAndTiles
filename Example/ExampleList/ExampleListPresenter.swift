@@ -17,7 +17,6 @@ protocol ExampleListViewDelegate: AnyObject {
 
 class ExampleListPresenter {
 
-    private let exampleNames = ExampleType.allCases
     var dataSource: TableViewDataSource?
 
     weak var view: ExampleListViewDelegate?
@@ -39,8 +38,6 @@ class ExampleListPresenter {
             view?.showSingleSelectionExample()
         case .editable:
             view?.showEditableExample()
-        default:
-            break
         }
     }
 }
