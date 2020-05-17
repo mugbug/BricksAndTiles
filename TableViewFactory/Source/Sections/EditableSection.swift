@@ -19,10 +19,10 @@ public class EditableSection: TableViewSection {
         return cellBuilders.count
     }
 
-    init(cellBuilders: [TableViewEditableCellBuilder],
-         header: UIView? = nil,
-         footer: UIView? = nil,
-         willDisplayItem: DisplayItemBlockType? = nil) {
+    public init(cellBuilders: [TableViewEditableCellBuilder],
+                header: UIView? = nil,
+                footer: UIView? = nil,
+                willDisplayItem: DisplayItemBlockType? = nil) {
         self.header = header
         self.footer = footer
         self.cellBuilders = cellBuilders

@@ -1,5 +1,5 @@
 //
-//  SingleSelectionTableViewFactory.swift
+//  EditableTableViewFactory.swift
 //  Example
 //
 //  Created by Pedro M. Zaroni on 17/05/20.
@@ -8,18 +8,18 @@
 
 import TableViewFactory
 
-class SingleSelectionExampleTableViewFactory {
+class EditableTableViewFactory: TableViewFactoryProtocol {
 
     func make() -> [TableViewSection] {
-        let section = SingleSelectionSection(
+        let section = EditableSection(
             cellBuilders: cellBuilders(),
             header: header()
         )
         return [section]
     }
 
-    func cellBuilders() -> [TableViewSelectableCellBuilder] {
-        return (0...5).map { _ in SingleSelectionCellBuilder() }
+    func cellBuilders() -> [TableViewEditableCellBuilder] {
+        return (0...5).map { _ in EditableCellBuilder() }
     }
 
     func header() -> UIView {

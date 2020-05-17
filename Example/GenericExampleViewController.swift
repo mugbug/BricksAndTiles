@@ -1,5 +1,5 @@
 //
-//  DragableExampleViewController.swift
+//  GenericExampleViewController.swift
 //  Example
 //
 //  Created by Pedro Zaroni on 16/05/20.
@@ -36,9 +36,6 @@ final class GenericExampleViewController: UIViewController {
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 40
         tableView.backgroundColor = .white
-
-        // Use this to enable drag n drop
-        tableView.isEditing = presenter is DragableExamplePresenter
         return tableView
     }()
 
@@ -54,6 +51,12 @@ final class GenericExampleViewController: UIViewController {
         }
 
         presenter.setupDataSource(in: tableView)
+    }
+
+    // MARK: - Config
+
+    func toggleEditable(_ isEditable: Bool) {
+        tableView.isEditing = isEditable
     }
 }
 

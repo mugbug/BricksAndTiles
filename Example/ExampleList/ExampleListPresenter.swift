@@ -12,6 +12,7 @@ import TableViewFactory
 protocol ExampleListViewDelegate: AnyObject {
     func showDragableExample()
     func showSingleSelectionExample()
+    func showEditableExample()
 }
 
 class ExampleListPresenter {
@@ -36,6 +37,8 @@ class ExampleListPresenter {
             view?.showDragableExample()
         case .singleSelection:
             view?.showSingleSelectionExample()
+        case .editable:
+            view?.showEditableExample()
         default:
             break
         }

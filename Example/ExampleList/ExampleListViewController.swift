@@ -35,18 +35,28 @@ final class ExampleListViewController: UIViewController {
 
         presenter.setupDataSource(in: tableView)
     }
+
+    private func showExample(withFactory factory: TableViewFactoryProtocol, isEditable: Bool) {
+        let presenter = GenericExamplePresenter(factory: factory)
+        let dragableExample = GenericExampleViewController(presenter: presenter)
+        dragableExample.toggleEditable(isEditable)
+        self.navigationController?.pushViewController(dragableExample, animated: true)
+    }
 }
 
 extension ExampleListViewController: ExampleListViewDelegate {
     func showDragableExample() {
-        let presenter = DragableExamplePresenter()
-        let dragableExample = GenericExampleViewController(presenter: presenter)
-        self.navigationController?.pushViewController(dragableExample, animated: true)
+        let factory = DragableExampleTableViewFactory()
+        showExample(withFactory: factory, isEditable: true)
     }
 
     func showSingleSelectionExample() {
-        let presenter = SingleSelectionExamplePresenter()
-        let singleSelectionExample = GenericExampleViewController(presenter: presenter)
-        self.navigationController?.pushViewController(singleSelectionExample, animated: true)
+        let factory = SingleSelectionExampleTableViewFactory()
+        showExample(withFactory: factory, isEditable: false)
+    }
+
+    func showEditableExample() {
+        let factory = EditableTableViewFactory()
+        showExample(withFactory: factory, isEditable: false)
     }
 }

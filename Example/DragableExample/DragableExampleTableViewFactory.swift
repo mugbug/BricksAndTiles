@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class DragableExampleTableViewFactory {
+class DragableExampleTableViewFactory: TableViewFactoryProtocol {
 
     func make() -> [TableViewSection] {
         let section = ArrangeableSection(
