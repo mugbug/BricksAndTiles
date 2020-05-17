@@ -8,17 +8,17 @@
 import UIKit
 
 public class StaticSection: TableViewSection {
-    
+
     private var cellBuilders: [TableViewCellBuilder]
     private var header: UIView?
     private var footer: UIView?
 
     private var willDisplayItem: DisplayItemBlockType?
-    
+
     public var numberOfRows: Int {
         return cellBuilders.count
     }
-    
+
     public init(cellBuilders: [TableViewCellBuilder],
                 header: UIView? = nil,
                 footer: UIView? = nil,
@@ -34,7 +34,7 @@ public class StaticSection: TableViewSection {
             builder.registerCellIdentifier(in: tableView)
         }
     }
-    
+
     public func cellHeight(forCellAt indexPath: IndexPath, on tableView: UITableView) -> CGFloat {
         return cellBuilders[indexPath.row].cellHeight
     }
@@ -58,7 +58,7 @@ public class StaticSection: TableViewSection {
     public func tableViewSectionFooter(_ tableView: UITableView) -> UIView? {
         return footer
     }
-    
+
     public func tableViewSectionHeader(_ tableView: UITableView) -> UIView? {
         return header
     }

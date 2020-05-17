@@ -8,14 +8,14 @@
 import UIKit
 
 public class TableViewDataSource: NSObject {
-    
+
     private var sections: [TableViewSection] = []
-    
+
     public init(sections: [TableViewSection], tableView: UITableView) {
         self.sections = sections
 
         super.init()
-        
+
         tableView.dataSource = self
         tableView.delegate = self
         registerCells(in: tableView)
@@ -26,7 +26,7 @@ public class TableViewDataSource: NSObject {
             section.registerCells(in: tableView)
         }
     }
-    
+
     private func section(at indexPath: IndexPath) -> TableViewSection {
         return sections[indexPath.section]
     }
@@ -37,11 +37,11 @@ public class TableViewDataSource: NSObject {
 }
 
 extension TableViewDataSource: UITableViewDataSource {
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].numberOfRows
     }
-    
+
     public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -55,13 +55,13 @@ extension TableViewDataSource: UITableViewDataSource {
 }
 
 extension TableViewDataSource: UITableViewDelegate {
-    
+
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let size = self.section(at: indexPath).cellHeight(forCellAt: indexPath, on: tableView)
-        
+
         return size
     }
-    
+
     public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return section(at: indexPath).tableViewCell(tableView, shouldSelectCellAt: indexPath)
     }
@@ -74,14 +74,14 @@ extension TableViewDataSource: UITableViewDelegate {
         if !section(at: indexPath).tableViewCell(tableView, shouldSelectCellAt: indexPath) {
             return nil
         }
-        
+
         return indexPath
     }
 
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return sections[section].tableViewSectionFooter(tableView)
     }
-    
+
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return sections[section].tableViewSectionHeader(tableView)
     }

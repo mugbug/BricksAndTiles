@@ -8,7 +8,7 @@
 import UIKit
 
 public class ArrangeableSection: TableViewSection {
-    
+
     private var cellBuilders: [TableViewArrangeableCellBuilder]
     private var header: UIView?
     private var footer: UIView?
@@ -74,14 +74,14 @@ public class ArrangeableSection: TableViewSection {
         }
         return CGFloat.leastNonzeroMagnitude
     }
-    
+
     public func tableViewSectionFooterHeight(_ tableView: UITableView) -> CGFloat {
         if footer != nil {
             return UITableView.automaticDimension
         }
         return CGFloat.leastNonzeroMagnitude
     }
-    
+
     public func tableView(_ tableView: UITableView,
                           willDisplayFooterView view: UIView,
                           forSection section: Int) {
