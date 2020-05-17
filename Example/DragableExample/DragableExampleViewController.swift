@@ -18,7 +18,7 @@ final class DragableExampleViewController: UIViewController {
         tableView.estimatedSectionHeaderHeight = 40
         tableView.backgroundColor = .white
 
-        /// Use this to enable drag n drop
+        // Use this to enable drag n drop
         tableView.isEditing = true
         return tableView
     }()
@@ -33,7 +33,7 @@ final class DragableExampleViewController: UIViewController {
             [view.topAnchor.constraint(equalTo: self.view.topAnchor),
              view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
              view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-             view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),]
+             view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)]
         }
 
         presenter.setupDataSource(in: tableView)

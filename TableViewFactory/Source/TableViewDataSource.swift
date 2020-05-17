@@ -13,15 +13,14 @@ public class TableViewDataSource: NSObject {
     
     public init(sections: [TableViewSection], tableView: UITableView) {
         self.sections = sections
-        
+
         super.init()
         
         tableView.dataSource = self
         tableView.delegate = self
         registerCells(in: tableView)
-        
     }
-    
+
     private func registerCells(in tableView: UITableView) {
         for section in sections {
             section.registerCells(in: tableView)
@@ -31,7 +30,7 @@ public class TableViewDataSource: NSObject {
     private func section(at indexPath: IndexPath) -> TableViewSection {
         return sections[indexPath.section]
     }
-    
+
     func insertSection(section: TableViewSection) {
         self.sections.append(section)
     }
@@ -46,10 +45,10 @@ extension TableViewDataSource: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-    
+
     public func tableView(_ tableView: UITableView,
                           cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let section = self.section(at: indexPath)
         return section.tableViewCell(at: indexPath, on: tableView)
     }
@@ -66,11 +65,11 @@ extension TableViewDataSource: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return section(at: indexPath).tableViewCell(tableView, shouldSelectCellAt: indexPath)
     }
-    
+
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         section(at: indexPath).tableViewCell(tableView, didSelectCellAt: indexPath)
     }
-    
+
     public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if !section(at: indexPath).tableViewCell(tableView, shouldSelectCellAt: indexPath) {
             return nil
@@ -78,7 +77,7 @@ extension TableViewDataSource: UITableViewDelegate {
         
         return indexPath
     }
-    
+
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return sections[section].tableViewSectionFooter(tableView)
     }
@@ -86,11 +85,11 @@ extension TableViewDataSource: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return sections[section].tableViewSectionHeader(tableView)
     }
-    
+
     public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return sections[section].tableViewSectionFooterHeight(tableView)
     }
-    
+
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return sections[section].tableViewSectionHeaderHeight(tableView)
     }
@@ -100,33 +99,37 @@ extension TableViewDataSource: UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        sections[section].tableView(tableView, willDisplayHeaderView:view ,forSection: section)
+        sections[section].tableView(tableView, willDisplayHeaderView: view, forSection: section)
     }
 
     public func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         sections[section].tableView(tableView, willDisplayFooterView: view, forSection: section)
     }
-    
+
     public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return section(at: indexPath).tableView(tableView, canMoveRowAt: indexPath)
     }
-    
-    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+
+    public func tableView(_ tableView: UITableView,
+                          moveRowAt sourceIndexPath: IndexPath,
+                          to destinationIndexPath: IndexPath) {
         return section(at: sourceIndexPath).tableView(tableView, moveRowAt: sourceIndexPath, to: destinationIndexPath)
     }
 
-    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    public func tableView(_ tableView: UITableView,
+                          editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         return section(at: indexPath).tableView(tableView, editActionsForRowAt: indexPath)
     }
-    
+
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return section(at: indexPath).tableView(tableView, canEditRowAt: indexPath)
     }
-    
-    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+
+    public func tableView(_ tableView: UITableView,
+                          editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return section(at: indexPath).tableView(tableView, editingStyleForRowAt: indexPath)
     }
-    
+
     public func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return section(at: indexPath).tableView(tableView, shouldIndentWhileEditingRowAt: indexPath)
     }

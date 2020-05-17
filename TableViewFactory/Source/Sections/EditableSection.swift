@@ -50,7 +50,7 @@ public class EditableSection: TableViewSection {
     }
 
     public func tableViewCell(at indexPath: IndexPath,
-                       on tableView: UITableView) -> UITableViewCell {
+                              on tableView: UITableView) -> UITableViewCell {
 
         return cellBuilders[indexPath.row].tableViewCell(at: indexPath, on: tableView)
     }
@@ -78,12 +78,13 @@ public class EditableSection: TableViewSection {
     }
 
     public func tableView(_ tableView: UITableView,
-                   willDisplayFooterView view: UIView,
-                   forSection section: Int) {
+                          willDisplayFooterView view: UIView,
+                          forSection section: Int) {
         self.willDisplayItem?(.footer)
     }
 
-    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    public func tableView(_ tableView: UITableView,
+                          editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 
         let cellActions = cellBuilders[indexPath.row].cellActions(tableView, at: indexPath)
         var actions = [UITableViewRowAction]()
@@ -98,12 +99,13 @@ public class EditableSection: TableViewSection {
         }
         return actions
     }
-    
+
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return cellBuilders[indexPath.row].canEditRow()
     }
 
-    private func removeFromTableView(_ tableView: UITableView, at indexPath: IndexPath) -> EditableCellActionFactory.HandlerType {
+    private func removeFromTableView(_ tableView: UITableView,
+                                     at indexPath: IndexPath) -> EditableCellActionFactory.HandlerType {
         return { [weak self] completion in
             guard let self = self else { return }
 

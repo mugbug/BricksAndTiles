@@ -10,7 +10,7 @@ import TableViewFactory
 
 class ExampleListTableViewFactory {
     typealias SelectedExample = (ExampleType) -> Void
-    
+
     private let didSelect: SelectedExample
 
     init(didSelect: @escaping SelectedExample) {

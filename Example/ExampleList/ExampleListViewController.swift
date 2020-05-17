@@ -30,7 +30,7 @@ final class ExampleListViewController: UIViewController {
             [view.topAnchor.constraint(equalTo: self.view.topAnchor),
              view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
              view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-             view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),]
+             view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)]
         }
 
         presenter.setupDataSource(in: tableView)

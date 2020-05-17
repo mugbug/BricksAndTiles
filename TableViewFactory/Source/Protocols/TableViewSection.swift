@@ -9,15 +9,15 @@ import UIKit
 
 public protocol TableViewSection {
     var numberOfRows: Int { get }
-    
+
     func registerCells(in tableView: UITableView)
-    
+
     func cellHeight(forCellAt indexPath: IndexPath, on tableView: UITableView) -> CGFloat
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell
     
     func tableViewCell(_ tableView: UITableView, shouldSelectCellAt indexPath: IndexPath) -> Bool
     func tableViewCell(_ tableView: UITableView, didSelectCellAt indexPath: IndexPath)
-    
+
     func tableViewSectionHeader(_ tableView: UITableView) -> UIView?
     func tableViewSectionFooter(_ tableView: UITableView) -> UIView?
     func tableViewSectionHeaderHeight(_ tableView: UITableView) -> CGFloat
@@ -30,7 +30,7 @@ public protocol TableViewSection {
     func tableView(_ tableView: UITableView,
                    willDisplayHeaderView view: UIView,
                    forSection section: Int)
-    
+
     func tableView(_ tableView: UITableView,
                    willDisplayFooterView view: UIView,
                    forSection section: Int)
@@ -44,7 +44,7 @@ public protocol TableViewSection {
                    editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     func tableView(_ tableView: UITableView,
                    canEditRowAt indexPath: IndexPath) -> Bool
-    
+
     func tableView(_ tableView: UITableView,
                    editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle
     func tableView(_ tableView: UITableView,
@@ -59,7 +59,7 @@ public extension TableViewSection {
     func tableViewSectionHeader(_ tableView: UITableView) -> UIView? {
         return nil
     }
-    
+
     func tableViewSectionFooter(_ tableView: UITableView) -> UIView? {
         return nil
     }

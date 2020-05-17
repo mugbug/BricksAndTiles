@@ -24,8 +24,8 @@ class DragableExampleTableViewFactory {
     }
 
     func header() -> UIView {
-        let header = UIView()
-        header.backgroundColor = .black
+        let header = UILabel()
+        header.text = "This is a section"
         return header
     }
 }
