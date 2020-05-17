@@ -11,6 +11,7 @@ import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
     func showDragableExample()
+    func showSingleSelectionExample()
 }
 
 class ExampleListPresenter {
@@ -33,6 +34,8 @@ class ExampleListPresenter {
         switch type {
         case .dragable:
             view?.showDragableExample()
+        case .singleSelection:
+            view?.showSingleSelectionExample()
         default:
             break
         }

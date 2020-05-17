@@ -1,20 +1,20 @@
 //
-//  DragableExamplePresenter.swift
+//  SingleSectionExamplePresenter.swift
 //  Example
 //
-//  Created by Pedro M. Zaroni on 16/05/20.
+//  Created by Pedro M. Zaroni on 17/05/20.
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
 import UIKit
 import TableViewFactory
 
-class DragableExamplePresenter: GenericPresenterProtocol {
+class SingleSelectionExamplePresenter: GenericPresenterProtocol {
     var dataSource: TableViewDataSource?
 
     func setupDataSource(in tableView: UITableView) {
         self.dataSource = TableViewDataSource(
-            sections: DragableExampleTableViewFactory().make(),
+            sections: SingleSelectionExampleTableViewFactory().make(),
             tableView: tableView
         )
     }

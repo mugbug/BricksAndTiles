@@ -12,6 +12,10 @@
 		7342B35E2470873400644987 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B35C2470873400644987 /* ViewCodeProtocol.swift */; };
 		7342B35F2470873400644987 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B35D2470873400644987 /* UIView+Constraints.swift */; };
 		7342B362247089D000644987 /* ExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B361247089D000644987 /* ExampleType.swift */; };
+		7342B3662471B20200644987 /* SingleSectionExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B3652471B20200644987 /* SingleSectionExamplePresenter.swift */; };
+		7342B3692471B23600644987 /* SingleSelectionTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B3682471B23600644987 /* SingleSelectionTableViewFactory.swift */; };
+		7342B36C2471B28400644987 /* SingleSelectionCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B36B2471B28400644987 /* SingleSelectionCellBuilder.swift */; };
+		7342B36E2471B29100644987 /* SingleSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B36D2471B29100644987 /* SingleSelectionTableViewCell.swift */; };
 		73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */; };
 		73AB8FA12470726B000A7BF5 /* ExampleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA02470726B000A7BF5 /* ExampleListPresenter.swift */; };
 		73AB8FA4247072AB000A7BF5 /* ExampleListTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA3247072AB000A7BF5 /* ExampleListTableViewFactory.swift */; };
@@ -49,13 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7342B350247082A000644987 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EBF15ADE229B3A630055DF69;
-			remoteInfo = TableViewFactory;
-		};
 		73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
@@ -97,6 +94,10 @@
 		7342B35C2470873400644987 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewCodeProtocol.swift; path = Example/Utils/ViewCodeHelper/ViewCodeProtocol.swift; sourceTree = SOURCE_ROOT; };
 		7342B35D2470873400644987 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Constraints.swift"; path = "Example/Utils/ViewCodeHelper/UIView+Constraints.swift"; sourceTree = SOURCE_ROOT; };
 		7342B361247089D000644987 /* ExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleType.swift; path = Example/ExampleList/Entity/ExampleType.swift; sourceTree = SOURCE_ROOT; };
+		7342B3652471B20200644987 /* SingleSectionExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleSectionExamplePresenter.swift; path = Example/SingleSelectionExample/SingleSectionExamplePresenter.swift; sourceTree = SOURCE_ROOT; };
+		7342B3682471B23600644987 /* SingleSelectionTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleSelectionTableViewFactory.swift; path = Example/SingleSelectionExample/TableView/SingleSelectionTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
+		7342B36B2471B28400644987 /* SingleSelectionCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleSelectionCellBuilder.swift; path = Example/SingleSelectionExample/TableView/CellBuilder/SingleSelectionCellBuilder.swift; sourceTree = SOURCE_ROOT; };
+		7342B36D2471B29100644987 /* SingleSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleSelectionTableViewCell.swift; path = Example/SingleSelectionExample/TableView/CellBuilder/SingleSelectionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListViewController.swift; path = Example/ExampleList/ExampleListViewController.swift; sourceTree = SOURCE_ROOT; };
 		73AB8FA02470726B000A7BF5 /* ExampleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListPresenter.swift; path = Example/ExampleList/ExampleListPresenter.swift; sourceTree = SOURCE_ROOT; };
 		73AB8FA3247072AB000A7BF5 /* ExampleListTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListTableViewFactory.swift; path = Example/ExampleList/TableView/ExampleListTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
@@ -197,6 +198,33 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		7342B3642471AE8F00644987 /* SingleSelectionExample */ = {
+			isa = PBXGroup;
+			children = (
+				7342B3672471B22B00644987 /* TableView */,
+				7342B3652471B20200644987 /* SingleSectionExamplePresenter.swift */,
+			);
+			path = SingleSelectionExample;
+			sourceTree = "<group>";
+		};
+		7342B3672471B22B00644987 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				7342B36A2471B27A00644987 /* CellBuilder */,
+				7342B3682471B23600644987 /* SingleSelectionTableViewFactory.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		7342B36A2471B27A00644987 /* CellBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				7342B36B2471B28400644987 /* SingleSelectionCellBuilder.swift */,
+				7342B36D2471B29100644987 /* SingleSelectionTableViewCell.swift */,
+			);
+			path = CellBuilder;
+			sourceTree = "<group>";
+		};
 		73AB8F9D2470716F000A7BF5 /* ExampleList */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,10 +257,11 @@
 		73D12D4B2470675D008B0AB9 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				73D12D4C2470675D008B0AB9 /* AppDelegate.swift */,
 				7342B353247086BA00644987 /* Utils */,
 				73AB8F9D2470716F000A7BF5 /* ExampleList */,
 				73D12D7A247068A6008B0AB9 /* DragableExample */,
-				73D12D4C2470675D008B0AB9 /* AppDelegate.swift */,
+				7342B3642471AE8F00644987 /* SingleSelectionExample */,
 				73D12D522470675F008B0AB9 /* Assets.xcassets */,
 				73D12D572470675F008B0AB9 /* LaunchScreen.storyboard */,
 				73D12D5A2470675F008B0AB9 /* Info.plist */,
@@ -438,7 +467,6 @@
 			);
 			dependencies = (
 				73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */,
-				7342B351247082A000644987 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -608,7 +636,11 @@
 			files = (
 				7342B362247089D000644987 /* ExampleType.swift in Sources */,
 				73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */,
+				7342B3662471B20200644987 /* SingleSectionExamplePresenter.swift in Sources */,
+				7342B3692471B23600644987 /* SingleSelectionTableViewFactory.swift in Sources */,
 				7342B35E2470873400644987 /* ViewCodeProtocol.swift in Sources */,
+				7342B36C2471B28400644987 /* SingleSelectionCellBuilder.swift in Sources */,
+				7342B36E2471B29100644987 /* SingleSelectionTableViewCell.swift in Sources */,
 				73D12D7E2470690E008B0AB9 /* DragableExamplePresenter.swift in Sources */,
 				7342B35F2470873400644987 /* UIView+Constraints.swift in Sources */,
 				73D12D8124706960008B0AB9 /* DragableExampleTableViewFactory.swift in Sources */,
@@ -665,11 +697,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7342B351247082A000644987 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EBF15ADE229B3A630055DF69 /* TableViewFactory */;
-			targetProxy = 7342B350247082A000644987 /* PBXContainerItemProxy */;
-		};
 		73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBF15ADE229B3A630055DF69 /* TableViewFactory */;
@@ -837,7 +864,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -895,7 +922,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

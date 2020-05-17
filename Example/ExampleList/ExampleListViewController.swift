@@ -39,7 +39,14 @@ final class ExampleListViewController: UIViewController {
 
 extension ExampleListViewController: ExampleListViewDelegate {
     func showDragableExample() {
-        let dragableExample = DragableExampleViewController()
+        let presenter = DragableExamplePresenter()
+        let dragableExample = GenericExampleViewController(presenter: presenter)
         self.navigationController?.pushViewController(dragableExample, animated: true)
+    }
+
+    func showSingleSelectionExample() {
+        let presenter = SingleSelectionExamplePresenter()
+        let singleSelectionExample = GenericExampleViewController(presenter: presenter)
+        self.navigationController?.pushViewController(singleSelectionExample, animated: true)
     }
 }

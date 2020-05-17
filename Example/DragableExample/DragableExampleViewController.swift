@@ -8,7 +8,26 @@
 
 import UIKit
 
-final class DragableExampleViewController: UIViewController {
+protocol GenericPresenterProtocol: AnyObject {
+    func setupDataSource(in tableView: UITableView)
+}
+
+final class GenericExampleViewController: UIViewController {
+
+    // MARK: - Initialization
+
+    private let presenter: GenericPresenterProtocol
+
+    init(presenter: GenericPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - View Setup
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -19,11 +38,9 @@ final class DragableExampleViewController: UIViewController {
         tableView.backgroundColor = .white
 
         // Use this to enable drag n drop
-        tableView.isEditing = true
+        tableView.isEditing = presenter is DragableExamplePresenter
         return tableView
     }()
-
-    private let presenter = DragableExamplePresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
