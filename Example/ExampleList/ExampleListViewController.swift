@@ -59,4 +59,9 @@ extension ExampleListViewController: ExampleListViewDelegate {
         let factory = EditableTableViewFactory()
         showExample(withFactory: factory, isEditable: false)
     }
+
+    func showAlternateStaticExample() {
+        let factory = AlternateStaticTableViewFactory()
+        showExample(withFactory: factory, isEditable: false)
+    }
 }

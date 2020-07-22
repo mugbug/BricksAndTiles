@@ -13,6 +13,7 @@ protocol ExampleListViewDelegate: AnyObject {
     func showDragableExample()
     func showSingleSelectionExample()
     func showEditableExample()
+    func showAlternateStaticExample()
 }
 
 class ExampleListPresenter {
@@ -38,6 +39,8 @@ class ExampleListPresenter {
             view?.showSingleSelectionExample()
         case .editable:
             view?.showEditableExample()
+        case .alternateStatic:
+            view?.showAlternateStaticExample()
         }
     }
 }

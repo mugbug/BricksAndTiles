@@ -32,9 +32,9 @@ final class GenericExampleViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 40
+        tableView.estimatedRowHeight = 44
         tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedSectionHeaderHeight = 40
+        tableView.estimatedSectionHeaderHeight = 44
         tableView.backgroundColor = .white
         return tableView
     }()

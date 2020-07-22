@@ -10,4 +10,5 @@ enum ExampleType: String, CaseIterable {
     case dragable = "Drag n' Drop"
     case editable = "Slide for actions"
     case singleSelection = "Single selection"
+    case alternateStatic = "Alternate static"
 }

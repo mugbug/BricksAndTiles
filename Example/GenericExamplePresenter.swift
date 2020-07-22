@@ -1,5 +1,5 @@
 //
-//  SingleSectionExamplePresenter.swift
+//  GenericExamplePresenter.swift
 //  Example
 //
 //  Created by Pedro M. Zaroni on 17/05/20.
