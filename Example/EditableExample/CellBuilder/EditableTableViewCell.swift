@@ -8,8 +8,9 @@
 
 import UIKit
 import TableViewFactory
+import ViewCodeHelper
 
-class EditableTableViewCell: UITableViewCell, Identifiable {
+class EditableTableViewCell: UITableViewCell, Reusable {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,7 +26,6 @@
 		736E6B8724B2172E0086B985 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8624B2172E0086B985 /* CollectionViewCell.swift */; };
 		736E6B8924B217390086B985 /* CollectionViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8824B217390086B985 /* CollectionViewCellBuilder.swift */; };
 		736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */; };
-		736E6B9024B21B190086B985 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8F24B21B190086B985 /* UICollectionView+Reusable.swift */; };
 		736E6B9324B21B7C0086B985 /* CollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */; };
 		736E6B9624B225210086B985 /* HorizontalListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B9524B225210086B985 /* HorizontalListFactory.swift */; };
 		736E6B9924B227010086B985 /* HorizontalListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B9824B227010086B985 /* HorizontalListCollectionView.swift */; };
@@ -41,6 +40,7 @@
 		73AB8FA4247072AB000A7BF5 /* ExampleListTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA3247072AB000A7BF5 /* ExampleListTableViewFactory.swift */; };
 		73AB8FA72470737A000A7BF5 /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA62470737A000A7BF5 /* SelectableTableViewCell.swift */; };
 		73AB8FA924707460000A7BF5 /* SelectableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA824707460000A7BF5 /* SelectableCellBuilder.swift */; };
+		73B8FAF924D3891400B32167 /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 73B8FAF824D3891400B32167 /* ViewCodeHelper */; };
 		73D12D4D2470675D008B0AB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12D4C2470675D008B0AB9 /* AppDelegate.swift */; };
 		73D12D532470675F008B0AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D12D522470675F008B0AB9 /* Assets.xcassets */; };
 		73D12D562470675F008B0AB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D12D552470675F008B0AB9 /* Preview Assets.xcassets */; };
@@ -63,8 +63,6 @@
 		EBF15B14229B3B190055DF69 /* EditableCellActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15B0D229B3B190055DF69 /* EditableCellActionFactory.swift */; };
 		EBF15B15229B3B190055DF69 /* TableViewArrangeableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15B0E229B3B190055DF69 /* TableViewArrangeableCellBuilder.swift */; };
 		EBF15B3D229B3D800055DF69 /* UITableView+DeleteRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15B3C229B3D800055DF69 /* UITableView+DeleteRows.swift */; };
-		EBF15B9B229B4BF30055DF69 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15B9A229B4BF30055DF69 /* UITableView+Reusable.swift */; };
-		EBF15B9F229B4C5D0055DF69 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF15B9E229B4C5D0055DF69 /* Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +121,6 @@
 		736E6B8624B2172E0086B985 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = Example/AlternateStaticExample/CellBuilder/CollectionViewCell/CollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		736E6B8824B217390086B985 /* CollectionViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCellBuilder.swift; path = Example/AlternateStaticExample/CellBuilder/CollectionViewCell/CollectionViewCellBuilder.swift; sourceTree = SOURCE_ROOT; };
 		736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
-		736E6B8F24B21B190086B985 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
 		736E6B9524B225210086B985 /* HorizontalListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HorizontalListFactory.swift; path = Example/CollectionViewExample/HorizontalListFactory.swift; sourceTree = SOURCE_ROOT; };
 		736E6B9824B227010086B985 /* HorizontalListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HorizontalListCollectionView.swift; path = Example/AlternateStaticExample/CellBuilder/CollectionViewCell/View/HorizontalListCollectionView.swift; sourceTree = SOURCE_ROOT; };
@@ -167,8 +164,6 @@
 		EBF15B0D229B3B190055DF69 /* EditableCellActionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableCellActionFactory.swift; sourceTree = "<group>"; };
 		EBF15B0E229B3B190055DF69 /* TableViewArrangeableCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrangeableCellBuilder.swift; sourceTree = "<group>"; };
 		EBF15B3C229B3D800055DF69 /* UITableView+DeleteRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DeleteRows.swift"; sourceTree = "<group>"; };
-		EBF15B9A229B4BF30055DF69 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
-		EBF15B9E229B4C5D0055DF69 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B8FAF924D3891400B32167 /* ViewCodeHelper in Frameworks */,
 				7342B34E247082A000644987 /* TableViewFactory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,14 +288,6 @@
 				736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */,
 			);
 			path = CollectionView;
-			sourceTree = "<group>";
-		};
-		736E6B8E24B21B0A0086B985 /* UICollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				736E6B8F24B21B190086B985 /* UICollectionView+Reusable.swift */,
-			);
-			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		736E6B9124B21B700086B985 /* Protocols */ = {
@@ -486,7 +474,6 @@
 		EBF15AE1229B3A630055DF69 /* TableViewFactory */ = {
 			isa = PBXGroup;
 			children = (
-				EBF15B9D229B4C3D0055DF69 /* Protocols */,
 				EBF15B9C229B4C290055DF69 /* Source */,
 				EBF15B3B229B3D730055DF69 /* Extensions */,
 				EBF15AE2229B3A630055DF69 /* TableViewFactory.h */,
@@ -548,9 +535,7 @@
 		EBF15B3B229B3D730055DF69 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				736E6B8E24B21B0A0086B985 /* UICollectionView */,
 				EBF15B3C229B3D800055DF69 /* UITableView+DeleteRows.swift */,
-				EBF15B9A229B4BF30055DF69 /* UITableView+Reusable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -562,14 +547,6 @@
 				736E6B8A24B2197E0086B985 /* TableView */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		EBF15B9D229B4C3D0055DF69 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				EBF15B9E229B4C5D0055DF69 /* Identifiable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,6 +579,9 @@
 				73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */,
 			);
 			name = Example;
+			packageProductDependencies = (
+				73B8FAF824D3891400B32167 /* ViewCodeHelper */,
+			);
 			productName = Example;
 			productReference = 73D12D4A2470675D008B0AB9 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -638,6 +618,8 @@
 			dependencies = (
 			);
 			name = TableViewFactory;
+			packageProductDependencies = (
+			);
 			productName = TableViewFactory;
 			productReference = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */;
 			productType = "com.apple.product-type.framework";
@@ -695,6 +677,9 @@
 				Base,
 			);
 			mainGroup = EBF15AD5229B3A630055DF69;
+			packageReferences = (
+				73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */,
+			);
 			productRefGroup = EBF15AE0229B3A630055DF69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -823,11 +808,8 @@
 				EBF15B02229B3AD20055DF69 /* TableViewDataSource.swift in Sources */,
 				736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */,
 				EBF15B11229B3B190055DF69 /* TableViewCellBuilder.swift in Sources */,
-				EBF15B9B229B4BF30055DF69 /* UITableView+Reusable.swift in Sources */,
 				EBF15B04229B3AD20055DF69 /* TableViewItem.swift in Sources */,
 				EBF15B00229B3AD20055DF69 /* EditableSection.swift in Sources */,
-				EBF15B9F229B4C5D0055DF69 /* Identifiable.swift in Sources */,
-				736E6B9024B21B190086B985 /* UICollectionView+Reusable.swift in Sources */,
 				EBF15B0F229B3B190055DF69 /* TableViewSelectableCellBuilder.swift in Sources */,
 				736E6B9324B21B7C0086B985 /* CollectionViewSection.swift in Sources */,
 				EBF15B10229B3B190055DF69 /* SelectableTableViewCell.swift in Sources */,
@@ -1226,6 +1208,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mugbug/view-code-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73B8FAF824D3891400B32167 /* ViewCodeHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */;
+			productName = ViewCodeHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBF15AD6229B3A630055DF69 /* Project object */;
 }

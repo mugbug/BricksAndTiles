@@ -8,8 +8,9 @@
 
 import UIKit
 import TableViewFactory
+import ViewCodeHelper
 
-final class HorizontalListItemCell: UICollectionViewCell, Identifiable {
+final class HorizontalListItemCell: UICollectionViewCell, Reusable {
 
     private lazy var roundedBackgroundView: UIView = {
         let view = UIView()
