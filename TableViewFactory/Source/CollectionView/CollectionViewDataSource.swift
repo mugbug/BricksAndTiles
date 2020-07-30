@@ -17,7 +17,7 @@ public class CollectionViewDataSource: NSObject {
         super.init()
 
         collectionView.dataSource = self
-//        collectionView.delegate = self
+        collectionView.delegate = self
         registerCells(in: collectionView)
     }
 
@@ -33,7 +33,8 @@ public class CollectionViewDataSource: NSObject {
 }
 
 extension CollectionViewDataSource: UICollectionViewDataSource {
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView,
+                               numberOfItemsInSection section: Int) -> Int {
         return sections[section].numberOfItems
     }
 
@@ -41,5 +42,27 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let section = self.section(at: indexPath)
         return section.collectionViewCell(at: indexPath, on: collectionView)
+    }
+}
+
+extension CollectionViewDataSource: UICollectionViewDelegate {
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               didSelectItemAt indexPath: IndexPath) {
+        let section = self.section(at: indexPath)
+        return section.didSelectItem(at: indexPath, on: collectionView)
+    }
+}
+
+extension CollectionViewDataSource: UICollectionViewDelegateFlowLayout {
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let section = self.section(at: indexPath)
+        return section.sizeForItem(
+            at: indexPath,
+            on: collectionView,
+            layout: collectionViewLayout
+        )
     }
 }
