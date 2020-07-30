@@ -8,8 +8,9 @@
 
 import UIKit
 import TableViewFactory
+import ViewCodeHelper
 
-class SecondStaticCell: UITableViewCell, Identifiable {
+class SecondStaticCell: UITableViewCell, Reusable {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()

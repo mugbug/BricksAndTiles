@@ -8,8 +8,9 @@
 
 import UIKit
 import TableViewFactory
+import ViewCodeHelper
 
-class SingleSelectionTableViewCell: SelectableCell, Identifiable {
+class SingleSelectionTableViewCell: SelectableCell, Reusable {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
