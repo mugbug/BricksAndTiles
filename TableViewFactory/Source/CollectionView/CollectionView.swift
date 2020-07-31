@@ -9,9 +9,9 @@
 import UIKit
 import ViewCodeHelper
 
-//extension UICollectionViewCell: Reusable {}
 typealias CollectionViewDelegate = UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
 
+// swiftlint:disable line_length
 public final class CollectionView<CellType: UICollectionViewCell>: UIView, CollectionViewDelegate where CellType: Reusable {
 
     // MARK: Configuration

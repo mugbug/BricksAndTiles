@@ -42,8 +42,8 @@ class ExampleListPresenter {
             view?.showEditableExample()
         case .alternateStatic:
             view?.showAlternateStaticExample()
-        case .collectionView:
-            view?.showCollectionViewExample()
+//        case .collectionView:
+//            view?.showCollectionViewExample()
         }
     }
 }

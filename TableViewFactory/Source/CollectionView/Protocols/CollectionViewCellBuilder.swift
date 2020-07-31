@@ -8,8 +8,7 @@
 
 public protocol CollectionViewCellBuilder {
 
-    var cellSize: CGSize { get }
-
+    func cellSize(collectionSize: CGSize) -> CGSize
     func registerCellIdentifier(in collectionView: UICollectionView)
     func collectionViewCell(
         at indexPath: IndexPath,

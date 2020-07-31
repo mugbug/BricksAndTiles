@@ -26,7 +26,7 @@ final class CollectionViewExampleViewController: UIViewController {
     private func flowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.headerReferenceSize = CGSize(width: 50, height: 50)
+//        layout.headerReferenceSize = CGSize(width: 50, height: 50)
         return layout
     }
 
@@ -55,7 +55,8 @@ extension CollectionViewExampleViewController: ViewCodeProtocol {
         view.addSubviewWithConstraints(subview: collectionView)
     }
 
-    func setupConstraints() { }
+    func setupConstraints() {
+    }
 
     func additionalSetup() {
         view.backgroundColor = .white

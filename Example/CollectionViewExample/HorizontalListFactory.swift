@@ -18,7 +18,7 @@ final class HorizontalListFactory {
     }
 
     func cellBuilders() -> [CollectionViewCellBuilder] {
-        return (0...2).map { _ in HorizontalCellBuilder() }
+        return (0...10).map { _ in HorizontalCellBuilder() }
     }
 }
 
@@ -41,29 +41,10 @@ final class HorizontalCellHeader: UICollectionReusableView, Reusable {
     }
 }
 
-extension UICollectionView {
-    func dequeueReusableSupplementaryView<T: UICollectionReusableView>(
-        ofKind kind: String,
-        for indexPath: IndexPath
-    ) -> T where T: Reusable {
-        let supplementaryView = dequeueReusableSupplementaryView(
-            ofKind: kind,
-            withReuseIdentifier: T.identifier,
-            for: indexPath
-        )
-        guard let view = supplementaryView as? T else { return T() }
-        return view
-    }
+final class HorizontalCellBuilder: HorizontalCollectionViewCellBuilder {
 
-    func register<T: UICollectionReusableView>(_: T.Type, forSupplementaryViewOfKind kind: String) where T: Reusable {
-        register(T.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: T.identifier)
-    }
-}
-
-final class HorizontalCellBuilder: CollectionViewCellBuilder {
-
-    var cellSize: CGSize {
-        CGSize(width: 300, height: 500)
+    var cellWidth: CGFloat {
+        return 60
     }
 
     func registerCellIdentifier(in collectionView: UICollectionView) {

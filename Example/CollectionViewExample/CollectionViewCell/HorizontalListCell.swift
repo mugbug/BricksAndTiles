@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  HorizontalListCell.swift
 //  Example
 //
 //  Created by Pedro M. Zaroni on 05/07/20.
@@ -20,10 +20,22 @@ final class HorizontalListCell: UITableViewCell, Reusable {
         .. \.text <- "Header"
         .. \.textColor <- .black
 
-    lazy var listView = CollectionView<CollectionCell>(
-        scrollDirection: .horizontal,
-        color: .orange
-    )
+    var dataSource: CollectionViewDataSource?
+
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(
+            frame: .zero,
+            collectionViewLayout: flowLayout()
+        )
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
+    }()
+
+    private func flowLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        return layout
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,8 +51,16 @@ extension HorizontalListCell: ViewCodeProtocol {
     func setupHierarchy() {
         contentView.addSubviewWithConstraints(subview: stackView)
         stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(listView)
+        stackView.addArrangedSubview(collectionView)
     }
 
     func setupConstraints() { }
+
+    func additionalSetup() {
+        let factory = HorizontalListFactory().make()
+        self.dataSource = CollectionViewDataSource(
+            sections: factory,
+            collectionView: collectionView
+        )
+    }
 }

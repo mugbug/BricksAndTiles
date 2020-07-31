@@ -47,7 +47,7 @@ public final class StaticCollectionSection: CollectionViewSection {
     public func sizeForItem(at indexPath: IndexPath,
                             on collectionView: UICollectionView,
                             layout: UICollectionViewLayout) -> CGSize {
-        return self.row(at: indexPath).cellSize
+        return self.row(at: indexPath).cellSize(collectionSize: collectionView.frame.size)
     }
 
     public func didSelectItem(at indexPath: IndexPath, on collectionView: UICollectionView) {
