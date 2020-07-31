@@ -50,9 +50,14 @@ final class CollectionViewExampleViewController: UIViewController {
 }
 
 extension CollectionViewExampleViewController: ViewCodeProtocol {
-    public func setupHierarchy() {
+    func setupHierarchy() {
         view.addSubviewWithConstraints(subview: collectionView)
     }
 
-    public func setupConstraints() { }
+    func setupConstraints() { }
+
+    func additionalSetup() {
+        view.backgroundColor = .white
+        collectionView.backgroundColor = .white
+    }
 }
