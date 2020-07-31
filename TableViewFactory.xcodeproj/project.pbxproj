@@ -45,6 +45,8 @@
 		73B8FB1724D38F2900B32167 /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 73B8FB1624D38F2900B32167 /* ViewCodeHelper */; };
 		73B8FB1824D38F5200B32167 /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		73B8FB1924D38F5200B32167 /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73B8FB2124D394F900B32167 /* StaticCollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */; };
+		73B8FB2324D3957A00B32167 /* CollectionViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB2224D3957A00B32167 /* CollectionViewCellBuilder.swift */; };
 		73D12D4D2470675D008B0AB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12D4C2470675D008B0AB9 /* AppDelegate.swift */; };
 		73D12D532470675F008B0AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D12D522470675F008B0AB9 /* Assets.xcassets */; };
 		73D12D562470675F008B0AB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D12D552470675F008B0AB9 /* Preview Assets.xcassets */; };
@@ -167,6 +169,8 @@
 		73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewCodeHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B8FB0C24D38F2300B32167 /* ViewCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewCodeHelper.h; sourceTree = "<group>"; };
 		73B8FB0D24D38F2300B32167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionSection.swift; sourceTree = "<group>"; };
+		73B8FB2224D3957A00B32167 /* CollectionViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBuilder.swift; sourceTree = "<group>"; };
 		73D12D4A2470675D008B0AB9 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D12D4C2470675D008B0AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D12D522470675F008B0AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 		736E6B8B24B2199F0086B985 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				73B8FB1F24D394E200B32167 /* Sections */,
 				736E6B9124B21B700086B985 /* Protocols */,
 				736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */,
 				73B8FAFF24D38C5700B32167 /* CollectionView.swift */,
@@ -335,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */,
+				73B8FB2224D3957A00B32167 /* CollectionViewCellBuilder.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -420,6 +426,14 @@
 				73B8FB0D24D38F2300B32167 /* Info.plist */,
 			);
 			path = ViewCodeHelper;
+			sourceTree = "<group>";
+		};
+		73B8FB1F24D394E200B32167 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		73D12D4B2470675D008B0AB9 /* Example */ = {
@@ -896,6 +910,8 @@
 				EBF15B13229B3B190055DF69 /* TableViewEditableCellBuilder.swift in Sources */,
 				EBF15B12229B3B190055DF69 /* TableViewSection.swift in Sources */,
 				EBF15B02229B3AD20055DF69 /* TableViewDataSource.swift in Sources */,
+				73B8FB2124D394F900B32167 /* StaticCollectionSection.swift in Sources */,
+				73B8FB2324D3957A00B32167 /* CollectionViewCellBuilder.swift in Sources */,
 				73B8FB0024D38C5700B32167 /* CollectionView.swift in Sources */,
 				736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */,
 				EBF15B11229B3B190055DF69 /* TableViewCellBuilder.swift in Sources */,

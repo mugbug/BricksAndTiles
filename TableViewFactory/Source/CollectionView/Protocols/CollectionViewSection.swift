@@ -10,7 +10,6 @@ import UIKit
 
 public protocol CollectionViewSection {
     var numberOfItems: Int { get }
-    var size: CGSize { get }
     func registerCells(in collectionView: UICollectionView)
 
     func collectionViewCell(at indexPath: IndexPath,
