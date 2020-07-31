@@ -9,10 +9,10 @@
 import UIKit
 import ViewCodeHelper
 
-extension UICollectionViewCell: Reusable {}
+//extension UICollectionViewCell: Reusable {}
 typealias CollectionViewDelegate = UICollectionViewDelegateFlowLayout & UICollectionViewDataSource
 
-public final class CollectionView<CellType: UICollectionViewCell>: UIView, CollectionViewDelegate {
+public final class CollectionView<CellType: UICollectionViewCell>: UIView, CollectionViewDelegate where CellType: Reusable {
 
     // MARK: Configuration
 

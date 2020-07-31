@@ -26,6 +26,7 @@ final class CollectionViewExampleViewController: UIViewController {
     private func flowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.headerReferenceSize = CGSize(width: 50, height: 50)
         return layout
     }
 

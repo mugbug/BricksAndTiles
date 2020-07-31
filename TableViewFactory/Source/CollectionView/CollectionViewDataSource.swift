@@ -43,6 +43,17 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
         let section = self.section(at: indexPath)
         return section.collectionViewCell(at: indexPath, on: collectionView)
     }
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               viewForSupplementaryElementOfKind kind: String,
+                               at indexPath: IndexPath) -> UICollectionReusableView {
+        let section = self.section(at: indexPath)
+        return section.viewForSupplementaryElement(
+            kind: kind,
+            at: indexPath,
+            on: collectionView
+        )
+    }
 }
 
 extension CollectionViewDataSource: UICollectionViewDelegate {

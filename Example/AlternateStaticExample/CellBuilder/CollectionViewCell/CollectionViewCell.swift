@@ -20,7 +20,7 @@ final class HorizontalListCell: UITableViewCell, Reusable {
         .. \.text <- "Header"
         .. \.textColor <- .black
 
-    lazy var listView = CollectionView<UICollectionViewCell>(
+    lazy var listView = CollectionView<CollectionCell>(
         scrollDirection: .horizontal,
         color: .orange
     )
