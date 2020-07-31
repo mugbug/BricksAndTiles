@@ -6,7 +6,7 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
-final class StaticCollectionSection: CollectionViewSection {
+public final class StaticCollectionSection: CollectionViewSection {
 
     private var cellBuilders: [CollectionViewCellBuilder]
     private var header: UIView?
@@ -20,7 +20,7 @@ final class StaticCollectionSection: CollectionViewSection {
         self.cellBuilders = cellBuilders
     }
 
-    var numberOfItems: Int {
+    public var numberOfItems: Int {
         return cellBuilders.count
     }
 
@@ -28,22 +28,24 @@ final class StaticCollectionSection: CollectionViewSection {
         return cellBuilders[indexPath.row]
     }
 
-    func registerCells(in collectionView: UICollectionView) {
-
+    public func registerCells(in collectionView: UICollectionView) {
+        for builder in cellBuilders {
+            builder.registerCellIdentifier(in: collectionView)
+        }
     }
 
-    func collectionViewCell(at indexPath: IndexPath,
-                            on collectionView: UICollectionView) -> UICollectionViewCell {
+    public func collectionViewCell(at indexPath: IndexPath,
+                                   on collectionView: UICollectionView) -> UICollectionViewCell {
         return self.row(at: indexPath).collectionViewCell(at: indexPath, on: collectionView)
     }
 
-    func sizeForItem(at indexPath: IndexPath,
-                     on collectionView: UICollectionView,
-                     layout: UICollectionViewLayout) -> CGSize {
+    public func sizeForItem(at indexPath: IndexPath,
+                            on collectionView: UICollectionView,
+                            layout: UICollectionViewLayout) -> CGSize {
         return self.row(at: indexPath).cellSize
     }
 
-    func didSelectItem(at indexPath: IndexPath, on collectionView: UICollectionView) {
+    public func didSelectItem(at indexPath: IndexPath, on collectionView: UICollectionView) {
         self.row(at: indexPath).collectionViewDidSelectCell(collectionView)
     }
 }

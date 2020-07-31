@@ -32,7 +32,7 @@ class AlternateStaticTableViewFactory: TableViewFactoryProtocol {
 //            CollectionViewCellBuilder(),
 //            CollectionViewCellBuilder(),
 //            CollectionViewCellBuilder(),
-            CollectionViewCellBuilder(),
+            HorizontalListCellBuilder(),
         ]
     }
 
