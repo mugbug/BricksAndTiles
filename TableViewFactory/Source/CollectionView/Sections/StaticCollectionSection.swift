@@ -51,6 +51,6 @@ public final class StaticCollectionSection: CollectionViewSection {
     }
 
     public func didSelectItem(at indexPath: IndexPath, on collectionView: UICollectionView) {
-        self.row(at: indexPath).collectionViewDidSelectCell(collectionView)
+        self.row(at: indexPath).collectionViewDidSelectCell(collectionView, at: indexPath)
     }
 }

@@ -22,11 +22,11 @@ public protocol CollectionViewCellBuilder {
     ) -> UICollectionReusableView
 
 //    func collectionViewShouldSelectCell(_ collectionView: UICollectionView) -> Bool
-    func collectionViewDidSelectCell(_ collectionView: UICollectionView)
+    func collectionViewDidSelectCell(_ collectionView: UICollectionView, at indexPath: IndexPath)
 }
 
 public extension TableViewCellBuilder {
-    func collectionViewDidSelectCell(_ tableView: UITableView) {
+    func collectionViewDidSelectCell(_ collectionView: UICollectionView, at indexPath: IndexPath) {
         print("Default implementation")
     }
 }

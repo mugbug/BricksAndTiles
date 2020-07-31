@@ -18,7 +18,7 @@ final class HorizontalListFactory {
     }
 
     func cellBuilders() -> [CollectionViewCellBuilder] {
-        return (0...5).map { _ in HorizontalCellBuilder() }
+        return (0...2).map { _ in HorizontalCellBuilder() }
     }
 }
 
@@ -90,7 +90,8 @@ final class HorizontalCellBuilder: CollectionViewCellBuilder {
         return view
     }
 
-    func collectionViewDidSelectCell(_ collectionView: UICollectionView) {
-
+    func collectionViewDidSelectCell(_ collectionView: UICollectionView,
+                                     at indexPath: IndexPath) {
+        print("did tap cell at \(indexPath)")
     }
 }
