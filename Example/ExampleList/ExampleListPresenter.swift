@@ -14,6 +14,7 @@ protocol ExampleListViewDelegate: AnyObject {
     func showSingleSelectionExample()
     func showEditableExample()
     func showAlternateStaticExample()
+    func showCollectionViewExample()
 }
 
 class ExampleListPresenter {
@@ -41,6 +42,8 @@ class ExampleListPresenter {
             view?.showEditableExample()
         case .alternateStatic:
             view?.showAlternateStaticExample()
+//        case .collectionView:
+//            view?.showCollectionViewExample()
         }
     }
 }

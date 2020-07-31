@@ -20,19 +20,12 @@ class AlternateStaticTableViewFactory: TableViewFactoryProtocol {
 
     func cellBuilders() -> [TableViewCellBuilder] {
         return [
-//            FirstStaticCellBuilder(),
-//            SecondStaticCellBuilder(),
-//            FirstStaticCellBuilder(),
-//            FirstStaticCellBuilder(),
-//            CollectionViewCellBuilder(),
-//            SecondStaticCellBuilder(),
-//            CollectionViewCellBuilder(),
-//            CollectionViewCellBuilder(),
-//            CollectionViewCellBuilder(),
-//            CollectionViewCellBuilder(),
-//            CollectionViewCellBuilder(),
-//            CollectionViewCellBuilder(),
-            CollectionViewCellBuilder(),
+            HorizontalListCellBuilder(),
+            FirstStaticCellBuilder(),
+            HorizontalListCellBuilder(),
+            SecondStaticCellBuilder(),
+            FirstStaticCellBuilder(),
+            HorizontalListCellBuilder()
         ]
     }
 

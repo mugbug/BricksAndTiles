@@ -45,6 +45,11 @@ final class ExampleListViewController: UIViewController {
 }
 
 extension ExampleListViewController: ExampleListViewDelegate {
+    func showCollectionViewExample() {
+        let viewController = CollectionViewExampleViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
     func showDragableExample() {
         let factory = DragableExampleTableViewFactory()
         showExample(withFactory: factory, isEditable: true)

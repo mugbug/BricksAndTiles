@@ -7,14 +7,15 @@
 //
 
 import TableViewFactory
+import ViewCodeHelper
 
-class CollectionViewCellBuilder: TableViewCellBuilder {
+class HorizontalListCellBuilder: TableViewCellBuilder {
     func registerCellIdentifier(in tableView: UITableView) {
-        tableView.register(CollectionViewCell.self)
+        tableView.register(HorizontalListCell.self)
     }
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
-        let cell: CollectionViewCell = tableView.dequeueReusableCell(for: indexPath)
+        let cell: HorizontalListCell = tableView.dequeueReusableCell(for: indexPath)
         return cell
     }
 
@@ -23,6 +24,6 @@ class CollectionViewCellBuilder: TableViewCellBuilder {
     }
 
     var cellHeight: CGFloat {
-        return 100
+        return 200
     }
 }
