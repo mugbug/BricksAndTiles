@@ -13,6 +13,7 @@ public struct EditableCellActionFactory {
 
     public enum ActionType {
         case delete
+        case custom
     }
 
     // MARK: - Initialization

@@ -29,26 +29,12 @@ final class GenericExampleViewController: UIViewController {
 
     // MARK: - View Setup
 
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
-        tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedSectionHeaderHeight = 44
-        tableView.backgroundColor = .white
-        return tableView
-    }()
+    private lazy var tableView = UITableView.standard()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.addSubview(tableView)
-        tableView.constraint { view in
-            [view.topAnchor.constraint(equalTo: self.view.topAnchor),
-             view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-             view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-             view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)]
-        }
+        view.addSubviewWithConstraints(subview: tableView)
 
         presenter.setupDataSource(in: tableView)
     }
