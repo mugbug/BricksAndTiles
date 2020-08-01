@@ -37,6 +37,16 @@ class EditableCellBuilder: TableViewEditableCellBuilder {
             actionCompletion: {}
         )
 
-        return [deleteAction]
+        let newAction = EditableCellActionFactory(
+            type: .custom,
+            style: .normal,
+            title: "Read",
+            backgroundColor: .gray,
+            actionCompletion: {
+                print("Do something")
+            }
+        )
+
+        return [deleteAction, newAction]
     }
 }

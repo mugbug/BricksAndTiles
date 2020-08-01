@@ -10,28 +10,14 @@ import UIKit
 
 final class ExampleListViewController: UIViewController {
 
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 40
-        tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedSectionHeaderHeight = 40
-        tableView.backgroundColor = .white
-        return tableView
-    }()
+    private lazy var tableView = UITableView.standard()
 
     private let presenter = ExampleListPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
-        self.view.addSubview(tableView)
-        tableView.constraint { view in
-            [view.topAnchor.constraint(equalTo: self.view.topAnchor),
-             view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-             view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-             view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)]
-        }
+        self.view.addSubviewWithConstraints(subview: tableView)
 
         presenter.setupDataSource(in: tableView)
     }

@@ -35,24 +35,31 @@ public class EditableSection: TableViewSection {
         }
     }
 
-    public func cellHeight(forCellAt indexPath: IndexPath, on tableView: UITableView) -> CGFloat {
-        return cellBuilders[indexPath.row].cellHeight
+    private func row(at indexPath: IndexPath) -> TableViewEditableCellBuilder {
+        return cellBuilders[indexPath.row]
     }
 
-    public func tableViewCell(_ tableView: UITableView, shouldSelectCellAt indexPath: IndexPath) -> Bool {
-        return cellBuilders[indexPath.row].tableViewShouldSelectCell(tableView)
+    public func cellHeight(forCellAt indexPath: IndexPath,
+                           on tableView: UITableView) -> CGFloat {
+        return row(at: indexPath).cellHeight
     }
 
-    public func tableViewCell(_ tableView: UITableView, didSelectCellAt indexPath: IndexPath) {
+    public func tableViewCell(_ tableView: UITableView,
+                              shouldSelectCellAt indexPath: IndexPath) -> Bool {
+        return row(at: indexPath).tableViewShouldSelectCell(tableView)
+    }
+
+    public func tableViewCell(_ tableView: UITableView,
+                              didSelectCellAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        return cellBuilders[indexPath.row].tableViewDidSelectCell(tableView)
+        return row(at: indexPath).tableViewDidSelectCell(tableView)
     }
 
     public func tableViewCell(at indexPath: IndexPath,
                               on tableView: UITableView) -> UITableViewCell {
 
-        return cellBuilders[indexPath.row].tableViewCell(at: indexPath, on: tableView)
+        return row(at: indexPath).tableViewCell(at: indexPath, on: tableView)
     }
 
     public func tableViewSectionFooter(_ tableView: UITableView) -> UIView? {
@@ -86,26 +93,39 @@ public class EditableSection: TableViewSection {
     public func tableView(_ tableView: UITableView,
                           editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 
-        let cellActions = cellBuilders[indexPath.row].cellActions(tableView, at: indexPath)
-        var actions = [UITableViewRowAction]()
+        let cellActionFactories = row(at: indexPath).cellActions(tableView, at: indexPath)
 
-        cellActions.forEach { action in
-            switch action.type {
-            case .delete:
-                let handler = removeFromTableView(tableView, at: indexPath)
-                let delete = action.make(with: handler)
-                actions.append(delete)
-            }
+        return cellActionFactories.map { factory in
+            self.makeAction(
+                with: factory,
+                at: indexPath,
+                on: tableView
+            )
         }
-        return actions
     }
 
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return cellBuilders[indexPath.row].canEditRow()
+        return row(at: indexPath).canEditRow()
+    }
+}
+
+private extension EditableSection {
+    func makeAction(with factory: EditableCellActionFactory,
+                    at indexPath: IndexPath,
+                    on tableView: UITableView) -> UITableViewRowAction {
+        var handler: EditableCellActionFactory.HandlerType
+        switch factory.type {
+        case .delete:
+            handler = removeFromTableView(tableView, at: indexPath)
+        case .custom:
+            handler = { $0() }
+        }
+        let action = factory.make(with: handler)
+        return action
     }
 
-    private func removeFromTableView(_ tableView: UITableView,
-                                     at indexPath: IndexPath) -> EditableCellActionFactory.HandlerType {
+    func removeFromTableView(_ tableView: UITableView,
+                             at indexPath: IndexPath) -> EditableCellActionFactory.HandlerType {
         return { [weak self] completion in
             guard let self = self else { return }
 
