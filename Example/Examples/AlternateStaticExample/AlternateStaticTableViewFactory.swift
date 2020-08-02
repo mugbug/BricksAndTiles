@@ -32,6 +32,12 @@ class AlternateStaticTableViewFactory: TableViewFactoryProtocol {
     func header() -> UIView {
         let header = UILabel()
         header.text = "This is a section"
-        return header
+        let view = UIView()
+        view.addSubviewWithConstraints(
+            subview: header,
+            insets: .init(top: 16, left: 16, bottom: -16, right: -16)
+        )
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        return view
     }
 }

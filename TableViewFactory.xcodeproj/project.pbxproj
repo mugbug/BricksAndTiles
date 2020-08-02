@@ -47,6 +47,9 @@
 		73B8FB5E24D5B78F00B32167 /* CollectionViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5A24D5B78F00B32167 /* CollectionViewExampleViewController.swift */; };
 		73B8FB5F24D5B78F00B32167 /* HorizontalListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5B24D5B78F00B32167 /* HorizontalListFactory.swift */; };
 		73B8FB6124D5BF2600B32167 /* UITableView+DefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB6024D5BF2600B32167 /* UITableView+DefaultFactory.swift */; };
+		73B8FB6424D5EDAA00B32167 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB6324D5EDAA00B32167 /* HorizontalCell.swift */; };
+		73B8FB6624D5EDCD00B32167 /* HorizontalCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB6524D5EDCD00B32167 /* HorizontalCellHeader.swift */; };
+		73B8FB6824D5EDE700B32167 /* HorizontalCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB6724D5EDE700B32167 /* HorizontalCellBuilder.swift */; };
 		73D12D4D2470675D008B0AB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D12D4C2470675D008B0AB9 /* AppDelegate.swift */; };
 		73D12D532470675F008B0AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D12D522470675F008B0AB9 /* Assets.xcassets */; };
 		73D12D562470675F008B0AB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D12D552470675F008B0AB9 /* Preview Assets.xcassets */; };
@@ -171,6 +174,9 @@
 		73B8FB5A24D5B78F00B32167 /* CollectionViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewExampleViewController.swift; path = Example/Examples/CollectionViewExample/CollectionViewExampleViewController.swift; sourceTree = SOURCE_ROOT; };
 		73B8FB5B24D5B78F00B32167 /* HorizontalListFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalListFactory.swift; path = Example/Examples/CollectionViewExample/HorizontalListFactory.swift; sourceTree = SOURCE_ROOT; };
 		73B8FB6024D5BF2600B32167 /* UITableView+DefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DefaultFactory.swift"; sourceTree = "<group>"; };
+		73B8FB6324D5EDAA00B32167 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
+		73B8FB6524D5EDCD00B32167 /* HorizontalCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCellHeader.swift; sourceTree = "<group>"; };
+		73B8FB6724D5EDE700B32167 /* HorizontalCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCellBuilder.swift; sourceTree = "<group>"; };
 		73D12D4A2470675D008B0AB9 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D12D4C2470675D008B0AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D12D522470675F008B0AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -312,7 +318,7 @@
 		736E6B9424B224F50086B985 /* CollectionViewExample */ = {
 			isa = PBXGroup;
 			children = (
-				73B8FB5624D5B78F00B32167 /* CollectionViewCell */,
+				73B8FB5624D5B78F00B32167 /* CellBuilder */,
 				73B8FB5A24D5B78F00B32167 /* CollectionViewExampleViewController.swift */,
 				73B8FB5B24D5B78F00B32167 /* HorizontalListFactory.swift */,
 			);
@@ -428,6 +434,7 @@
 		73B8FB4A24D5B74900B32167 /* CellBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				73B8FB6224D5ED6400B32167 /* HorizontalListCell */,
 				73B8FB4B24D5B74900B32167 /* SecondStaticCell */,
 				73B8FB4E24D5B74900B32167 /* FIrstStaticCell */,
 			);
@@ -453,22 +460,24 @@
 			path = FIrstStaticCell;
 			sourceTree = "<group>";
 		};
-		73B8FB5624D5B78F00B32167 /* CollectionViewCell */ = {
+		73B8FB5624D5B78F00B32167 /* CellBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				73B8FB6324D5EDAA00B32167 /* HorizontalCell.swift */,
+				73B8FB6524D5EDCD00B32167 /* HorizontalCellHeader.swift */,
+				73B8FB6724D5EDE700B32167 /* HorizontalCellBuilder.swift */,
+			);
+			name = CellBuilder;
+			path = Example/Examples/CollectionViewExample/CellBuilder;
+			sourceTree = SOURCE_ROOT;
+		};
+		73B8FB6224D5ED6400B32167 /* HorizontalListCell */ = {
 			isa = PBXGroup;
 			children = (
 				73B8FB5724D5B78F00B32167 /* HorizontalListCell.swift */,
-				73B8FB5824D5B78F00B32167 /* View */,
 				73B8FB5924D5B78F00B32167 /* HorizontalListCellBuilder.swift */,
 			);
-			name = CollectionViewCell;
-			path = Example/Examples/CollectionViewExample/CollectionViewCell;
-			sourceTree = SOURCE_ROOT;
-		};
-		73B8FB5824D5B78F00B32167 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
+			path = HorizontalListCell;
 			sourceTree = "<group>";
 		};
 		73D12D4B2470675D008B0AB9 /* Example */ = {
@@ -891,6 +900,7 @@
 				73B8FB4224D5B72C00B32167 /* EditableCellBuilder.swift in Sources */,
 				7342B3762471B9CF00644987 /* DragableExampleTableViewFactory.swift in Sources */,
 				73B8FB3B24D5B72100B32167 /* DragableExampleCellBuilder.swift in Sources */,
+				73B8FB6824D5EDE700B32167 /* HorizontalCellBuilder.swift in Sources */,
 				73B8FB5324D5B74900B32167 /* SecondStaticCell.swift in Sources */,
 				73D12D4D2470675D008B0AB9 /* AppDelegate.swift in Sources */,
 				73B8FB3C24D5B72100B32167 /* DragableExampleTableViewCell.swift in Sources */,
@@ -899,6 +909,8 @@
 				73B8FB5124D5B74900B32167 /* AlternateStaticTableViewFactory.swift in Sources */,
 				73B8FB5224D5B74900B32167 /* SecondStaticCellBuilder.swift in Sources */,
 				73B8FB5F24D5B78F00B32167 /* HorizontalListFactory.swift in Sources */,
+				73B8FB6424D5EDAA00B32167 /* HorizontalCell.swift in Sources */,
+				73B8FB6624D5EDCD00B32167 /* HorizontalCellHeader.swift in Sources */,
 				73B8FB5E24D5B78F00B32167 /* CollectionViewExampleViewController.swift in Sources */,
 				73AB8FA924707460000A7BF5 /* SelectableCellBuilder.swift in Sources */,
 				73AB8FA12470726B000A7BF5 /* ExampleListPresenter.swift in Sources */,

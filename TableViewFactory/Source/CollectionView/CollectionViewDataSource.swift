@@ -33,6 +33,10 @@ public class CollectionViewDataSource: NSObject {
 }
 
 extension CollectionViewDataSource: UICollectionViewDataSource {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return sections.count
+    }
+
     public func collectionView(_ collectionView: UICollectionView,
                                numberOfItemsInSection section: Int) -> Int {
         return sections[section].numberOfItems
