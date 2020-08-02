@@ -30,17 +30,13 @@ class SecondStaticCell: UITableViewCell, Reusable {
 
 extension SecondStaticCell: ViewCodeProtocol {
     func setupHierarchy() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubviewWithConstraints(
+            subview: titleLabel,
+            insets: .init(top: 44, left: 16, bottom: -44, right: -16)
+        )
     }
 
-    func setupConstraints() {
-        titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
-        }
-    }
+    func setupConstraints() {}
 
     func additionalSetup() {
         backgroundColor = .orange
