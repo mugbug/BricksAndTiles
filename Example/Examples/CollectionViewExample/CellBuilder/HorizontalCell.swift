@@ -9,12 +9,7 @@
 import UIKit
 import ViewCodeHelper
 
-protocol ViewConfigurable: Reusable {
-    associatedtype ViewModel
-    func configure(with model: ViewModel)
-}
-
-final class HorizontalCell: UICollectionViewCell, Reusable, ViewConfigurable {
+final class HorizontalCell: UICollectionViewCell, CellConfigurable {
     typealias ViewModel = String
 
     private lazy var coverArt = UIImageView()
