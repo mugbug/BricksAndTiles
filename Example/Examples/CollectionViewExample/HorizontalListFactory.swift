@@ -24,13 +24,18 @@ struct HorizontalListFactory {
     }
 
     func cellBuilders() -> [CollectionViewCellBuilder] {
+        return availableImages().map(HorizontalCellBuilder.init)
+    }
+
+    private func availableImages() -> [String] {
         return [
-            HorizontalCellBuilder(width: 40, backgroundColor: backgroundColor),
-            HorizontalCellBuilder(width: 100, backgroundColor: backgroundColor),
-            HorizontalCellBuilder(width: 60, backgroundColor: backgroundColor),
-            HorizontalCellBuilder(width: 40, backgroundColor: backgroundColor),
-            HorizontalCellBuilder(width: 90, backgroundColor: backgroundColor),
-            HorizontalCellBuilder(width: 60, backgroundColor: backgroundColor)
+            "iron-wine",
+            "lumineers",
+            "pink-floyd",
+            "lumineers-2",
+            "cage",
+            "iron-wine-2",
+            "ff"
         ]
     }
 }

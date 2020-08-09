@@ -9,9 +9,36 @@
 import UIKit
 import ViewCodeHelper
 
-final class HorizontalCell: UICollectionViewCell, Reusable {
+protocol ViewConfigurable: Reusable {
+    associatedtype ViewModel
+    func configure(with model: ViewModel)
+}
 
-    func configure(color: UIColor) {
-        backgroundColor = color
+final class HorizontalCell: UICollectionViewCell, Reusable, ViewConfigurable {
+    typealias ViewModel = String
+
+    private lazy var coverArt = UIImageView()
+        .. \.layer.cornerRadius <- 10
+        .. \.clipsToBounds <- true
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        buildView()
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func configure(with model: ViewModel) {
+        coverArt.image = UIImage(named: model)
+    }
+}
+
+extension HorizontalCell: ViewCodeProtocol {
+    func setupHierarchy() {
+        contentView.addSubviewWithConstraints(subview: coverArt)
+    }
+
+    func setupConstraints() { }
 }

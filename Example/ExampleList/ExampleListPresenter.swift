@@ -10,8 +10,7 @@ import UIKit
 import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
-    func showExample(forType type: ExampleType,
-                     isEditable: Bool)
+    func showExample(forType type: ExampleType, isEditable: Bool)
 }
 
 class ExampleListPresenter {

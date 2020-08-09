@@ -9,7 +9,7 @@
 import TableViewFactory
 import ViewCodeHelper
 
-class HorizontalListCellBuilder: TableViewCellBuilder {
+struct HorizontalListCellBuilder: TableViewCellBuilder {
     func registerCellIdentifier(in tableView: UITableView) {
         tableView.register(HorizontalListCell.self)
     }

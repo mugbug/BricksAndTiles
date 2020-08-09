@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class DragableExampleCellBuilder: TableViewArrangeableCellBuilder {
+struct DragableExampleCellBuilder: TableViewArrangeableCellBuilder {
 
     var cellHeight: CGFloat {
         return UITableView.automaticDimension

@@ -26,8 +26,7 @@ final class ExampleListViewController: UIViewController {
 }
 
 extension ExampleListViewController: ExampleListViewDelegate {
-    func showExample(forType type: ExampleType,
-                     isEditable: Bool) {
+    func showExample(forType type: ExampleType, isEditable: Bool) {
         let presenter = GenericExamplePresenter(type: type)
         let dragableExample = GenericExampleViewController(presenter: presenter)
         dragableExample.toggleEditable(isEditable)

@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class EditableCellBuilder: TableViewEditableCellBuilder {
+struct EditableCellBuilder: TableViewEditableCellBuilder {
 
     var cellHeight: CGFloat {
         return UITableView.automaticDimension

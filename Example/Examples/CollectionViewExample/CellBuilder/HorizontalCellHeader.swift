@@ -13,7 +13,7 @@ final class HorizontalCellHeader: UICollectionReusableView, Reusable {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        backgroundColor = .lightGray
     }
 
     required init?(coder: NSCoder) {
