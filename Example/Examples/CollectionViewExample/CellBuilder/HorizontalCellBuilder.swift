@@ -8,15 +8,30 @@
 
 import TableViewFactory
 
-final class HorizontalCellBuilder: HorizontalCollectionViewCellBuilder {
+/*
+ For fixed width size, `HorizontalCollectionViewCellBuilder`
+ removes some boilerplate (it'll use all available height)
+ */
 
-    var cellWidth: CGFloat
-    private let backgroundColor: UIColor
+//struct HorizontalCellBuilder: HorizontalCollectionViewCellBuilder {
+//
+//    var cellWidth: CGFloat { 96 }
 
-    init(width: CGFloat, backgroundColor: UIColor) {
-        self.cellWidth = width
-        self.backgroundColor = backgroundColor
+/*
+ For relative to collection view sizes, go for `CollectionViewCellBuilder`
+ but be careful on not requiring more space than you have
+ */
+
+struct HorizontalCellBuilder: CollectionViewCellBuilder {
+
+    func cellSize(collectionSize: CGSize) -> CGSize {
+        let height = collectionSize.height
+        return CGSize(width: height, height: height)
     }
+
+// --------------------------------------------------------------------------
+
+    var imageName: String
 
     func registerCellIdentifier(in collectionView: UICollectionView) {
         collectionView.register(HorizontalCell.self)
@@ -28,18 +43,23 @@ final class HorizontalCellBuilder: HorizontalCollectionViewCellBuilder {
 
     func collectionViewCell(at indexPath: IndexPath, on collectionView: UICollectionView) -> UICollectionViewCell {
         let cell: HorizontalCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(color: backgroundColor)
+        cell.configure(with: imageName)
         return cell
     }
 
     func collectionViewSupplementaryView(kind: String,
                                          at indexPath: IndexPath,
                                          on collectionView: UICollectionView) -> UICollectionReusableView {
-        let view: HorizontalCellHeader = collectionView.dequeueReusableSupplementaryView(
-            ofKind: kind,
-            for: indexPath
-        )
-        return view
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let view: HorizontalCellHeader = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                for: indexPath
+            )
+            return view
+        default:
+            return UICollectionReusableView()
+        }
     }
 
     func collectionViewDidSelectCell(_ collectionView: UICollectionView,

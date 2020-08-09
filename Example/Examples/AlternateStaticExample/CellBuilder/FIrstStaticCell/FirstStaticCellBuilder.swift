@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class FirstStaticCellBuilder: TableViewCellBuilder {
+struct FirstStaticCellBuilder: TableViewCellBuilder {
     func registerCellIdentifier(in tableView: UITableView) {
         tableView.register(FirstStaticCell.self)
     }

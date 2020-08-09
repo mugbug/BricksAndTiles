@@ -328,8 +328,8 @@
 		737FEA1E24A77461000E7744 /* AlternateStaticExample */ = {
 			isa = PBXGroup;
 			children = (
-				73B8FB4924D5B74900B32167 /* AlternateStaticTableViewFactory.swift */,
 				73B8FB4A24D5B74900B32167 /* CellBuilder */,
+				73B8FB4924D5B74900B32167 /* AlternateStaticTableViewFactory.swift */,
 			);
 			path = AlternateStaticExample;
 			sourceTree = "<group>";

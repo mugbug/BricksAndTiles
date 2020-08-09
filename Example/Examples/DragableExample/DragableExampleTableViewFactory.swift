@@ -14,6 +14,7 @@ class DragableExampleTableViewFactory: TableViewFactoryProtocol {
         let section = ArrangeableSection(
             cellBuilders: cellBuilders(),
             header: header(),
+            footer: UIView(),
             moveRowCompletion: { _, _ in }
         )
         return [section]

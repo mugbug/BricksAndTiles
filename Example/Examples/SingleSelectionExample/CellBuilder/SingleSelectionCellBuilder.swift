@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class SingleSelectionCellBuilder: TableViewSelectableCellBuilder {
+struct SingleSelectionCellBuilder: TableViewSelectableCellBuilder {
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
     }
