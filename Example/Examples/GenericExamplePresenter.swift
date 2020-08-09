@@ -14,11 +14,13 @@ protocol TableViewFactoryProtocol {
 }
 
 class GenericExamplePresenter: GenericPresenterProtocol {
+    var exampleName: String { type.rawValue }
     var dataSource: TableViewDataSource?
-    private let factory: TableViewFactoryProtocol
+    private lazy var factory: TableViewFactoryProtocol = type.tableFactory()
+    private let type: ExampleType
 
-    init(factory: TableViewFactoryProtocol) {
-        self.factory = factory
+    init(type: ExampleType) {
+        self.type = type
     }
 
     func setupDataSource(in tableView: UITableView) {

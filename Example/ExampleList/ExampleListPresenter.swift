@@ -10,11 +10,8 @@ import UIKit
 import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
-    func showDragableExample()
-    func showSingleSelectionExample()
-    func showEditableExample()
-    func showAlternateStaticExample()
-    func showCollectionViewExample()
+    func showExample(forType type: ExampleType,
+                     isEditable: Bool)
 }
 
 class ExampleListPresenter {
@@ -33,17 +30,22 @@ class ExampleListPresenter {
     }
 
     private func showExample(for type: ExampleType) {
-        switch type {
+        let isEditable = type == .dragable
+        view?.showExample(forType: type, isEditable: isEditable)
+    }
+}
+
+extension ExampleType {
+    func tableFactory() -> TableViewFactoryProtocol {
+        switch self {
         case .dragable:
-            view?.showDragableExample()
+            return DragableExampleTableViewFactory()
         case .singleSelection:
-            view?.showSingleSelectionExample()
+            return SingleSelectionExampleTableViewFactory()
         case .editable:
-            view?.showEditableExample()
+            return EditableTableViewFactory()
         case .alternateStatic:
-            view?.showAlternateStaticExample()
-//        case .collectionView:
-//            view?.showCollectionViewExample()
+            return AlternateStaticTableViewFactory()
         }
     }
 }

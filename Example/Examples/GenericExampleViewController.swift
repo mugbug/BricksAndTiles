@@ -9,6 +9,7 @@
 import UIKit
 
 protocol GenericPresenterProtocol: AnyObject {
+    var exampleName: String { get }
     func setupDataSource(in tableView: UITableView)
 }
 
@@ -35,6 +36,7 @@ final class GenericExampleViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubviewWithConstraints(subview: tableView)
+        title = presenter.exampleName
 
         presenter.setupDataSource(in: tableView)
     }

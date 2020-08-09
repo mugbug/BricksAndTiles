@@ -17,42 +17,20 @@ final class ExampleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
+        title = "TableViewFactory Example"
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.view.addSubviewWithConstraints(subview: tableView)
 
         presenter.setupDataSource(in: tableView)
     }
-
-    private func showExample(withFactory factory: TableViewFactoryProtocol, isEditable: Bool) {
-        let presenter = GenericExamplePresenter(factory: factory)
-        let dragableExample = GenericExampleViewController(presenter: presenter)
-        dragableExample.toggleEditable(isEditable)
-        self.navigationController?.pushViewController(dragableExample, animated: true)
-    }
 }
 
 extension ExampleListViewController: ExampleListViewDelegate {
-    func showCollectionViewExample() {
-        let viewController = CollectionViewExampleViewController()
-        self.navigationController?.pushViewController(viewController, animated: true)
-    }
-
-    func showDragableExample() {
-        let factory = DragableExampleTableViewFactory()
-        showExample(withFactory: factory, isEditable: true)
-    }
-
-    func showSingleSelectionExample() {
-        let factory = SingleSelectionExampleTableViewFactory()
-        showExample(withFactory: factory, isEditable: false)
-    }
-
-    func showEditableExample() {
-        let factory = EditableTableViewFactory()
-        showExample(withFactory: factory, isEditable: false)
-    }
-
-    func showAlternateStaticExample() {
-        let factory = AlternateStaticTableViewFactory()
-        showExample(withFactory: factory, isEditable: false)
+    func showExample(forType type: ExampleType,
+                     isEditable: Bool) {
+        let presenter = GenericExamplePresenter(type: type)
+        let dragableExample = GenericExampleViewController(presenter: presenter)
+        dragableExample.toggleEditable(isEditable)
+        self.navigationController?.pushViewController(dragableExample, animated: true)
     }
 }

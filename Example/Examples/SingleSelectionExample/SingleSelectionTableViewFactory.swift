@@ -13,7 +13,8 @@ class SingleSelectionExampleTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = SingleSelectionSection(
             cellBuilders: cellBuilders(),
-            header: header()
+            header: header(),
+            footer: UIView()
         )
         return [section]
     }

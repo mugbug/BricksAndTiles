@@ -13,7 +13,8 @@ class EditableTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = EditableSection(
             cellBuilders: cellBuilders(),
-            header: header()
+            header: header(),
+            footer: UIView()
         )
         return [section]
     }
