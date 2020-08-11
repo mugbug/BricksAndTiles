@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class EditableTableViewFactory: TableViewFactoryProtocol {
+struct EditableTableViewFactory: TableViewFactoryProtocol {
 
     func make() -> [TableViewSection] {
         let section = EditableSection(

@@ -41,7 +41,9 @@ public protocol TableViewSection {
                    to destinationIndexPath: IndexPath)
 
     func tableView(_ tableView: UITableView,
-                   editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+                   leadingActionsForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    func tableView(_ tableView: UITableView,
+                   trailingActionsForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     func tableView(_ tableView: UITableView,
                    canEditRowAt indexPath: IndexPath) -> Bool
 
@@ -85,7 +87,12 @@ public extension TableViewSection {
                    to destinationIndexPath: IndexPath) { }
 
     func tableView(_ tableView: UITableView,
-                   editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+                   leadingActionsForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return nil
+    }
+
+    func tableView(_ tableView: UITableView,
+                   trailingActionsForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         return nil
     }
 

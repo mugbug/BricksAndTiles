@@ -8,7 +8,8 @@
 import UIKit
 
 public protocol TableViewEditableCellBuilder: TableViewCellBuilder {
-    func cellActions(_ tableView: UITableView, at indexPath: IndexPath) -> [EditableCellActionFactory]
+    func cellLeadingActions(_ tableView: UITableView, at indexPath: IndexPath) -> [EditableCellActionFactory]
+    func cellTrailingActions(_ tableView: UITableView, at indexPath: IndexPath) -> [EditableCellActionFactory]
     func canEditRow() -> Bool
 }
 

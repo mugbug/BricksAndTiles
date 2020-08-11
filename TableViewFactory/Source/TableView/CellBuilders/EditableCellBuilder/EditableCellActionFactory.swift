@@ -19,13 +19,13 @@ public struct EditableCellActionFactory {
     // MARK: - Initialization
 
     let type: EditableCellActionFactory.ActionType
-    private let style: UITableViewRowAction.Style
+    private let style: UIContextualAction.Style
     private let title: String
     private let backgroundColor: UIColor
     private let actionCompletion: () -> Void
 
     public init(type: EditableCellActionFactory.ActionType,
-                style: UITableViewRowAction.Style,
+                style: UIContextualAction.Style,
                 title: String,
                 backgroundColor: UIColor,
                 actionCompletion: @escaping () -> Void) {
@@ -38,9 +38,10 @@ public struct EditableCellActionFactory {
 
     // MARK: - Factory
 
-    public func make(with handler: @escaping HandlerType) -> UITableViewRowAction {
-        let action = UITableViewRowAction(style: style, title: title) { _, _ in
+    public func make(with handler: @escaping HandlerType) -> UIContextualAction {
+        let action = UIContextualAction(style: style, title: title) { _, _, completion in
             handler(self.actionCompletion)
+            completion(true)
         }
 
         action.backgroundColor = backgroundColor

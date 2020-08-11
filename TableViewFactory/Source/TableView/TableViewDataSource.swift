@@ -116,9 +116,18 @@ extension TableViewDataSource: UITableViewDelegate {
         return section(at: sourceIndexPath).tableView(tableView, moveRowAt: sourceIndexPath, to: destinationIndexPath)
     }
 
-    public func tableView(_ tableView: UITableView,
-                          editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        return section(at: indexPath).tableView(tableView, editActionsForRowAt: indexPath)
+    public func tableView(
+        _ tableView: UITableView,
+        leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+        return section(at: indexPath).tableView(tableView, leadingActionsForRowAt: indexPath)
+    }
+
+    public func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+        return section(at: indexPath).tableView(tableView, trailingActionsForRowAt: indexPath)
     }
 
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

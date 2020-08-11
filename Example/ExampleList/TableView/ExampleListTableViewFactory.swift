@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class ExampleListTableViewFactory {
+struct ExampleListTableViewFactory {
     typealias SelectedExample = (ExampleType) -> Void
 
     private let didSelect: SelectedExample
