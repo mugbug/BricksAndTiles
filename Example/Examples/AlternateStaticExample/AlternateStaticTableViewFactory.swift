@@ -13,32 +13,42 @@ struct AlternateStaticTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = StaticSection(
             cellBuilders: cellBuilders(),
-            header: header(),
-            footer: UIView()
+            header: header()
         )
-        return [section]
+        return [
+            horizontalListSection(),
+            section,
+            horizontalListSection(),
+            horizontalListSection()
+        ]
     }
 
     func cellBuilders() -> [TableViewCellBuilder] {
         return [
-            HorizontalListCellBuilder(),
-            FirstStaticCellBuilder(),
-            HorizontalListCellBuilder(),
             SecondStaticCellBuilder(),
-            FirstStaticCellBuilder(),
-            HorizontalListCellBuilder()
+            FirstStaticCellBuilder()
         ]
+    }
+
+    func horizontalListSection() -> StaticSection {
+        return StaticSection(
+            cellBuilders: [HorizontalListCellBuilder(),
+                           FirstStaticCellBuilder()],
+            header: header()
+        )
     }
 
     func header() -> UIView {
         let header = UILabel()
         header.text = "This is a section"
+        header.font = .preferredFont(forTextStyle: .title1)
+        header.textColor = .white
         let view = UIView()
         view.addSubviewWithConstraints(
             subview: header,
             insets: .init(top: 16, left: 16, bottom: -16, right: -16)
         )
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        view.backgroundColor = .darkGray
         return view
     }
 }

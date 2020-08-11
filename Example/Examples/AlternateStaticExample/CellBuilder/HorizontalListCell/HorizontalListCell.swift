@@ -29,14 +29,14 @@ final class HorizontalListCell: UITableViewCell, Reusable {
             collectionViewLayout: flowLayout()
         )
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .darkGray
         return collectionView
     }()
 
     private func flowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .init(top: 0, left: 16, bottom: 0, right: 16)
-        layout.headerReferenceSize = CGSize(width: 50, height: 50)
+        layout.headerReferenceSize = CGSize(width: 100, height: 50)
         layout.scrollDirection = .horizontal
         return layout
     }
@@ -53,22 +53,13 @@ final class HorizontalListCell: UITableViewCell, Reusable {
 
 extension HorizontalListCell: ViewCodeProtocol {
     func setupHierarchy() {
-        contentView.addSubviewWithConstraints(
-            subview: stackView,
-            insets: .init(top: 10, left: 0, bottom: -10, right: 0)
-        )
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(collectionView)
+        contentView.addSubviewWithConstraints(subview: collectionView)
     }
 
     func setupConstraints() { }
 
     func additionalSetup() {
-        let color: UIColor = [
-            .black, .blue, .brown, .cyan, .darkGray,
-            .green, .lightGray, .magenta, .orange, .purple
-        ].randomElement()!
-        let factory = HorizontalListFactory(backgroundColor: color).make()
+        let factory = HorizontalListFactory().make()
         self.dataSource = CollectionViewDataSource(
             sections: factory,
             collectionView: collectionView
