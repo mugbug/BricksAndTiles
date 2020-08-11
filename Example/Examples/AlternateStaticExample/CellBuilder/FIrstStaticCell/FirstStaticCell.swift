@@ -12,11 +12,10 @@ import ViewCodeHelper
 
 class FirstStaticCell: UITableViewCell, Reusable {
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "First cell"
-        return label
-    }()
+    private lazy var coverArt = UIImageView()
+        .. \.clipsToBounds <- true
+        .. \.contentMode <- .scaleAspectFit
+        .. \.image <- UIImage(named: "ed-sheeran-live")
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -30,19 +29,16 @@ class FirstStaticCell: UITableViewCell, Reusable {
 
 extension FirstStaticCell: ViewCodeProtocol {
     func setupHierarchy() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubviewWithConstraints(subview: coverArt)
     }
 
     func setupConstraints() {
-        titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
+        coverArt.constraint { view in
+            [view.heightAnchor.constraint(equalToConstant: 200)]
         }
     }
 
     func additionalSetup() {
-        backgroundColor = .green
+        contentView.backgroundColor = .darkGray
     }
 }

@@ -11,8 +11,6 @@ import ViewCodeHelper
 
 struct HorizontalListFactory {
 
-    var backgroundColor: UIColor = .gray
-
     func make() -> [CollectionViewSection] {
         let section = StaticCollectionSection(
             cellBuilders: cellBuilders()
