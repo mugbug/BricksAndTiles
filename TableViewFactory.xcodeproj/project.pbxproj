@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
+		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
+		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7342B34E247082A000644987 /* TableViewFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; };
 		7342B34F247082A000644987 /* TableViewFactory.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7342B362247089D000644987 /* ExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B361247089D000644987 /* ExampleType.swift */; };
@@ -22,9 +25,6 @@
 		73AB8FA72470737A000A7BF5 /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA62470737A000A7BF5 /* SelectableTableViewCell.swift */; };
 		73AB8FA924707460000A7BF5 /* SelectableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8FA824707460000A7BF5 /* SelectableCellBuilder.swift */; };
 		73B8FB0E24D38F2300B32167 /* ViewCodeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B8FB0C24D38F2300B32167 /* ViewCodeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B8FB1124D38F2300B32167 /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
-		73B8FB1224D38F2300B32167 /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73B8FB1724D38F2900B32167 /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 73B8FB1624D38F2900B32167 /* ViewCodeHelper */; };
 		73B8FB1824D38F5200B32167 /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		73B8FB1924D38F5200B32167 /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73B8FB2124D394F900B32167 /* StaticCollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */; };
@@ -75,19 +75,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		733732B124E20F3E008DAF3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73B8FB0924D38F2300B32167;
+			remoteInfo = ViewCodeHelper;
+		};
 		73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EBF15ADE229B3A630055DF69;
 			remoteInfo = TableViewFactory;
-		};
-		73B8FB0F24D38F2300B32167 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 73B8FB0924D38F2300B32167;
-			remoteInfo = ViewCodeHelper;
 		};
 		73B8FB1A24D38F5200B32167 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -119,7 +119,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73B8FB1224D38F2300B32167 /* ViewCodeHelper.framework in Embed Frameworks */,
+				733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */,
 				7342B34F247082A000644987 /* TableViewFactory.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -213,7 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B8FB1724D38F2900B32167 /* ViewCodeHelper in Frameworks */,
+				733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B8FB1124D38F2300B32167 /* ViewCodeHelper.framework in Frameworks */,
+				733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */,
 				7342B34E247082A000644987 /* TableViewFactory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,7 +672,7 @@
 			);
 			name = ViewCodeHelper;
 			packageProductDependencies = (
-				73B8FB1624D38F2900B32167 /* ViewCodeHelper */,
+				733732AD24E20F2E008DAF3A /* ViewCodeHelper */,
 			);
 			productName = ViewCodeHelper;
 			productReference = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */;
@@ -692,7 +692,7 @@
 			);
 			dependencies = (
 				73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */,
-				73B8FB1024D38F2300B32167 /* PBXTargetDependency */,
+				733732B224E20F3E008DAF3A /* PBXTargetDependency */,
 			);
 			name = Example;
 			packageProductDependencies = (
@@ -966,15 +966,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		733732B224E20F3E008DAF3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73B8FB0924D38F2300B32167 /* ViewCodeHelper */;
+			targetProxy = 733732B124E20F3E008DAF3A /* PBXContainerItemProxy */;
+		};
 		73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBF15ADE229B3A630055DF69 /* TableViewFactory */;
 			targetProxy = 73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */;
-		};
-		73B8FB1024D38F2300B32167 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 73B8FB0924D38F2300B32167 /* ViewCodeHelper */;
-			targetProxy = 73B8FB0F24D38F2300B32167 /* PBXContainerItemProxy */;
 		};
 		73B8FB1B24D38F5200B32167 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1429,7 +1429,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		73B8FB1624D38F2900B32167 /* ViewCodeHelper */ = {
+		733732AD24E20F2E008DAF3A /* ViewCodeHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */;
 			productName = ViewCodeHelper;

@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class SingleSelectionExampleTableViewFactory: TableViewFactoryProtocol {
+struct SingleSelectionExampleTableViewFactory: TableViewFactoryProtocol {
 
     func make() -> [TableViewSection] {
         let section = SingleSelectionSection(

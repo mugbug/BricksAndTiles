@@ -91,17 +91,27 @@ public class EditableSection: TableViewSection {
     }
 
     public func tableView(_ tableView: UITableView,
-                          editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+                          leadingActionsForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-        let cellActionFactories = row(at: indexPath).cellActions(tableView, at: indexPath)
+        let cellActionFactories = row(at: indexPath).cellLeadingActions(tableView, at: indexPath)
 
-        return cellActionFactories.map { factory in
-            self.makeAction(
-                with: factory,
-                at: indexPath,
-                on: tableView
-            )
-        }
+        return makeSwipeConfiguration(
+            with: cellActionFactories,
+            at: indexPath,
+            on: tableView
+        )
+    }
+
+    public func tableView(_ tableView: UITableView,
+                          trailingActionsForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let cellActionFactories = row(at: indexPath).cellTrailingActions(tableView, at: indexPath)
+
+        return makeSwipeConfiguration(
+            with: cellActionFactories,
+            at: indexPath,
+            on: tableView
+        )
     }
 
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -110,9 +120,22 @@ public class EditableSection: TableViewSection {
 }
 
 private extension EditableSection {
+    func makeSwipeConfiguration(with factories: [EditableCellActionFactory],
+                                at indexPath: IndexPath,
+                                on tableView: UITableView) -> UISwipeActionsConfiguration {
+        let actions = factories.map { factory in
+            self.makeAction(
+                with: factory,
+                at: indexPath,
+                on: tableView
+            )
+        }
+        return UISwipeActionsConfiguration(actions: actions)
+    }
+
     func makeAction(with factory: EditableCellActionFactory,
                     at indexPath: IndexPath,
-                    on tableView: UITableView) -> UITableViewRowAction {
+                    on tableView: UITableView) -> UIContextualAction {
         var handler: EditableCellActionFactory.HandlerType
         switch factory.type {
         case .delete:

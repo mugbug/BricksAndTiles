@@ -8,7 +8,7 @@
 
 import TableViewFactory
 
-class AlternateStaticTableViewFactory: TableViewFactoryProtocol {
+struct AlternateStaticTableViewFactory: TableViewFactoryProtocol {
 
     func make() -> [TableViewSection] {
         let section = StaticSection(

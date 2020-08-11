@@ -19,10 +19,14 @@ struct FirstStaticCellBuilder: TableViewCellBuilder {
     }
 
     func tableViewShouldSelectCell(_ tableView: UITableView) -> Bool {
-        false
+        true
     }
 
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
+    }
+
+    func tableViewDidSelectCell(_ tableView: UITableView) {
+        print("did select cell")
     }
 }

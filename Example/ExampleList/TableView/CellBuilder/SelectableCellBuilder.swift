@@ -9,7 +9,7 @@
 import Foundation
 import TableViewFactory
 
-class SelectableCellBuilder: TableViewCellBuilder {
+struct SelectableCellBuilder: TableViewCellBuilder {
 
     private let type: ExampleType
     private let didSelect: () -> Void

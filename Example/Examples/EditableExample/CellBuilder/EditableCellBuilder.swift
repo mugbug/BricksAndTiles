@@ -27,26 +27,53 @@ struct EditableCellBuilder: TableViewEditableCellBuilder {
         return false
     }
 
-    func cellActions(_ tableView: UITableView,
-                     at indexPath: IndexPath) -> [EditableCellActionFactory] {
-        let deleteAction = EditableCellActionFactory(
-            type: .delete,
-            style: .destructive,
-            title: "Remover",
-            backgroundColor: .red,
-            actionCompletion: {}
-        )
-
-        let newAction = EditableCellActionFactory(
+    func cellLeadingActions(_ tableView: UITableView,
+                            at indexPath: IndexPath) -> [EditableCellActionFactory] {
+        let readAction = EditableCellActionFactory(
             type: .custom,
             style: .normal,
             title: "Read",
-            backgroundColor: .gray,
+            backgroundColor: .systemBlue,
             actionCompletion: {
-                print("Do something")
+                print("Marked as read")
             }
         )
 
-        return [deleteAction, newAction]
+        let favAction = EditableCellActionFactory(
+            type: .custom,
+            style: .normal,
+            title: "Fav",
+            backgroundColor: .systemYellow,
+            actionCompletion: {
+                print("Marked as fav")
+            }
+        )
+
+        return [readAction, favAction]
+    }
+
+    func cellTrailingActions(_ tableView: UITableView,
+                             at indexPath: IndexPath) -> [EditableCellActionFactory] {
+        let deleteAction = EditableCellActionFactory(
+            type: .delete,
+            style: .destructive,
+            title: "Remove",
+            backgroundColor: .red,
+            actionCompletion: {
+                print("Removed")
+            }
+        )
+
+        let likeAction = EditableCellActionFactory(
+            type: .custom,
+            style: .destructive,
+            title: "Like",
+            backgroundColor: .systemTeal,
+            actionCompletion: {
+                print("Marked as fav")
+            }
+        )
+
+        return [deleteAction, likeAction]
     }
 }
