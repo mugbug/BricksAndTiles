@@ -37,8 +37,4 @@ extension FirstStaticCell: ViewCodeProtocol {
             [view.heightAnchor.constraint(equalToConstant: 200)]
         }
     }
-
-    func additionalSetup() {
-        contentView.backgroundColor = .darkGray
-    }
 }

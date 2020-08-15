@@ -12,15 +12,6 @@ import TableViewFactory
 
 final class HorizontalListCell: UITableViewCell, Reusable {
 
-    lazy var stackView = UIStackView()
-        .. \.axis <- .vertical
-        .. \.spacing <- 10
-
-    lazy var titleLabel = UILabel()
-        .. \.font <- .systemFont(ofSize: 20)
-        .. \.text <- "Some horizontal list"
-        .. \.textColor <- .black
-
     var dataSource: CollectionViewDataSource?
 
     lazy var collectionView: UICollectionView = {
@@ -29,14 +20,15 @@ final class HorizontalListCell: UITableViewCell, Reusable {
             collectionViewLayout: flowLayout()
         )
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .darkGray
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
 
     private func flowLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .init(top: 0, left: 16, bottom: 0, right: 16)
-        layout.headerReferenceSize = CGSize(width: 100, height: 50)
+        // Uncomment to show header
+//        layout.headerReferenceSize = CGSize(width: 100, height: 50)
         layout.scrollDirection = .horizontal
         return layout
     }
@@ -53,7 +45,10 @@ final class HorizontalListCell: UITableViewCell, Reusable {
 
 extension HorizontalListCell: ViewCodeProtocol {
     func setupHierarchy() {
-        contentView.addSubviewWithConstraints(subview: collectionView)
+        contentView.addSubviewWithConstraints(
+            subview: collectionView,
+            insets: .init(all: 16)
+        )
     }
 
     func setupConstraints() { }

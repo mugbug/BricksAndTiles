@@ -10,35 +10,10 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class SecondStaticCell: UITableViewCell, Reusable {
+class SecondStaticCell: LabelCell, CellConfigurable {
+    typealias ViewModel = String
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Second cell"
-        return label
-    }()
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        buildView()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension SecondStaticCell: ViewCodeProtocol {
-    func setupHierarchy() {
-        contentView.addSubviewWithConstraints(
-            subview: titleLabel,
-            insets: .init(top: 44, left: 16, bottom: -44, right: -16)
-        )
-    }
-
-    func setupConstraints() {}
-
-    func additionalSetup() {
-        backgroundColor = .orange
+    func configure(with model: String) {
+        textLabel?.text = model
     }
 }

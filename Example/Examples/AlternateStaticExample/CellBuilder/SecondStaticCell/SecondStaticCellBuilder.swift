@@ -15,6 +15,7 @@ struct SecondStaticCellBuilder: TableViewCellBuilder {
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
         let cell: SecondStaticCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: "** Some AD **")
         return cell
     }
 

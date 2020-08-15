@@ -9,6 +9,7 @@
 import TableViewFactory
 
 struct DragableExampleCellBuilder: TableViewArrangeableCellBuilder {
+    typealias CellType = DragableExampleTableViewCell
 
     var model: DragableExampleTableViewCell.ViewModel
 
@@ -17,11 +18,11 @@ struct DragableExampleCellBuilder: TableViewArrangeableCellBuilder {
     }
 
     func registerCellIdentifier(in tableView: UITableView) {
-        tableView.register(DragableExampleTableViewCell.self)
+        tableView.register(CellType.self)
     }
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
-        let cell: DragableExampleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        let cell: CellType = tableView.dequeueReusableCell(for: indexPath)
         cell.configure(with: model)
         return cell
     }

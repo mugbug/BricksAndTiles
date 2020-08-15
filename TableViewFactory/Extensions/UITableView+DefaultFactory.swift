@@ -14,7 +14,7 @@ public extension UITableView {
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 44
         if #available(iOS 13.0, *) {
-            tableView.backgroundColor = .systemGray6
+            tableView.backgroundColor = .groupTableViewBackground
         } else {
             tableView.backgroundColor = .lightGray
         }
