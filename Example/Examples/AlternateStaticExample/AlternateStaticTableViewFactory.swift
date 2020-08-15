@@ -6,35 +6,39 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
+import ViewCodeHelper
 import TableViewFactory
+
+extension UIEdgeInsets: Builder {}
 
 struct AlternateStaticTableViewFactory: TableViewFactoryProtocol {
 
     func make() -> [TableViewSection] {
-        let section = StaticSection(
-            cellBuilders: cellBuilders(),
-            header: SimpleHeader(title: "Sit back and relax")
+        return [
+            section(title: "The best indie albums of the 2000s",
+                    builder: HorizontalListCellBuilder()),
+            section(title: "Chill",
+                    builder: HorizontalListCellBuilder()),
+            section(title: "Indie's indispensables",
+                    builder: FirstStaticCellBuilder()),
+            section(title: "Throwback",
+                    builder: HorizontalListCellBuilder())
+        ]
+    }
+
+    func section(title: String, builder: TableViewCellBuilder) -> TableViewSection {
+        StaticSection(
+            cellBuilders: [builder],
+            header: header(title: title)
         )
-        return [
-            horizontalListSection(),
-            section,
-            horizontalListSection(),
-            horizontalListSection()
-        ]
     }
 
-    func cellBuilders() -> [TableViewCellBuilder] {
-        return [
-            SecondStaticCellBuilder(),
-            FirstStaticCellBuilder()
-        ]
-    }
-
-    func horizontalListSection() -> StaticSection {
-        return StaticSection(
-            cellBuilders: [HorizontalListCellBuilder(),
-                           FirstStaticCellBuilder()],
-            header: SimpleHeader(title: "Rainy days")
+    func header(title: String) -> UIView {
+        SimpleHeader(
+            title: title,
+            textStyle: .largeTitle,
+            insets: .init(all: 16)
+                .. \.top <- 30
         )
     }
 }

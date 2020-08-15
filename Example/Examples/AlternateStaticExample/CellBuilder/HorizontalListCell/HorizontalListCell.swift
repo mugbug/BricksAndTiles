@@ -47,7 +47,12 @@ extension HorizontalListCell: ViewCodeProtocol {
     func setupHierarchy() {
         contentView.addSubviewWithConstraints(
             subview: collectionView,
-            insets: .init(all: 16)
+            insets: .init(
+                top: 16,
+                left: 0,
+                bottom: -16,
+                right: 0
+            )
         )
     }
 

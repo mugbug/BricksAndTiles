@@ -24,6 +24,6 @@ struct HorizontalListCellBuilder: TableViewCellBuilder {
     }
 
     var cellHeight: CGFloat {
-        return 150
+        return 200
     }
 }
