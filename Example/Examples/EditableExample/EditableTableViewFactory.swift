@@ -13,7 +13,7 @@ struct EditableTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = EditableSection(
             cellBuilders: cellBuilders(),
-            header: header(),
+            header: SimpleHeader(title: "Available Songs"),
             footer: UIView()
         )
         return [section]
@@ -21,11 +21,5 @@ struct EditableTableViewFactory: TableViewFactoryProtocol {
 
     func cellBuilders() -> [TableViewEditableCellBuilder] {
         return (0...5).map { _ in EditableCellBuilder() }
-    }
-
-    func header() -> UIView {
-        let header = UILabel()
-        header.text = "This is a section"
-        return header
     }
 }

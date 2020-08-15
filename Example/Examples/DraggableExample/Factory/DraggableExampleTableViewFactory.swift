@@ -20,13 +20,13 @@ struct DragableExampleTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = ArrangeableSection(
             cellBuilders: cellBuilders(songs: model.topSongs),
-            header: header(title: "My Top Songs"),
+            header: SimpleHeader(title: "My Top Songs"),
             footer: UIView(),
             moveRowCompletion: moveRowCompletion
         )
         let section1 = ArrangeableSection(
             cellBuilders: cellBuilders(songs: model.songs),
-            header: header(title: "My Songs"),
+            header: SimpleHeader(title: "My Songs"),
             footer: UIView(),
             moveRowCompletion: moveRowCompletion
         )

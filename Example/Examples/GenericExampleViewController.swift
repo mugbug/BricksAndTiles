@@ -47,13 +47,3 @@ final class GenericExampleViewController: UIViewController {
         tableView.isEditing = isEditable
     }
 }
-
-func header(title: String) -> UIView {
-    let header = UILabel()
-    header.font = .preferredFont(forTextStyle: .title2)
-    header.text = title
-
-    let view = UIView()
-    view.addSubviewWithConstraints(subview: header, insets: .init(all: 16))
-    return view
-}
