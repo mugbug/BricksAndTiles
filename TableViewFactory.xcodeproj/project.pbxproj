@@ -13,13 +13,13 @@
 		73271F5724E8031D00FE1546 /* DraggablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F5524E8031D00FE1546 /* DraggablePresenter.swift */; };
 		73271F5A24E804F700FE1546 /* DragableExampleCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F5824E804F700FE1546 /* DragableExampleCellBuilder.swift */; };
 		73271F5B24E804F700FE1546 /* DragableExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F5924E804F700FE1546 /* DragableExampleTableViewCell.swift */; };
+		73271F5D24E8255100FE1546 /* GenericExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */; };
 		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
 		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7342B34E247082A000644987 /* TableViewFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; };
 		7342B34F247082A000644987 /* TableViewFactory.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7342B362247089D000644987 /* ExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B361247089D000644987 /* ExampleType.swift */; };
-		7342B3702471B67200644987 /* GenericExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B36F2471B67200644987 /* GenericExampleViewController.swift */; };
 		7342B3732471B82800644987 /* GenericExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B3722471B82800644987 /* GenericExamplePresenter.swift */; };
 		7342B3772471B9D200644987 /* SingleSelectionTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B3752471B9C500644987 /* SingleSelectionTableViewFactory.swift */; };
 		736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */; };
@@ -148,8 +148,8 @@
 		73271F5524E8031D00FE1546 /* DraggablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DraggablePresenter.swift; path = Example/Examples/DraggableExample/DraggablePresenter.swift; sourceTree = SOURCE_ROOT; };
 		73271F5824E804F700FE1546 /* DragableExampleCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragableExampleCellBuilder.swift; path = Example/Examples/DraggableExample/Factory/CellBuilder/DragableExampleCellBuilder.swift; sourceTree = SOURCE_ROOT; };
 		73271F5924E804F700FE1546 /* DragableExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragableExampleTableViewCell.swift; path = Example/Examples/DraggableExample/Factory/CellBuilder/DragableExampleTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericExampleViewController.swift; path = Example/Examples/GenericExampleViewController.swift; sourceTree = SOURCE_ROOT; };
 		7342B361247089D000644987 /* ExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleType.swift; path = Example/ExampleList/Entity/ExampleType.swift; sourceTree = SOURCE_ROOT; };
-		7342B36F2471B67200644987 /* GenericExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExampleViewController.swift; sourceTree = "<group>"; };
 		7342B3722471B82800644987 /* GenericExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExamplePresenter.swift; sourceTree = "<group>"; };
 		7342B3752471B9C500644987 /* SingleSelectionTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionTableViewFactory.swift; sourceTree = "<group>"; };
 		736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -424,8 +424,8 @@
 		73B8FB3824D5B70000B32167 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */,
 				7342B3722471B82800644987 /* GenericExamplePresenter.swift */,
-				7342B36F2471B67200644987 /* GenericExampleViewController.swift */,
 				737FEA1E24A77461000E7744 /* AlternateStaticExample */,
 				736E6B9424B224F50086B985 /* CollectionViewExample */,
 				73D12D7A247068A6008B0AB9 /* DraggableExample */,
@@ -917,7 +917,6 @@
 				73B8FB4124D5B72C00B32167 /* EditableTableViewFactory.swift in Sources */,
 				7342B362247089D000644987 /* ExampleType.swift in Sources */,
 				73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */,
-				7342B3702471B67200644987 /* GenericExampleViewController.swift in Sources */,
 				73B8FB5524D5B74900B32167 /* FirstStaticCellBuilder.swift in Sources */,
 				73271F5724E8031D00FE1546 /* DraggablePresenter.swift in Sources */,
 				7342B3732471B82800644987 /* GenericExamplePresenter.swift in Sources */,
@@ -942,6 +941,7 @@
 				73B8FB5E24D5B78F00B32167 /* CollectionViewExampleViewController.swift in Sources */,
 				73AB8FA924707460000A7BF5 /* SelectableCellBuilder.swift in Sources */,
 				73AB8FA12470726B000A7BF5 /* ExampleListPresenter.swift in Sources */,
+				73271F5D24E8255100FE1546 /* GenericExampleViewController.swift in Sources */,
 				73B8FB4824D5B73900B32167 /* SingleSelectionTableViewCell.swift in Sources */,
 				73B8FB5D24D5B78F00B32167 /* HorizontalListCellBuilder.swift in Sources */,
 				73AB8FA4247072AB000A7BF5 /* ExampleListTableViewFactory.swift in Sources */,

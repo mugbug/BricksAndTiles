@@ -34,18 +34,6 @@ struct DragableExampleTableViewFactory: TableViewFactoryProtocol {
     }
 
     func cellBuilders(songs: [Song]) -> [TableViewArrangeableCellBuilder] {
-        return songs.map { song in
-            DragableExampleCellBuilder(model: "\(song.name)")
-        }
-    }
-
-    func header(title: String) -> UIView {
-        let header = UILabel()
-        header.font = .preferredFont(forTextStyle: .title2)
-        header.text = title
-
-        let view = UIView()
-        view.addSubviewWithConstraints(subview: header, insets: .init(all: 16))
-        return view
+        return songs.map(DragableExampleCellBuilder.init)
     }
 }

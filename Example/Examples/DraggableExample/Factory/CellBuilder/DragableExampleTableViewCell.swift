@@ -11,13 +11,7 @@ import TableViewFactory
 import ViewCodeHelper
 
 class DragableExampleTableViewCell: UITableViewCell, CellConfigurable {
-    typealias ViewModel = String
-
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .title1)
-        return label
-    }()
+    typealias ViewModel = Song
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,17 +22,25 @@ class DragableExampleTableViewCell: UITableViewCell, CellConfigurable {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with model: String) {
-        titleLabel.text = model
+    func configure(with model: Song) {
+        textLabel?.text = model.name
+        if #available(iOS 13.0, *) {
+            let image = UIImage(systemName: "star.fill")
+            imageView?.image = model.isFav ? image : nil
+            imageView?.tintColor = .systemYellow
+        }
     }
 }
 
 extension DragableExampleTableViewCell: ViewCodeProtocol {
     func setupHierarchy() {
-        contentView.addSubviewWithConstraints(subview: titleLabel, insets: .init(all: 20))
     }
 
     func setupConstraints() { }
+
+    func additionalSetup() {
+        textLabel?.font = .preferredFont(forTextStyle: .title1)
+    }
 }
 
 //#if canImport(SwiftUI) && DEBUG

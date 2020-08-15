@@ -30,7 +30,7 @@ struct SelectableCellBuilder: TableViewCellBuilder {
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
         let cell: SelectableExampleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(forType: type)
+        cell.configure(with: type)
         return cell
     }
 

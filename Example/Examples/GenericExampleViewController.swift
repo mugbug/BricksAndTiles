@@ -48,25 +48,12 @@ final class GenericExampleViewController: UIViewController {
     }
 }
 
-//#if canImport(SwiftUI) && DEBUG
-//import SwiftUI
-//struct DragableViewRepresentable: UIViewRepresentable {
-//
-//    var currentViewController = DragableExampleViewController()
-//
-//    func makeUIView(context: Context) -> UIView {
-//        return currentViewController.view!
-//    }
-//
-//    func updateUIView(_ view: UIView, context: Context) {
-//
-//    }
-//}
-//
-//@available(iOS 13.0, *)
-//struct DragableViewController_Preview: PreviewProvider {
-//    static var previews: some View {
-//        DragableViewRepresentable()
-//    }
-//}
-//#endif
+func header(title: String) -> UIView {
+    let header = UILabel()
+    header.font = .preferredFont(forTextStyle: .title2)
+    header.text = title
+
+    let view = UIView()
+    view.addSubviewWithConstraints(subview: header, insets: .init(all: 16))
+    return view
+}

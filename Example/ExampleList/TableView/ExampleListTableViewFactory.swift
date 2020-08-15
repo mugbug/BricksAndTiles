@@ -20,7 +20,7 @@ struct ExampleListTableViewFactory {
     func make() -> [TableViewSection] {
         let section = StaticSection(
             cellBuilders: cellBuilders(),
-            header: header(),
+            header: header(title: "Examples"),
             footer: UIView()
         )
         return [section]
@@ -32,11 +32,5 @@ struct ExampleListTableViewFactory {
                 self.didSelect(type)
             }
         }
-    }
-
-    func header() -> UIView {
-        let header = UILabel()
-        header.text = "Examples"
-        return header
     }
 }

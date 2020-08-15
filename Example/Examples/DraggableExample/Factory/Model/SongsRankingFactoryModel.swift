@@ -13,4 +13,14 @@ struct SongsRankingFactoryModel {
 
 struct Song {
     let name: String
+    var isFav: Bool = false
+
+    init(name: String) {
+        self.name = name
+    }
+
+    init(name: String, isFav: Bool) {
+        self.name = name
+        self.isFav = isFav
+    }
 }

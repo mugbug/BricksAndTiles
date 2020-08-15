@@ -10,13 +10,8 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class SelectableExampleTableViewCell: UITableViewCell, Reusable {
-
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hello World"
-        return label
-    }()
+class SelectableExampleTableViewCell: UITableViewCell, CellConfigurable {
+    typealias ViewModel = ExampleType
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -29,23 +24,18 @@ class SelectableExampleTableViewCell: UITableViewCell, Reusable {
 
     // MARK: - Setup
 
-    func configure(forType type: ExampleType) {
-        titleLabel.text = type.rawValue
+    func configure(with model: ExampleType) {
+        textLabel?.text = model.rawValue
     }
 }
 
 extension SelectableExampleTableViewCell: ViewCodeProtocol {
-    func setupHierarchy() {
-        contentView.addSubview(titleLabel)
-    }
+    func setupHierarchy() {}
 
-    func setupConstraints() {
-        titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
-        }
+    func setupConstraints() {}
+
+    func additionalSetup() {
+        textLabel?.font = .preferredFont(forTextStyle: .title1)
         self.accessoryType = .disclosureIndicator
     }
 }

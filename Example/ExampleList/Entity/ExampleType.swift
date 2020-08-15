@@ -7,9 +7,9 @@
 //
 
 enum ExampleType: String, CaseIterable {
-    case dragable = "Drag n' Drop"
-    case editable = "Slide for actions"
+    case draggable = "Draggable"
+    case editable = "Slide for Actions"
     case singleSelection = "Single selection"
-    case alternateStatic = "Alternate static"
+    case alternateStatic = "Alternating examples"
 //    case collectionView = "CollectionView"
 }
