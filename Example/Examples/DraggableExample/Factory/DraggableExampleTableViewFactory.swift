@@ -33,7 +33,6 @@ struct DragableExampleTableViewFactory: TableViewFactoryProtocol {
         return [section, section1]
     }
 
-
     func cellBuilders(songs: [Song]) -> [TableViewArrangeableCellBuilder] {
         return songs.map { song in
             DragableExampleCellBuilder(model: "\(song.name)")

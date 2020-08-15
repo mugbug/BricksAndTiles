@@ -26,13 +26,14 @@ class DraggablePresenter {
     init(view: DraggableViewDelelgate) {
         self.view = view
         factoryModel = SongsRankingFactoryModel(
-            topSongs: [],
-            songs: [
+            topSongs: [
                 "Strawberry Fields Forever",
                 "The End",
                 "Hey You",
                 "Breathe (In The Air)",
-                "Us and Them",
+                "Us and Them"
+                ].map(Song.init),
+            songs: [
                 "Happiness is a Warm Gun",
                 "Across The Universe",
                 "People Are Strange",
@@ -41,8 +42,6 @@ class DraggablePresenter {
                 ].map(Song.init)
         )
     }
-
-//    weak var view: ExampleListViewDelegate?
 
     func setupDataSource(in tableView: UITableView) {
         self.dataSource = TableViewDataSource(

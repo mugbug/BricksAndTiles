@@ -11,7 +11,6 @@ import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
-//    func reloadTableView()
 }
 
 class ExampleListPresenter {
