@@ -11,6 +11,7 @@ import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
+//    func reloadTableView()
 }
 
 class ExampleListPresenter {
@@ -38,7 +39,10 @@ extension ExampleType {
     func tableFactory() -> TableViewFactoryProtocol {
         switch self {
         case .dragable:
-            return DragableExampleTableViewFactory()
+            return DragableExampleTableViewFactory(
+                model: SongsRankingFactoryModel(topSongs: [], songs: []),
+                moveRowCompletion: { (_, _) in }
+            )
         case .singleSelection:
             return SingleSelectionExampleTableViewFactory()
         case .editable:

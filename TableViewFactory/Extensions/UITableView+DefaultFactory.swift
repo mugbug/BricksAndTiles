@@ -8,12 +8,16 @@
 
 public extension UITableView {
     static func standard() -> UITableView {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 44
-        tableView.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            tableView.backgroundColor = .systemGray6
+        } else {
+            tableView.backgroundColor = .lightGray
+        }
         return tableView
     }
 }

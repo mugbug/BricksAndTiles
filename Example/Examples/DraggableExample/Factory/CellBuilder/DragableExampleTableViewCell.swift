@@ -10,11 +10,12 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class DragableExampleTableViewCell: UITableViewCell, Reusable {
+class DragableExampleTableViewCell: UITableViewCell, CellConfigurable {
+    typealias ViewModel = String
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hello World"
+        label.font = .preferredFont(forTextStyle: .title1)
         return label
     }()
 
@@ -26,21 +27,18 @@ class DragableExampleTableViewCell: UITableViewCell, Reusable {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    func configure(with model: String) {
+        titleLabel.text = model
+    }
 }
 
 extension DragableExampleTableViewCell: ViewCodeProtocol {
     func setupHierarchy() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubviewWithConstraints(subview: titleLabel, insets: .init(all: 20))
     }
 
-    func setupConstraints() {
-        titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
-        }
-    }
+    func setupConstraints() { }
 }
 
 //#if canImport(SwiftUI) && DEBUG

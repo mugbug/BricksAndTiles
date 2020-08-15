@@ -10,6 +10,8 @@ import TableViewFactory
 
 struct DragableExampleCellBuilder: TableViewArrangeableCellBuilder {
 
+    var model: DragableExampleTableViewCell.ViewModel
+
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
     }
@@ -20,6 +22,7 @@ struct DragableExampleCellBuilder: TableViewArrangeableCellBuilder {
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
         let cell: DragableExampleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: model)
         return cell
     }
 

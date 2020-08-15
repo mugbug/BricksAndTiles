@@ -17,7 +17,8 @@ final class ExampleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
-        title = "TableViewFactory Example"
+        title = "TableViewFactory"
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.view.addSubviewWithConstraints(subview: tableView)
 
@@ -27,9 +28,17 @@ final class ExampleListViewController: UIViewController {
 
 extension ExampleListViewController: ExampleListViewDelegate {
     func showExample(forType type: ExampleType, isEditable: Bool) {
+        guard type != .dragable else {
+            return showDraggableExample()
+        }
         let presenter = GenericExamplePresenter(type: type)
-        let dragableExample = GenericExampleViewController(presenter: presenter)
-        dragableExample.toggleEditable(isEditable)
-        self.navigationController?.pushViewController(dragableExample, animated: true)
+        let view = GenericExampleViewController(presenter: presenter)
+        view.toggleEditable(isEditable)
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+
+    private func showDraggableExample() {
+        let view = DraggableViewController()
+        self.navigationController?.pushViewController(view, animated: true)
     }
 }
