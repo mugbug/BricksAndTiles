@@ -11,13 +11,20 @@ import ViewCodeHelper
 
 final class SimpleHeader: UIView {
     lazy var titleLabel = UILabel()
-        .. \.font <- .preferredFont(forTextStyle: .title2)
+        .. \.font <- .preferredFont(forTextStyle: textStyle)
         .. \.text <- title
+        .. \.numberOfLines <- 0
 
     let title: String
+    let textStyle: UIFont.TextStyle
+    let insets: UIEdgeInsets
 
-    init(title: String) {
+    init(title: String,
+         textStyle: UIFont.TextStyle = .title2,
+         insets: UIEdgeInsets = .init(all: 16)) {
         self.title = title
+        self.textStyle = textStyle
+        self.insets = insets
         super.init(frame: .zero)
         buildView()
     }
@@ -29,7 +36,7 @@ final class SimpleHeader: UIView {
 
 extension SimpleHeader: ViewCodeProtocol {
     func setupHierarchy() {
-        addSubviewWithConstraints(subview: titleLabel, insets: .init(all: 16))
+        addSubviewWithConstraints(subview: titleLabel, insets: insets)
     }
 
     func setupConstraints() {}

@@ -12,6 +12,7 @@ class LabelCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         textLabel?.font = .preferredFont(forTextStyle: .title1)
+        textLabel?.numberOfLines = 0
     }
 
     required init?(coder aDecoder: NSCoder) {
