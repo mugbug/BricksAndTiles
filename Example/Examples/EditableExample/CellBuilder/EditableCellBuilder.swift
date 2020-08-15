@@ -10,6 +10,8 @@ import TableViewFactory
 
 struct EditableCellBuilder: TableViewEditableCellBuilder {
 
+    var model: EditableTableViewCell.ViewModel
+
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
     }
@@ -20,6 +22,7 @@ struct EditableCellBuilder: TableViewEditableCellBuilder {
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
         let cell: EditableTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: model)
         return cell
     }
 
@@ -35,7 +38,7 @@ struct EditableCellBuilder: TableViewEditableCellBuilder {
             title: "Read",
             backgroundColor: .systemBlue,
             actionCompletion: {
-                print("Marked as read")
+                print("Marked as read \(self.model.name)")
             }
         )
 
@@ -45,7 +48,7 @@ struct EditableCellBuilder: TableViewEditableCellBuilder {
             title: "Fav",
             backgroundColor: .systemYellow,
             actionCompletion: {
-                print("Marked as fav")
+                print("Marked as fav \(self.model.name)")
             }
         )
 
@@ -60,7 +63,7 @@ struct EditableCellBuilder: TableViewEditableCellBuilder {
             title: "Remove",
             backgroundColor: .red,
             actionCompletion: {
-                print("Removed")
+                print("Removed \(self.model.name)")
             }
         )
 
@@ -70,7 +73,7 @@ struct EditableCellBuilder: TableViewEditableCellBuilder {
             title: "Like",
             backgroundColor: .systemTeal,
             actionCompletion: {
-                print("Marked as fav")
+                print("Like \(self.model.name)")
             }
         )
 

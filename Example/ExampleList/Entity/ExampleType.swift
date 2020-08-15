@@ -12,4 +12,17 @@ enum ExampleType: String, CaseIterable {
     case singleSelection = "Single selection"
     case alternateStatic = "Alternating examples"
 //    case collectionView = "CollectionView"
+
+    var title: String {
+        switch self {
+        case .draggable:
+            return "My Song Ranking"
+        case .editable:
+            return "Available Songs"
+        case .singleSelection:
+            return "Song of the Day"
+        case .alternateStatic:
+            return "Songfy"
+        }
+    }
 }

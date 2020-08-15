@@ -15,6 +15,9 @@
 		73271F5B24E804F700FE1546 /* DragableExampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F5924E804F700FE1546 /* DragableExampleTableViewCell.swift */; };
 		73271F5D24E8255100FE1546 /* GenericExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */; };
 		73271F6124E827C700FE1546 /* SimpleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6024E827C700FE1546 /* SimpleHeader.swift */; };
+		73271F6424E82B1D00FE1546 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6324E82B1D00FE1546 /* SongService.swift */; };
+		73271F6624E82B7100FE1546 /* SingleSelectionTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6524E82B7100FE1546 /* SingleSelectionTableViewFactory.swift */; };
+		73271F6924E82C9600FE1546 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6824E82C9600FE1546 /* LabelCell.swift */; };
 		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
 		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -22,7 +25,6 @@
 		7342B34F247082A000644987 /* TableViewFactory.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* TableViewFactory.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7342B362247089D000644987 /* ExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B361247089D000644987 /* ExampleType.swift */; };
 		7342B3732471B82800644987 /* GenericExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B3722471B82800644987 /* GenericExamplePresenter.swift */; };
-		7342B3772471B9D200644987 /* SingleSelectionTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7342B3752471B9C500644987 /* SingleSelectionTableViewFactory.swift */; };
 		736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */; };
 		736E6B9324B21B7C0086B985 /* CollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */; };
 		73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */; };
@@ -151,9 +153,11 @@
 		73271F5924E804F700FE1546 /* DragableExampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragableExampleTableViewCell.swift; path = Example/Examples/DraggableExample/Factory/CellBuilder/DragableExampleTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericExampleViewController.swift; path = Example/Examples/GenericExampleViewController.swift; sourceTree = SOURCE_ROOT; };
 		73271F6024E827C700FE1546 /* SimpleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SimpleHeader.swift; path = Example/Components/Header/SimpleHeader.swift; sourceTree = SOURCE_ROOT; };
+		73271F6324E82B1D00FE1546 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SongService.swift; path = Example/Database/SongService.swift; sourceTree = SOURCE_ROOT; };
+		73271F6524E82B7100FE1546 /* SingleSelectionTableViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleSelectionTableViewFactory.swift; path = Example/Examples/SingleSelectionExample/SingleSelectionTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
+		73271F6824E82C9600FE1546 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelCell.swift; path = Example/Components/Cell/LabelCell.swift; sourceTree = SOURCE_ROOT; };
 		7342B361247089D000644987 /* ExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleType.swift; path = Example/ExampleList/Entity/ExampleType.swift; sourceTree = SOURCE_ROOT; };
 		7342B3722471B82800644987 /* GenericExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExamplePresenter.swift; sourceTree = "<group>"; };
-		7342B3752471B9C500644987 /* SingleSelectionTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionTableViewFactory.swift; sourceTree = "<group>"; };
 		736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
 		73AB8F9E24707186000A7BF5 /* ExampleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleListViewController.swift; path = Example/ExampleList/ExampleListViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -281,6 +285,7 @@
 		73271F5E24E827B600FE1546 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				73271F6724E82C8100FE1546 /* Cell */,
 				73271F5F24E827BC00FE1546 /* Header */,
 			);
 			path = Components;
@@ -292,6 +297,22 @@
 				73271F6024E827C700FE1546 /* SimpleHeader.swift */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		73271F6224E82B0A00FE1546 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				73271F6324E82B1D00FE1546 /* SongService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		73271F6724E82C8100FE1546 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				73271F6824E82C9600FE1546 /* LabelCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7342B34D247082A000644987 /* Frameworks */ = {
@@ -312,8 +333,8 @@
 		7342B3642471AE8F00644987 /* SingleSelectionExample */ = {
 			isa = PBXGroup;
 			children = (
+				73271F6524E82B7100FE1546 /* SingleSelectionTableViewFactory.swift */,
 				73B8FB4424D5B73900B32167 /* CellBuilder */,
-				7342B3752471B9C500644987 /* SingleSelectionTableViewFactory.swift */,
 			);
 			path = SingleSelectionExample;
 			sourceTree = "<group>";
@@ -525,6 +546,7 @@
 		73D12D4B2470675D008B0AB9 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				73271F6224E82B0A00FE1546 /* Database */,
 				73271F5E24E827B600FE1546 /* Components */,
 				73B8FB3824D5B70000B32167 /* Examples */,
 				73AB8F9D2470716F000A7BF5 /* ExampleList */,
@@ -931,6 +953,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73271F6424E82B1D00FE1546 /* SongService.swift in Sources */,
 				73271F5A24E804F700FE1546 /* DragableExampleCellBuilder.swift in Sources */,
 				73B8FB4324D5B72C00B32167 /* EditableTableViewCell.swift in Sources */,
 				73B8FB4124D5B72C00B32167 /* EditableTableViewFactory.swift in Sources */,
@@ -942,7 +965,6 @@
 				73271F6124E827C700FE1546 /* SimpleHeader.swift in Sources */,
 				73B8FB4724D5B73900B32167 /* SingleSelectionCellBuilder.swift in Sources */,
 				73271F5B24E804F700FE1546 /* DragableExampleTableViewCell.swift in Sources */,
-				7342B3772471B9D200644987 /* SingleSelectionTableViewFactory.swift in Sources */,
 				73B8FB5424D5B74900B32167 /* FirstStaticCell.swift in Sources */,
 				73B8FB4224D5B72C00B32167 /* EditableCellBuilder.swift in Sources */,
 				73B8FB6824D5EDE700B32167 /* HorizontalCellBuilder.swift in Sources */,
@@ -958,12 +980,14 @@
 				73B8FB6424D5EDAA00B32167 /* HorizontalCell.swift in Sources */,
 				73B8FB6624D5EDCD00B32167 /* HorizontalCellHeader.swift in Sources */,
 				73271F5124E8029500FE1546 /* DraggableExampleTableViewFactory.swift in Sources */,
+				73271F6624E82B7100FE1546 /* SingleSelectionTableViewFactory.swift in Sources */,
 				73B8FB5E24D5B78F00B32167 /* CollectionViewExampleViewController.swift in Sources */,
 				73AB8FA924707460000A7BF5 /* SelectableCellBuilder.swift in Sources */,
 				73AB8FA12470726B000A7BF5 /* ExampleListPresenter.swift in Sources */,
 				73271F5D24E8255100FE1546 /* GenericExampleViewController.swift in Sources */,
 				73B8FB4824D5B73900B32167 /* SingleSelectionTableViewCell.swift in Sources */,
 				73B8FB5D24D5B78F00B32167 /* HorizontalListCellBuilder.swift in Sources */,
+				73271F6924E82C9600FE1546 /* LabelCell.swift in Sources */,
 				73AB8FA4247072AB000A7BF5 /* ExampleListTableViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

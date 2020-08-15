@@ -14,7 +14,7 @@ protocol TableViewFactoryProtocol {
 }
 
 class GenericExamplePresenter: GenericPresenterProtocol {
-    var exampleName: String { type.rawValue }
+    var exampleName: String { type.title }
     var dataSource: TableViewDataSource?
     private lazy var factory: TableViewFactoryProtocol = type.tableFactory()
     private let type: ExampleType

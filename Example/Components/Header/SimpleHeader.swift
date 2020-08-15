@@ -15,7 +15,7 @@ final class SimpleHeader: UIView {
         .. \.text <- title
 
     let title: String
-    
+
     init(title: String) {
         self.title = title
         super.init(frame: .zero)
