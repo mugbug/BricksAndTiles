@@ -38,7 +38,10 @@ extension ExampleType {
     func tableFactory() -> TableViewFactoryProtocol {
         switch self {
         case .dragable:
-            return DragableExampleTableViewFactory()
+            return DragableExampleTableViewFactory(
+                model: SongsRankingFactoryModel(topSongs: [], songs: []),
+                moveRowCompletion: { (_, _) in }
+            )
         case .singleSelection:
             return SingleSelectionExampleTableViewFactory()
         case .editable:
