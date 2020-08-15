@@ -29,7 +29,7 @@ class ExampleListPresenter {
     }
 
     private func showExample(for type: ExampleType) {
-        let isEditable = type == .dragable
+        let isEditable = type == .draggable
         view?.showExample(forType: type, isEditable: isEditable)
     }
 }
@@ -37,7 +37,7 @@ class ExampleListPresenter {
 extension ExampleType {
     func tableFactory() -> TableViewFactoryProtocol {
         switch self {
-        case .dragable:
+        case .draggable:
             return DragableExampleTableViewFactory(
                 model: SongsRankingFactoryModel(topSongs: [], songs: []),
                 moveRowCompletion: { (_, _) in }

@@ -10,21 +10,16 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class SingleSelectionTableViewCell: SelectableCell, Reusable {
+typealias SelectableConfigurableCell = SelectableTableViewCell & CellConfigurable
 
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hello World"
-        return label
-    }()
+class SingleSelectionTableViewCell: LabelCell, SelectableConfigurableCell {
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        buildView()
-    }
+    // MARK: - CellConfigurable
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    typealias ViewModel = Song
+
+    func configure(with model: Song) {
+        textLabel?.text = model.name
     }
 
     // MARK: - SelectableCell
@@ -35,20 +30,5 @@ class SingleSelectionTableViewCell: SelectableCell, Reusable {
 
     func makeSelectionInvisible() {
         accessoryType = .none
-    }
-}
-
-extension SingleSelectionTableViewCell: ViewCodeProtocol {
-    func setupHierarchy() {
-        contentView.addSubview(titleLabel)
-    }
-
-    func setupConstraints() {
-        titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
-        }
     }
 }

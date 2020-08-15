@@ -9,6 +9,9 @@
 import TableViewFactory
 
 struct SingleSelectionCellBuilder: TableViewSelectableCellBuilder {
+
+    var model: SingleSelectionTableViewCell.ViewModel
+
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
     }
@@ -19,6 +22,11 @@ struct SingleSelectionCellBuilder: TableViewSelectableCellBuilder {
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> SelectableCell {
         let cell: SingleSelectionTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: model)
         return cell
+    }
+
+    func tableViewDidSelectCell(_ tableView: UITableView) {
+        print(model.name)
     }
 }

@@ -47,26 +47,3 @@ final class GenericExampleViewController: UIViewController {
         tableView.isEditing = isEditable
     }
 }
-
-//#if canImport(SwiftUI) && DEBUG
-//import SwiftUI
-//struct DragableViewRepresentable: UIViewRepresentable {
-//
-//    var currentViewController = DragableExampleViewController()
-//
-//    func makeUIView(context: Context) -> UIView {
-//        return currentViewController.view!
-//    }
-//
-//    func updateUIView(_ view: UIView, context: Context) {
-//
-//    }
-//}
-//
-//@available(iOS 13.0, *)
-//struct DragableViewController_Preview: PreviewProvider {
-//    static var previews: some View {
-//        DragableViewRepresentable()
-//    }
-//}
-//#endif

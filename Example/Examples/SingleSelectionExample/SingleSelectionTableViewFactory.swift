@@ -10,22 +10,18 @@ import TableViewFactory
 
 struct SingleSelectionExampleTableViewFactory: TableViewFactoryProtocol {
 
+    let availableSongs = SongService.availableSongs
+
     func make() -> [TableViewSection] {
         let section = SingleSelectionSection(
             cellBuilders: cellBuilders(),
-            header: header(),
+            header: SimpleHeader(title: "How is your mood today?"),
             footer: UIView()
         )
         return [section]
     }
 
     func cellBuilders() -> [TableViewSelectableCellBuilder] {
-        return (0...5).map { _ in SingleSelectionCellBuilder() }
-    }
-
-    func header() -> UIView {
-        let header = UILabel()
-        header.text = "This is a section"
-        return header
+        return availableSongs.map(SingleSelectionCellBuilder.init)
     }
 }

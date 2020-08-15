@@ -20,13 +20,13 @@ struct DragableExampleTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = ArrangeableSection(
             cellBuilders: cellBuilders(songs: model.topSongs),
-            header: header(title: "My Top Songs"),
+            header: SimpleHeader(title: "My Top Songs"),
             footer: UIView(),
             moveRowCompletion: moveRowCompletion
         )
         let section1 = ArrangeableSection(
             cellBuilders: cellBuilders(songs: model.songs),
-            header: header(title: "My Songs"),
+            header: SimpleHeader(title: "My Songs"),
             footer: UIView(),
             moveRowCompletion: moveRowCompletion
         )
@@ -34,18 +34,6 @@ struct DragableExampleTableViewFactory: TableViewFactoryProtocol {
     }
 
     func cellBuilders(songs: [Song]) -> [TableViewArrangeableCellBuilder] {
-        return songs.map { song in
-            DragableExampleCellBuilder(model: "\(song.name)")
-        }
-    }
-
-    func header(title: String) -> UIView {
-        let header = UILabel()
-        header.font = .preferredFont(forTextStyle: .title2)
-        header.text = title
-
-        let view = UIView()
-        view.addSubviewWithConstraints(subview: header, insets: .init(all: 16))
-        return view
+        return songs.map(DragableExampleCellBuilder.init)
     }
 }

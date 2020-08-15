@@ -10,42 +10,13 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class SelectableExampleTableViewCell: UITableViewCell, Reusable {
-
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hello World"
-        return label
-    }()
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        buildView()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+class SelectableExampleTableViewCell: LabelCell, CellConfigurable {
+    typealias ViewModel = ExampleType
 
     // MARK: - Setup
 
-    func configure(forType type: ExampleType) {
-        titleLabel.text = type.rawValue
-    }
-}
-
-extension SelectableExampleTableViewCell: ViewCodeProtocol {
-    func setupHierarchy() {
-        contentView.addSubview(titleLabel)
-    }
-
-    func setupConstraints() {
-        titleLabel.constraint { view in
-            [view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-             view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)]
-        }
+    func configure(with model: ExampleType) {
+        textLabel?.text = model.rawValue
         self.accessoryType = .disclosureIndicator
     }
 }

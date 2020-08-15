@@ -7,9 +7,22 @@
 //
 
 enum ExampleType: String, CaseIterable {
-    case dragable = "Drag n' Drop"
-    case editable = "Slide for actions"
+    case draggable = "Draggable"
+    case editable = "Slide for Actions"
     case singleSelection = "Single selection"
-    case alternateStatic = "Alternate static"
+    case alternateStatic = "Alternating examples"
 //    case collectionView = "CollectionView"
+
+    var title: String {
+        switch self {
+        case .draggable:
+            return "My Song Ranking"
+        case .editable:
+            return "Available Songs"
+        case .singleSelection:
+            return "Song of the Day"
+        case .alternateStatic:
+            return "Songfy"
+        }
+    }
 }

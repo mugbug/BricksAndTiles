@@ -10,22 +10,17 @@ import TableViewFactory
 
 struct EditableTableViewFactory: TableViewFactoryProtocol {
 
+    let availableSongs = SongService.availableSongs
+
     func make() -> [TableViewSection] {
         let section = EditableSection(
             cellBuilders: cellBuilders(),
-            header: header(),
             footer: UIView()
         )
         return [section]
     }
 
     func cellBuilders() -> [TableViewEditableCellBuilder] {
-        return (0...5).map { _ in EditableCellBuilder() }
-    }
-
-    func header() -> UIView {
-        let header = UILabel()
-        header.text = "This is a section"
-        return header
+        return availableSongs.map(EditableCellBuilder.init)
     }
 }

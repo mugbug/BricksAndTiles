@@ -32,7 +32,7 @@ class DraggablePresenter {
                 "Hey You",
                 "Breathe (In The Air)",
                 "Us and Them"
-                ].map(Song.init),
+                ].map { Song(name: $0, isFav: true) },
             songs: [
                 "Happiness is a Warm Gun",
                 "Across The Universe",
@@ -58,6 +58,11 @@ class DraggablePresenter {
         var table = [factoryModel.topSongs, factoryModel.songs]
         let mySong = table[sourceIndexPath.section].remove(at: sourceIndexPath.row)
         table[destinationIndexPath.section].insert(mySong, at: destinationIndexPath.row)
-        factoryModel = SongsRankingFactoryModel(topSongs: table[0], songs: table[1])
+        let topSongs = table[0].map { Song(name: $0.name, isFav: true) }
+        let songs = table[1].map { Song(name: $0.name, isFav: false) }
+        factoryModel = SongsRankingFactoryModel(
+            topSongs: topSongs,
+            songs: songs
+        )
     }
 }

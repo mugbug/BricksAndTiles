@@ -13,7 +13,7 @@ struct AlternateStaticTableViewFactory: TableViewFactoryProtocol {
     func make() -> [TableViewSection] {
         let section = StaticSection(
             cellBuilders: cellBuilders(),
-            header: header()
+            header: SimpleHeader(title: "Sit back and relax")
         )
         return [
             horizontalListSection(),
@@ -34,21 +34,7 @@ struct AlternateStaticTableViewFactory: TableViewFactoryProtocol {
         return StaticSection(
             cellBuilders: [HorizontalListCellBuilder(),
                            FirstStaticCellBuilder()],
-            header: header()
+            header: SimpleHeader(title: "Rainy days")
         )
-    }
-
-    func header() -> UIView {
-        let header = UILabel()
-        header.text = "This is a section"
-        header.font = .preferredFont(forTextStyle: .title1)
-        header.textColor = .white
-        let view = UIView()
-        view.addSubviewWithConstraints(
-            subview: header,
-            insets: .init(top: 16, left: 16, bottom: -16, right: -16)
-        )
-        view.backgroundColor = .darkGray
-        return view
     }
 }

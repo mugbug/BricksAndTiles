@@ -28,7 +28,7 @@ final class ExampleListViewController: UIViewController {
 
 extension ExampleListViewController: ExampleListViewDelegate {
     func showExample(forType type: ExampleType, isEditable: Bool) {
-        guard type != .dragable else {
+        guard type != .draggable else {
             return showDraggableExample()
         }
         let presenter = GenericExamplePresenter(type: type)
