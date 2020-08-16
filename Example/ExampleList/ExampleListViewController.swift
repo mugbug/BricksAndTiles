@@ -28,17 +28,20 @@ final class ExampleListViewController: UIViewController {
 
 extension ExampleListViewController: ExampleListViewDelegate {
     func showExample(forType type: ExampleType, isEditable: Bool) {
-        guard type != .draggable else {
-            return showDraggableExample()
-        }
+        guard type.tableFactory() != nil else { return }
         let presenter = GenericExamplePresenter(type: type)
         let view = GenericExampleViewController(presenter: presenter)
         view.toggleEditable(isEditable)
         self.navigationController?.pushViewController(view, animated: true)
     }
 
-    private func showDraggableExample() {
+    func showDraggableExample() {
         let view = DraggableViewController()
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+
+    func showCollectionExample() {
+        let view = CollectionViewExampleViewController()
         self.navigationController?.pushViewController(view, animated: true)
     }
 }

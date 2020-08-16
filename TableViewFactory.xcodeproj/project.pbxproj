@@ -18,6 +18,12 @@
 		73271F6424E82B1D00FE1546 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6324E82B1D00FE1546 /* SongService.swift */; };
 		73271F6624E82B7100FE1546 /* SingleSelectionTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6524E82B7100FE1546 /* SingleSelectionTableViewFactory.swift */; };
 		73271F6924E82C9600FE1546 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6824E82C9600FE1546 /* LabelCell.swift */; };
+		73271F7524E9DD1000FE1546 /* HorizontalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6D24E9DD1000FE1546 /* HorizontalListCell.swift */; };
+		73271F7624E9DD1000FE1546 /* HorizontalListCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F6E24E9DD1000FE1546 /* HorizontalListCellBuilder.swift */; };
+		73271F7724E9DD1000FE1546 /* SecondStaticCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F7024E9DD1000FE1546 /* SecondStaticCellBuilder.swift */; };
+		73271F7824E9DD1000FE1546 /* SecondStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F7124E9DD1000FE1546 /* SecondStaticCell.swift */; };
+		73271F7924E9DD1000FE1546 /* FirstStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F7324E9DD1000FE1546 /* FirstStaticCell.swift */; };
+		73271F7A24E9DD1000FE1546 /* FirstStaticCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73271F7424E9DD1000FE1546 /* FirstStaticCellBuilder.swift */; };
 		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
 		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -44,12 +50,6 @@
 		73B8FB4724D5B73900B32167 /* SingleSelectionCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB4524D5B73900B32167 /* SingleSelectionCellBuilder.swift */; };
 		73B8FB4824D5B73900B32167 /* SingleSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB4624D5B73900B32167 /* SingleSelectionTableViewCell.swift */; };
 		73B8FB5124D5B74900B32167 /* AlternateStaticTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB4924D5B74900B32167 /* AlternateStaticTableViewFactory.swift */; };
-		73B8FB5224D5B74900B32167 /* SecondStaticCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB4C24D5B74900B32167 /* SecondStaticCellBuilder.swift */; };
-		73B8FB5324D5B74900B32167 /* SecondStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB4D24D5B74900B32167 /* SecondStaticCell.swift */; };
-		73B8FB5424D5B74900B32167 /* FirstStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB4F24D5B74900B32167 /* FirstStaticCell.swift */; };
-		73B8FB5524D5B74900B32167 /* FirstStaticCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5024D5B74900B32167 /* FirstStaticCellBuilder.swift */; };
-		73B8FB5C24D5B78F00B32167 /* HorizontalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5724D5B78F00B32167 /* HorizontalListCell.swift */; };
-		73B8FB5D24D5B78F00B32167 /* HorizontalListCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5924D5B78F00B32167 /* HorizontalListCellBuilder.swift */; };
 		73B8FB5E24D5B78F00B32167 /* CollectionViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5A24D5B78F00B32167 /* CollectionViewExampleViewController.swift */; };
 		73B8FB5F24D5B78F00B32167 /* HorizontalListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB5B24D5B78F00B32167 /* HorizontalListFactory.swift */; };
 		73B8FB6124D5BF2600B32167 /* UITableView+DefaultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB6024D5BF2600B32167 /* UITableView+DefaultFactory.swift */; };
@@ -156,6 +156,12 @@
 		73271F6324E82B1D00FE1546 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SongService.swift; path = Example/Database/SongService.swift; sourceTree = SOURCE_ROOT; };
 		73271F6524E82B7100FE1546 /* SingleSelectionTableViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleSelectionTableViewFactory.swift; path = Example/Examples/SingleSelectionExample/SingleSelectionTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
 		73271F6824E82C9600FE1546 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelCell.swift; path = Example/Components/Cell/LabelCell.swift; sourceTree = SOURCE_ROOT; };
+		73271F6D24E9DD1000FE1546 /* HorizontalListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalListCell.swift; sourceTree = "<group>"; };
+		73271F6E24E9DD1000FE1546 /* HorizontalListCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalListCellBuilder.swift; sourceTree = "<group>"; };
+		73271F7024E9DD1000FE1546 /* SecondStaticCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondStaticCellBuilder.swift; sourceTree = "<group>"; };
+		73271F7124E9DD1000FE1546 /* SecondStaticCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondStaticCell.swift; sourceTree = "<group>"; };
+		73271F7324E9DD1000FE1546 /* FirstStaticCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStaticCell.swift; sourceTree = "<group>"; };
+		73271F7424E9DD1000FE1546 /* FirstStaticCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStaticCellBuilder.swift; sourceTree = "<group>"; };
 		7342B361247089D000644987 /* ExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExampleType.swift; path = Example/ExampleList/Entity/ExampleType.swift; sourceTree = SOURCE_ROOT; };
 		7342B3722471B82800644987 /* GenericExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericExamplePresenter.swift; sourceTree = "<group>"; };
 		736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -177,12 +183,6 @@
 		73B8FB4524D5B73900B32167 /* SingleSelectionCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSelectionCellBuilder.swift; sourceTree = "<group>"; };
 		73B8FB4624D5B73900B32167 /* SingleSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		73B8FB4924D5B74900B32167 /* AlternateStaticTableViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlternateStaticTableViewFactory.swift; path = Example/Examples/AlternateStaticExample/AlternateStaticTableViewFactory.swift; sourceTree = SOURCE_ROOT; };
-		73B8FB4C24D5B74900B32167 /* SecondStaticCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondStaticCellBuilder.swift; sourceTree = "<group>"; };
-		73B8FB4D24D5B74900B32167 /* SecondStaticCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondStaticCell.swift; sourceTree = "<group>"; };
-		73B8FB4F24D5B74900B32167 /* FirstStaticCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStaticCell.swift; sourceTree = "<group>"; };
-		73B8FB5024D5B74900B32167 /* FirstStaticCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStaticCellBuilder.swift; sourceTree = "<group>"; };
-		73B8FB5724D5B78F00B32167 /* HorizontalListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalListCell.swift; sourceTree = "<group>"; };
-		73B8FB5924D5B78F00B32167 /* HorizontalListCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalListCellBuilder.swift; sourceTree = "<group>"; };
 		73B8FB5A24D5B78F00B32167 /* CollectionViewExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewExampleViewController.swift; path = Example/Examples/CollectionViewExample/CollectionViewExampleViewController.swift; sourceTree = SOURCE_ROOT; };
 		73B8FB5B24D5B78F00B32167 /* HorizontalListFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalListFactory.swift; path = Example/Examples/CollectionViewExample/HorizontalListFactory.swift; sourceTree = SOURCE_ROOT; };
 		73B8FB6024D5BF2600B32167 /* UITableView+DefaultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DefaultFactory.swift"; sourceTree = "<group>"; };
@@ -315,6 +315,44 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		73271F6B24E9DD1000FE1546 /* CellBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				73271F6C24E9DD1000FE1546 /* HorizontalListCell */,
+				73271F6F24E9DD1000FE1546 /* SecondStaticCell */,
+				73271F7224E9DD1000FE1546 /* FIrstStaticCell */,
+			);
+			name = CellBuilder;
+			path = Example/Examples/AlternateStaticExample/CellBuilder;
+			sourceTree = SOURCE_ROOT;
+		};
+		73271F6C24E9DD1000FE1546 /* HorizontalListCell */ = {
+			isa = PBXGroup;
+			children = (
+				73271F6D24E9DD1000FE1546 /* HorizontalListCell.swift */,
+				73271F6E24E9DD1000FE1546 /* HorizontalListCellBuilder.swift */,
+			);
+			path = HorizontalListCell;
+			sourceTree = "<group>";
+		};
+		73271F6F24E9DD1000FE1546 /* SecondStaticCell */ = {
+			isa = PBXGroup;
+			children = (
+				73271F7024E9DD1000FE1546 /* SecondStaticCellBuilder.swift */,
+				73271F7124E9DD1000FE1546 /* SecondStaticCell.swift */,
+			);
+			path = SecondStaticCell;
+			sourceTree = "<group>";
+		};
+		73271F7224E9DD1000FE1546 /* FIrstStaticCell */ = {
+			isa = PBXGroup;
+			children = (
+				73271F7324E9DD1000FE1546 /* FirstStaticCell.swift */,
+				73271F7424E9DD1000FE1546 /* FirstStaticCellBuilder.swift */,
+			);
+			path = FIrstStaticCell;
+			sourceTree = "<group>";
+		};
 		7342B34D247082A000644987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,7 +429,7 @@
 		737FEA1E24A77461000E7744 /* AlternateStaticExample */ = {
 			isa = PBXGroup;
 			children = (
-				73B8FB4A24D5B74900B32167 /* CellBuilder */,
+				73271F6B24E9DD1000FE1546 /* CellBuilder */,
 				73B8FB4924D5B74900B32167 /* AlternateStaticTableViewFactory.swift */,
 			);
 			path = AlternateStaticExample;
@@ -463,8 +501,8 @@
 		73B8FB3824D5B70000B32167 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */,
 				7342B3722471B82800644987 /* GenericExamplePresenter.swift */,
+				73271F5C24E8255100FE1546 /* GenericExampleViewController.swift */,
 				737FEA1E24A77461000E7744 /* AlternateStaticExample */,
 				736E6B9424B224F50086B985 /* CollectionViewExample */,
 				73D12D7A247068A6008B0AB9 /* DraggableExample */,
@@ -494,35 +532,6 @@
 			path = Example/Examples/SingleSelectionExample/CellBuilder;
 			sourceTree = SOURCE_ROOT;
 		};
-		73B8FB4A24D5B74900B32167 /* CellBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				73B8FB6224D5ED6400B32167 /* HorizontalListCell */,
-				73B8FB4B24D5B74900B32167 /* SecondStaticCell */,
-				73B8FB4E24D5B74900B32167 /* FIrstStaticCell */,
-			);
-			name = CellBuilder;
-			path = Example/Examples/AlternateStaticExample/CellBuilder;
-			sourceTree = SOURCE_ROOT;
-		};
-		73B8FB4B24D5B74900B32167 /* SecondStaticCell */ = {
-			isa = PBXGroup;
-			children = (
-				73B8FB4C24D5B74900B32167 /* SecondStaticCellBuilder.swift */,
-				73B8FB4D24D5B74900B32167 /* SecondStaticCell.swift */,
-			);
-			path = SecondStaticCell;
-			sourceTree = "<group>";
-		};
-		73B8FB4E24D5B74900B32167 /* FIrstStaticCell */ = {
-			isa = PBXGroup;
-			children = (
-				73B8FB4F24D5B74900B32167 /* FirstStaticCell.swift */,
-				73B8FB5024D5B74900B32167 /* FirstStaticCellBuilder.swift */,
-			);
-			path = FIrstStaticCell;
-			sourceTree = "<group>";
-		};
 		73B8FB5624D5B78F00B32167 /* CellBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,15 +542,6 @@
 			name = CellBuilder;
 			path = Example/Examples/CollectionViewExample/CellBuilder;
 			sourceTree = SOURCE_ROOT;
-		};
-		73B8FB6224D5ED6400B32167 /* HorizontalListCell */ = {
-			isa = PBXGroup;
-			children = (
-				73B8FB5724D5B78F00B32167 /* HorizontalListCell.swift */,
-				73B8FB5924D5B78F00B32167 /* HorizontalListCellBuilder.swift */,
-			);
-			path = HorizontalListCell;
-			sourceTree = "<group>";
 		};
 		73D12D4B2470675D008B0AB9 /* Example */ = {
 			isa = PBXGroup;
@@ -957,24 +957,23 @@
 				73271F5A24E804F700FE1546 /* DragableExampleCellBuilder.swift in Sources */,
 				73B8FB4324D5B72C00B32167 /* EditableTableViewCell.swift in Sources */,
 				73B8FB4124D5B72C00B32167 /* EditableTableViewFactory.swift in Sources */,
+				73271F7924E9DD1000FE1546 /* FirstStaticCell.swift in Sources */,
 				7342B362247089D000644987 /* ExampleType.swift in Sources */,
 				73AB8F9F24707186000A7BF5 /* ExampleListViewController.swift in Sources */,
-				73B8FB5524D5B74900B32167 /* FirstStaticCellBuilder.swift in Sources */,
 				73271F5724E8031D00FE1546 /* DraggablePresenter.swift in Sources */,
+				73271F7624E9DD1000FE1546 /* HorizontalListCellBuilder.swift in Sources */,
 				7342B3732471B82800644987 /* GenericExamplePresenter.swift in Sources */,
 				73271F6124E827C700FE1546 /* SimpleHeader.swift in Sources */,
 				73B8FB4724D5B73900B32167 /* SingleSelectionCellBuilder.swift in Sources */,
+				73271F7524E9DD1000FE1546 /* HorizontalListCell.swift in Sources */,
 				73271F5B24E804F700FE1546 /* DragableExampleTableViewCell.swift in Sources */,
-				73B8FB5424D5B74900B32167 /* FirstStaticCell.swift in Sources */,
 				73B8FB4224D5B72C00B32167 /* EditableCellBuilder.swift in Sources */,
 				73B8FB6824D5EDE700B32167 /* HorizontalCellBuilder.swift in Sources */,
-				73B8FB5324D5B74900B32167 /* SecondStaticCell.swift in Sources */,
 				73D12D4D2470675D008B0AB9 /* AppDelegate.swift in Sources */,
 				73271F5624E8031D00FE1546 /* DraggableViewController.swift in Sources */,
 				73AB8FA72470737A000A7BF5 /* SelectableTableViewCell.swift in Sources */,
-				73B8FB5C24D5B78F00B32167 /* HorizontalListCell.swift in Sources */,
 				73B8FB5124D5B74900B32167 /* AlternateStaticTableViewFactory.swift in Sources */,
-				73B8FB5224D5B74900B32167 /* SecondStaticCellBuilder.swift in Sources */,
+				73271F7724E9DD1000FE1546 /* SecondStaticCellBuilder.swift in Sources */,
 				7305F33824E76F6B001FCF29 /* SongsRankingFactoryModel.swift in Sources */,
 				73B8FB5F24D5B78F00B32167 /* HorizontalListFactory.swift in Sources */,
 				73B8FB6424D5EDAA00B32167 /* HorizontalCell.swift in Sources */,
@@ -982,12 +981,13 @@
 				73271F5124E8029500FE1546 /* DraggableExampleTableViewFactory.swift in Sources */,
 				73271F6624E82B7100FE1546 /* SingleSelectionTableViewFactory.swift in Sources */,
 				73B8FB5E24D5B78F00B32167 /* CollectionViewExampleViewController.swift in Sources */,
+				73271F7824E9DD1000FE1546 /* SecondStaticCell.swift in Sources */,
 				73AB8FA924707460000A7BF5 /* SelectableCellBuilder.swift in Sources */,
 				73AB8FA12470726B000A7BF5 /* ExampleListPresenter.swift in Sources */,
 				73271F5D24E8255100FE1546 /* GenericExampleViewController.swift in Sources */,
 				73B8FB4824D5B73900B32167 /* SingleSelectionTableViewCell.swift in Sources */,
-				73B8FB5D24D5B78F00B32167 /* HorizontalListCellBuilder.swift in Sources */,
 				73271F6924E82C9600FE1546 /* LabelCell.swift in Sources */,
+				73271F7A24E9DD1000FE1546 /* FirstStaticCellBuilder.swift in Sources */,
 				73AB8FA4247072AB000A7BF5 /* ExampleListTableViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
