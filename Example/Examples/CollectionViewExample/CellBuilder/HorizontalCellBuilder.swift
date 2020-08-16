@@ -25,13 +25,13 @@ import TableViewFactory
 struct HorizontalCellBuilder: CollectionViewCellBuilder {
 
     func cellSize(collectionSize: CGSize) -> CGSize {
-        let height = collectionSize.height
-        return CGSize(width: height, height: height)
+        return cellSize(collectionSize)
     }
 
 // --------------------------------------------------------------------------
 
     var imageName: String
+    var cellSize: (CGSize) -> CGSize
 
     func registerCellIdentifier(in collectionView: UICollectionView) {
         collectionView.register(HorizontalCell.self)

@@ -10,27 +10,22 @@ import Foundation
 import TableViewFactory
 
 struct SelectableCellBuilder: TableViewCellBuilder {
+    typealias CellType = SelectableExampleTableViewCell
 
-    private let type: ExampleType
-    private let didSelect: () -> Void
-
-    init(type: ExampleType,
-         didSelect: @escaping () -> Void) {
-        self.type = type
-        self.didSelect = didSelect
-    }
+    let model: CellType.ViewModel
+    let didSelect: (CellType.ViewModel) -> Void
 
     var cellHeight: CGFloat {
         return UITableView.automaticDimension
     }
 
     func registerCellIdentifier(in tableView: UITableView) {
-        tableView.register(SelectableExampleTableViewCell.self)
+        tableView.register(CellType.self)
     }
 
     func tableViewCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell {
-        let cell: SelectableExampleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: type)
+        let cell: CellType = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: model)
         return cell
     }
 
@@ -39,6 +34,6 @@ struct SelectableCellBuilder: TableViewCellBuilder {
     }
 
     func tableViewDidSelectCell(_ tableView: UITableView) {
-        didSelect()
+        didSelect(model)
     }
 }

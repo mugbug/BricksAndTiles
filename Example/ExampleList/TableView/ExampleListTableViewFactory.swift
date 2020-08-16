@@ -11,11 +11,7 @@ import TableViewFactory
 struct ExampleListTableViewFactory {
     typealias SelectedExample = (ExampleType) -> Void
 
-    private let didSelect: SelectedExample
-
-    init(didSelect: @escaping SelectedExample) {
-        self.didSelect = didSelect
-    }
+    var didSelect: SelectedExample
 
     func make() -> [TableViewSection] {
         let section = StaticSection(
@@ -28,9 +24,7 @@ struct ExampleListTableViewFactory {
 
     func cellBuilders() -> [TableViewCellBuilder] {
         return ExampleType.allCases.map { type in
-            SelectableCellBuilder(type: type) {
-                self.didSelect(type)
-            }
+            SelectableCellBuilder(model: type, didSelect: didSelect)
         }
     }
 }

@@ -59,10 +59,15 @@ extension HorizontalListCell: ViewCodeProtocol {
     func setupConstraints() { }
 
     func additionalSetup() {
-        let factory = HorizontalListFactory().make()
+        let factory = HorizontalListFactory(cellSize: cellSize).make()
         self.dataSource = CollectionViewDataSource(
             sections: factory,
             collectionView: collectionView
         )
+    }
+
+    func cellSize(collectionSize: CGSize) -> CGSize {
+        let height = collectionSize.height
+        return CGSize(width: height, height: height)
     }
 }

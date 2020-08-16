@@ -11,6 +11,8 @@ import ViewCodeHelper
 
 struct HorizontalListFactory {
 
+    var cellSize: (CGSize) -> CGSize
+
     func make() -> [CollectionViewSection] {
         let section = StaticCollectionSection(
             cellBuilders: cellBuilders()
@@ -22,7 +24,10 @@ struct HorizontalListFactory {
     }
 
     func cellBuilders() -> [CollectionViewCellBuilder] {
-        return availableImages().map(HorizontalCellBuilder.init)
+        return availableImages().map {
+            HorizontalCellBuilder(imageName: $0, cellSize: cellSize)
+
+        }
     }
 
     private func availableImages() -> [String] {

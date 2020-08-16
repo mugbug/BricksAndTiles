@@ -11,6 +11,8 @@ import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
+    func showDraggableExample()
+    func showCollectionExample()
 }
 
 class ExampleListPresenter {
@@ -29,25 +31,28 @@ class ExampleListPresenter {
     }
 
     private func showExample(for type: ExampleType) {
-        let isEditable = type == .draggable
-        view?.showExample(forType: type, isEditable: isEditable)
+        switch type {
+        case .draggable:
+            view?.showDraggableExample()
+        case .collectionView:
+            view?.showCollectionExample()
+        default:
+            view?.showExample(forType: type, isEditable: false)
+        }
     }
 }
 
 extension ExampleType {
-    func tableFactory() -> TableViewFactoryProtocol {
+    func tableFactory() -> TableViewFactoryProtocol? {
         switch self {
-        case .draggable:
-            return DragableExampleTableViewFactory(
-                model: SongsRankingFactoryModel(topSongs: [], songs: []),
-                moveRowCompletion: { (_, _) in }
-            )
         case .singleSelection:
             return SingleSelectionExampleTableViewFactory()
         case .editable:
             return EditableTableViewFactory()
-        case .alternateStatic:
+        case .horizontalList:
             return AlternateStaticTableViewFactory()
+        default:
+            return nil
         }
     }
 }
