@@ -43,7 +43,7 @@ final class CollectionViewExampleViewController: UIViewController {
 
 extension CollectionViewExampleViewController: ViewCodeProtocol {
     func setupHierarchy() {
-        view.addSubviewWithConstraintsOnViewGuide(subview: collectionView)
+        view.addSubviewWithConstraints(subview: collectionView)
     }
 
     func setupConstraints() {}
