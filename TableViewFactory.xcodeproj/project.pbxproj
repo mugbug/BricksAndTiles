@@ -514,6 +514,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		73610D4424F16C8A0070D724 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				73B8FB3624D5B5F300B32167 /* ArrangeableCellBuilder */,
+				EBF15B0B229B3B190055DF69 /* EditableCellBuilder */,
+				EBF15B06229B3B190055DF69 /* SingleSelectionCellBuilder */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		736E6B8A24B2197E0086B985 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,9 +664,7 @@
 			children = (
 				EBF15B09229B3B190055DF69 /* TableViewCellBuilder.swift */,
 				73610C8F24F1673B0070D724 /* Prebuilt */,
-				73B8FB3624D5B5F300B32167 /* ArrangeableCellBuilder */,
-				EBF15B0B229B3B190055DF69 /* EditableCellBuilder */,
-				EBF15B06229B3B190055DF69 /* SingleSelectionCellBuilder */,
+				73610D4424F16C8A0070D724 /* Protocols */,
 			);
 			path = CellBuilders;
 			sourceTree = "<group>";
