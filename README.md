@@ -1,17 +1,18 @@
-# TableViewFactory
+# BricksAndTiles
 
-🧩 Implement reusable data lists with ease in Swift/UIKit
+🧱 A composable solution for building reusable lists in Swift/UIKit. As easy as playing with Legos.
 
 # Features
-
+[UITableView](#uitableview)
 - [x] [Static cells](#static-cells)
-
 - [x] [Draggable cells](#draggable-cells)
-
 - [x] [Cells with actions on slide](#cells-with-actions-on-slide)
-
 - [x] [Single selection](#single-selection)
 
+[UICollectionView](#uicollectionview)
+- [x] [Static collection cells](#static-collection-cells)
+
+[UITableView + UICollectionView](#uitableview--uicollectionview)
 - [x] [Horizontal list cells](#horizontal-list-cells)
 
 # Usage [WIP]
@@ -19,15 +20,13 @@
 ## Basics
 
 **CellBuilder** — A configuration holder for each cell you want to display.
-
 **Section** — A model that holds header and footer (if needed); and a list of cell builders to be displayed.
-
 **TableViewFactory** — A factory of sections to be displayed.
 
+# UITableView
 ## Static cells
 
-### Preview:
-- [ ] Add example image
+### Preview
 
 ### Features (* required):
 
@@ -64,6 +63,10 @@ struct MyStaticCellBuilder: TableViewCellBuilder {
 
 ## Single selection
 
+# UICollectionView
+## Static collection cells
+
+# UITableView + UICollectionView
 ## Horizontal list cells
 
 # Author(s)
