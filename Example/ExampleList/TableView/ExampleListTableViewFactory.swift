@@ -9,7 +9,8 @@
 import TableViewFactory
 
 struct ExampleListTableViewFactory {
-    typealias SelectedExample = (ExampleType) -> Void
+    typealias ViewModel = ExampleNameTableViewCell.ViewModel
+    typealias SelectedExample = (ViewModel) -> Void
 
     var didSelect: SelectedExample
 
@@ -23,8 +24,10 @@ struct ExampleListTableViewFactory {
     }
 
     func cellBuilders() -> [TableViewCellBuilder] {
-        return ExampleType.allCases.map { type in
-            SelectableCellBuilder(model: type, didSelect: didSelect)
+        return ViewModel.allCases.map { type in
+            SelectableCellBuilder<ExampleNameTableViewCell>(
+                model: type, didSelect: didSelect
+            )
         }
     }
 }

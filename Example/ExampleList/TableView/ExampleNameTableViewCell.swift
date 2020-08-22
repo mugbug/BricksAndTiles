@@ -10,7 +10,7 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class SelectableExampleTableViewCell: LabelCell, CellConfigurable {
+class ExampleNameTableViewCell: LabelCell, CellConfigurable {
     typealias ViewModel = ExampleType
 
     // MARK: - Setup
