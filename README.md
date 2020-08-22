@@ -20,7 +20,9 @@
 ## Basics
 
 **CellBuilder** — A configuration holder for each cell you want to display.
+
 **Section** — A model that holds header and footer (if needed); and a list of cell builders to be displayed.
+
 **TableViewFactory** — A factory of sections to be displayed.
 
 # UITableView
