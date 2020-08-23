@@ -49,21 +49,21 @@ extension CollectionViewExampleViewController: ViewCodeProtocol {
     func setupConstraints() {}
 
     func additionalSetup() {
-        title = "Available albums"
+        title = ExampleType.collectionView.title
 
         if #available(iOS 13.0, *) {
             view.backgroundColor = .systemBackground
         }
 
-        let factory = HorizontalListFactory(cellSize: cellSize).make()
+        let factory = HorizontalListFactory(cellSize: cellSize)
         self.dataSource = CollectionViewDataSource(
-            sections: factory,
+            sections: factory.make(),
             collectionView: collectionView
         )
     }
 
     func cellSize(collectionSize: CGSize) -> CGSize {
-        let height = collectionSize.width / 2.05
+        let height = collectionSize.width / CGFloat.random(in: (1...5))
         return CGSize(width: height, height: height)
     }
 }

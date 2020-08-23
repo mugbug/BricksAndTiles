@@ -7,7 +7,7 @@
 //
 
 enum SongService {
-    static let availableSongs =  [
+    static let availableSongs = [
         "Strawberry Fields Forever",
         "The End",
         "Hey You",
@@ -16,7 +16,7 @@ enum SongService {
         "Happiness is a Warm Gun",
         "Across The Universe",
         "People Are Strange",
-        "Shine On Happy Peoplle",
+        "Shine On Happy People",
         "Losing My Religion"
     ].map(Song.init)
 }

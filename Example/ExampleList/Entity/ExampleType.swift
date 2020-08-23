@@ -11,7 +11,7 @@ enum ExampleType: String, CaseIterable {
     case editable = "Slide for Actions"
     case singleSelection = "Single selection"
     case horizontalList = "Horizontal List"
-    case collectionView = "CollectionView [WIP]"
+    case collectionView = "Static Collection"
 
     var title: String {
         switch self {
@@ -24,7 +24,7 @@ enum ExampleType: String, CaseIterable {
         case .horizontalList:
             return "Songfy"
         case .collectionView:
-            return rawValue
+            return "Available albums"
         }
     }
 }
