@@ -10,10 +10,14 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class SecondStaticCell: LabelCell, CellConfigurable {
+class SecondStaticCell: UITableViewCell, CellConfigurable {
     typealias ViewModel = String
 
     func configure(with model: String) {
         textLabel?.text = model
+        textLabel?.font = .systemFont(ofSize: 20)
+        if #available(iOS 13.0, *) {
+            backgroundColor = .groupTableViewBackground
+        }
     }
 }
