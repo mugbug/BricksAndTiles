@@ -9,10 +9,13 @@
 import TableViewFactory
 
 struct ExampleListTableViewFactory {
-    typealias ViewModel = ExampleNameTableViewCell.ViewModel
-    typealias SelectedExample = (ViewModel) -> Void
+    typealias ExampleViewModel = ExampleType
+    typealias SelectedExample = (ExampleViewModel) -> Void
+    typealias MeetupViewModel = MeetupExampleType
+    typealias SelectedMeetupExample = (MeetupViewModel) -> Void
 
     var didSelect: SelectedExample
+    var didSelectMeetupExample: SelectedMeetupExample
 
     func make() -> [TableViewSection] {
         let section = StaticSection(
@@ -20,13 +23,26 @@ struct ExampleListTableViewFactory {
             header: SimpleHeader(title: "Examples"),
             footer: UIView()
         )
-        return [section]
+        let meetupSection = StaticSection(
+            cellBuilders: meetupBuilders(),
+            header: SimpleHeader(title: "Dextra Meetup!"),
+            footer: UIView()
+        )
+        return [section, meetupSection]
     }
 
     func cellBuilders() -> [TableViewCellBuilder] {
-        return ViewModel.allCases.map { type in
-            SelectableCellBuilder<ExampleNameTableViewCell>(
+        return ExampleViewModel.allCases.map { type in
+            SelectableCellBuilder<ExampleNameTableViewCell<ExampleViewModel>>(
                 model: type, didSelect: didSelect
+            )
+        }
+    }
+
+    func meetupBuilders() -> [TableViewCellBuilder] {
+        return MeetupViewModel.allCases.map { type in
+            SelectableCellBuilder<ExampleNameTableViewCell<MeetupViewModel>>(
+                model: type, didSelect: didSelectMeetupExample
             )
         }
     }

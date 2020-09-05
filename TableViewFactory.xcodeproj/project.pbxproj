@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731C9DF22503CA1500967DA4 /* MeetupExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */; };
 		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
 		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -144,6 +145,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupExampleType.swift; sourceTree = "<group>"; };
 		73610C9024F167600070D724 /* SelectableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCellBuilder.swift; sourceTree = "<group>"; };
 		73610CDE24F16B710070D724 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Example/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		73610CE024F16B710070D724 /* SongService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
@@ -262,6 +264,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731C9DEE2503C82B00967DA4 /* MeetupExample */ = {
+			isa = PBXGroup;
+			children = (
+				731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */,
+			);
+			path = MeetupExample;
+			sourceTree = "<group>";
+		};
 		7342B34D247082A000644987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +596,7 @@
 				73610CDF24F16B710070D724 /* Database */,
 				73610D4524F1A8260070D724 /* Examples */,
 				73610CEA24F16B710070D724 /* ExampleList */,
+				731C9DEE2503C82B00967DA4 /* MeetupExample */,
 				73610D8C24F1B5CD0070D724 /* Resources */,
 			);
 			path = Example;
@@ -978,6 +989,7 @@
 				73610D7E24F1A8270070D724 /* SecondStaticCellBuilder.swift in Sources */,
 				73610D8424F1A8270070D724 /* DraggableViewController.swift in Sources */,
 				73610D1F24F16B710070D724 /* SongService.swift in Sources */,
+				731C9DF22503CA1500967DA4 /* MeetupExampleType.swift in Sources */,
 				73610D8124F1A8270070D724 /* FirstStaticCellBuilder.swift in Sources */,
 				73610D2424F16B710070D724 /* ExampleListViewController.swift in Sources */,
 				73610D8224F1A8270070D724 /* AlternateStaticTableViewFactory.swift in Sources */,

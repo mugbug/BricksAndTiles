@@ -13,6 +13,8 @@ protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
     func showDraggableExample()
     func showCollectionExample()
+    func showRegularExample()
+    func showFactoryExample()
 }
 
 class ExampleListPresenter {
@@ -22,15 +24,20 @@ class ExampleListPresenter {
     weak var view: ExampleListViewDelegate?
 
     func setupDataSource(in tableView: UITableView) {
-        self.dataSource = TableViewDataSource(
-            sections: ExampleListTableViewFactory(didSelect: { [weak self] type in
+        let factory = ExampleListTableViewFactory(
+            didSelect: { [weak self] type in
                 self?.showExample(for: type)
-            }).make(),
+            }, didSelectMeetupExample: { [weak self] type in
+                self?.showMeetupExample(for: type)
+            }
+        )
+        self.dataSource = TableViewDataSource(
+            sections: factory.make(),
             tableView: tableView
         )
     }
 
-    private func showExample(for type: ExampleType) {
+    func showExample(for type: ExampleType) {
         switch type {
         case .draggable:
             view?.showDraggableExample()
@@ -38,6 +45,15 @@ class ExampleListPresenter {
             view?.showCollectionExample()
         default:
             view?.showExample(forType: type, isEditable: false)
+        }
+    }
+
+    func showMeetupExample(for type: MeetupExampleType) {
+        switch type {
+        case .regular:
+            view?.showRegularExample()
+        case .factory:
+            view?.showFactoryExample()
         }
     }
 }
