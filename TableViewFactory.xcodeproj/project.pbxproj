@@ -282,13 +282,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		731C9DEE2503C82B00967DA4 /* MeetupExamples */ = {
+		731C9DEE2503C82B00967DA4 /* MeetupExample */ = {
 			isa = PBXGroup;
 			children = (
 				731C9DF32503CE9F00967DA4 /* Factory */,
 				731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */,
 			);
-			path = MeetupExamples;
+			path = MeetupExample;
 			sourceTree = "<group>";
 		};
 		731C9DF32503CE9F00967DA4 /* Factory */ = {
@@ -655,7 +655,7 @@
 				73610CDF24F16B710070D724 /* Database */,
 				73610D4524F1A8260070D724 /* Examples */,
 				73610CEA24F16B710070D724 /* ExampleList */,
-				731C9DEE2503C82B00967DA4 /* MeetupExamples */,
+				731C9DEE2503C82B00967DA4 /* MeetupExample */,
 				73610D8C24F1B5CD0070D724 /* Resources */,
 			);
 			path = Example;

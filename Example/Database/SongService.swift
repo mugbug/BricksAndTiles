@@ -9,24 +9,25 @@
 enum SongService {
     static let availableSongs = [
         "Strawberry Fields Forever",
-        "The End",
-        "Hey You",
+//        "The End",
+//        "Hey You",
         "Losing My Religion",
-        "Breathe (In The Air)"
+        "Breathe (In The Air)",
 //        "Us and Them",
-//        "Happiness is a Warm Gun",
+        "Happiness is a Warm Gun",
 //        "Across The Universe",
-//        "People Are Strange",
+        "People Are Strange"
 //        "Shiny Happy People",
     ].map(Song.init)
 
     static let availableAlbuns = [
-        ("The Dark Side of the Moon", "Pink Floyd"),
+        ("The Dark Side of the Moon", "Pink Floyd", "dark-side"),
 //        ("The Doors", "The Doors"),
-        ("The Beatles (White Album)", "The Beatles"),
+        ("Magical Mystery Tour", "The Beatles", "mystery"),
 //        ("Let It Be", "The Beatles"),
-        ("Out Of Time", "R.E.M."),
-        ("Strange Days", "The Doors")
-//        ("The Wall", "Pink Floyd")
+        ("Out Of Time", "R.E.M.", "rem"),
+        ("Strange Days", "The Doors", "doors"),
+        ("The Beatles (White Album)", "The Beatles", "white-album")
+//        ("The Wall", "Pink Floyd", "wall")
     ].map(Album.init)
 }

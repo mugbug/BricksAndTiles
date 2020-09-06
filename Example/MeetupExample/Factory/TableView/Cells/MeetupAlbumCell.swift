@@ -16,6 +16,8 @@ final class MeetupAlbumCell: UITableViewCell, Reusable {
 
         detailTextLabel?.text = model.band
         detailTextLabel?.font = .systemFont(ofSize: 16)
+
+        imageView?.image = UIImage(named: model.imageName)
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

@@ -9,4 +9,5 @@
 struct Album {
     var name: String
     var band: String
+    var imageName: String
 }
