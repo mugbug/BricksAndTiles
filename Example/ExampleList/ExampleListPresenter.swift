@@ -7,35 +7,17 @@
 //
 
 import UIKit
-import TableViewFactory
 
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
     func showDraggableExample()
     func showCollectionExample()
-    func showRegularExample()
     func showFactoryExample()
 }
 
 class ExampleListPresenter {
 
-    var dataSource: TableViewDataSource?
-
     weak var view: ExampleListViewDelegate?
-
-    func setupDataSource(in tableView: UITableView) {
-        let factory = ExampleListTableViewFactory(
-            didSelect: { [weak self] type in
-                self?.showExample(for: type)
-            }, didSelectMeetupExample: { [weak self] type in
-                self?.showMeetupExample(for: type)
-            }
-        )
-        self.dataSource = TableViewDataSource(
-            sections: factory.make(),
-            tableView: tableView
-        )
-    }
 
     func showExample(for type: ExampleType) {
         switch type {
@@ -50,8 +32,6 @@ class ExampleListPresenter {
 
     func showMeetupExample(for type: MeetupExampleType) {
         switch type {
-        case .regular:
-            view?.showRegularExample()
         case .factory:
             view?.showFactoryExample()
         }

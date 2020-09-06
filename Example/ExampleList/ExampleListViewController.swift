@@ -24,7 +24,7 @@ final class ExampleListViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.view.addSubviewWithConstraints(subview: tableView)
 
-        presenter.setupDataSource(in: tableView)
+        setupDataSource()
     }
 
     func setupDataSource() {
@@ -61,11 +61,9 @@ extension ExampleListViewController: ExampleListViewDelegate {
         self.navigationController?.pushViewController(view, animated: true)
     }
 
-    func showRegularExample() {
-
-    }
 
     func showFactoryExample() {
-
+        let view = MeetupFactoryViewController()
+        self.navigationController?.pushViewController(view, animated: true)
     }
 }

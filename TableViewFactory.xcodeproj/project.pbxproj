@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		731C9DF22503CA1500967DA4 /* MeetupExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */; };
+		731C9DF52503CEB300967DA4 /* MeetupFactoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9DF42503CEB300967DA4 /* MeetupFactoryViewController.swift */; };
+		731C9E0325043E2A00967DA4 /* MeetupTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0225043E2A00967DA4 /* MeetupTableViewFactory.swift */; };
+		731C9E0525043E8000967DA4 /* MeetupTableViewFactoryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0425043E8000967DA4 /* MeetupTableViewFactoryState.swift */; };
+		731C9E082504428B00967DA4 /* MeetupSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E072504428B00967DA4 /* MeetupSongCell.swift */; };
+		731C9E0A250442D700967DA4 /* MeetupAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E09250442D700967DA4 /* MeetupAlbumCell.swift */; };
+		731C9E0D2504431900967DA4 /* MeetupSongCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0C2504431900967DA4 /* MeetupSongCellBuilder.swift */; };
+		731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */; };
+		731C9E112504551800967DA4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E102504551800967DA4 /* Song.swift */; };
+		731C9E132504556900967DA4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E122504556900967DA4 /* Album.swift */; };
 		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
 		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -146,6 +155,15 @@
 
 /* Begin PBXFileReference section */
 		731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupExampleType.swift; sourceTree = "<group>"; };
+		731C9DF42503CEB300967DA4 /* MeetupFactoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupFactoryViewController.swift; sourceTree = "<group>"; };
+		731C9E0225043E2A00967DA4 /* MeetupTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupTableViewFactory.swift; sourceTree = "<group>"; };
+		731C9E0425043E8000967DA4 /* MeetupTableViewFactoryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupTableViewFactoryState.swift; sourceTree = "<group>"; };
+		731C9E072504428B00967DA4 /* MeetupSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupSongCell.swift; sourceTree = "<group>"; };
+		731C9E09250442D700967DA4 /* MeetupAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupAlbumCell.swift; sourceTree = "<group>"; };
+		731C9E0C2504431900967DA4 /* MeetupSongCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupSongCellBuilder.swift; sourceTree = "<group>"; };
+		731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupAlbumCellBuilder.swift; sourceTree = "<group>"; };
+		731C9E102504551800967DA4 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		731C9E122504556900967DA4 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		73610C9024F167600070D724 /* SelectableCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCellBuilder.swift; sourceTree = "<group>"; };
 		73610CDE24F16B710070D724 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Example/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		73610CE024F16B710070D724 /* SongService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
@@ -264,12 +282,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		731C9DEE2503C82B00967DA4 /* MeetupExample */ = {
+		731C9DEE2503C82B00967DA4 /* MeetupExamples */ = {
 			isa = PBXGroup;
 			children = (
+				731C9DF32503CE9F00967DA4 /* Factory */,
 				731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */,
 			);
-			path = MeetupExample;
+			path = MeetupExamples;
+			sourceTree = "<group>";
+		};
+		731C9DF32503CE9F00967DA4 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				731C9DF92503D04200967DA4 /* TableView */,
+				731C9DF42503CEB300967DA4 /* MeetupFactoryViewController.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		731C9DF92503D04200967DA4 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				731C9E0B2504431000967DA4 /* CellBuilders */,
+				731C9E062504419400967DA4 /* Cells */,
+				731C9E0225043E2A00967DA4 /* MeetupTableViewFactory.swift */,
+				731C9E0425043E8000967DA4 /* MeetupTableViewFactoryState.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		731C9E062504419400967DA4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				731C9E072504428B00967DA4 /* MeetupSongCell.swift */,
+				731C9E09250442D700967DA4 /* MeetupAlbumCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		731C9E0B2504431000967DA4 /* CellBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				731C9E0C2504431900967DA4 /* MeetupSongCellBuilder.swift */,
+				731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */,
+			);
+			path = CellBuilders;
 			sourceTree = "<group>";
 		};
 		7342B34D247082A000644987 /* Frameworks */ = {
@@ -291,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				73610CE024F16B710070D724 /* SongService.swift */,
+				731C9E102504551800967DA4 /* Song.swift */,
+				731C9E122504556900967DA4 /* Album.swift */,
 			);
 			name = Database;
 			path = Example/Database;
@@ -596,7 +655,7 @@
 				73610CDF24F16B710070D724 /* Database */,
 				73610D4524F1A8260070D724 /* Examples */,
 				73610CEA24F16B710070D724 /* ExampleList */,
-				731C9DEE2503C82B00967DA4 /* MeetupExample */,
+				731C9DEE2503C82B00967DA4 /* MeetupExamples */,
 				73610D8C24F1B5CD0070D724 /* Resources */,
 			);
 			path = Example;
@@ -976,13 +1035,18 @@
 				73610D7824F1A8270070D724 /* GenericExamplePresenter.swift in Sources */,
 				73610D8724F1A8270070D724 /* DragableExampleTableViewCell.swift in Sources */,
 				73610D2624F16B710070D724 /* ExampleNameTableViewCell.swift in Sources */,
+				731C9E112504551800967DA4 /* Song.swift in Sources */,
 				73610D8824F1A8270070D724 /* SongsRankingFactoryModel.swift in Sources */,
 				73610D2124F16B710070D724 /* SimpleHeader.swift in Sources */,
 				73610D7124F1A8270070D724 /* EditableTableViewCell.swift in Sources */,
 				73610D7B24F1A8270070D724 /* SingleSelectionTableViewFactory.swift in Sources */,
+				731C9DF52503CEB300967DA4 /* MeetupFactoryViewController.swift in Sources */,
 				73610D7724F1A8270070D724 /* HorizontalCellBuilder.swift in Sources */,
+				731C9E132504556900967DA4 /* Album.swift in Sources */,
 				73610D2724F16B710070D724 /* ExampleType.swift in Sources */,
+				731C9E0A250442D700967DA4 /* MeetupAlbumCell.swift in Sources */,
 				73610D7524F1A8270070D724 /* HorizontalCellHeader.swift in Sources */,
+				731C9E0325043E2A00967DA4 /* MeetupTableViewFactory.swift in Sources */,
 				73610D7C24F1A8270070D724 /* HorizontalListCell.swift in Sources */,
 				73610D2524F16B710070D724 /* ExampleListTableViewFactory.swift in Sources */,
 				73610D8324F1A8270070D724 /* DraggablePresenter.swift in Sources */,
@@ -990,6 +1054,8 @@
 				73610D8424F1A8270070D724 /* DraggableViewController.swift in Sources */,
 				73610D1F24F16B710070D724 /* SongService.swift in Sources */,
 				731C9DF22503CA1500967DA4 /* MeetupExampleType.swift in Sources */,
+				731C9E082504428B00967DA4 /* MeetupSongCell.swift in Sources */,
+				731C9E0D2504431900967DA4 /* MeetupSongCellBuilder.swift in Sources */,
 				73610D8124F1A8270070D724 /* FirstStaticCellBuilder.swift in Sources */,
 				73610D2424F16B710070D724 /* ExampleListViewController.swift in Sources */,
 				73610D8224F1A8270070D724 /* AlternateStaticTableViewFactory.swift in Sources */,
@@ -997,8 +1063,10 @@
 				73610D7024F1A8270070D724 /* EditableCellBuilder.swift in Sources */,
 				73610D7924F1A8270070D724 /* SingleSelectionCellBuilder.swift in Sources */,
 				73610D7F24F1A8270070D724 /* SecondStaticCell.swift in Sources */,
+				731C9E0525043E8000967DA4 /* MeetupTableViewFactoryState.swift in Sources */,
 				73610D7624F1A8270070D724 /* HorizontalCell.swift in Sources */,
 				73610D2824F16B710070D724 /* ExampleListPresenter.swift in Sources */,
+				731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */,
 				73610D1E24F16B710070D724 /* AppDelegate.swift in Sources */,
 				73610D8624F1A8270070D724 /* DragableExampleCellBuilder.swift in Sources */,
 				73610D7D24F1A8270070D724 /* HorizontalListCellBuilder.swift in Sources */,
