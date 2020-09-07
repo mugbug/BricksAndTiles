@@ -3,21 +3,20 @@
 //  Example
 //
 //  Created by Pedro M. Zaroni on 05/09/20.
-//  Copyright © 2020 Dextra. All rights reserved.
+//  Copyright © 2020 mugbug. All rights reserved.
 //
 
 import BricksAndTiles
 
 struct MeetupTableViewFactory {
-    typealias Models = MeetupTableViewFactoryState.Models
     var state: MeetupTableViewFactoryState
 
     func make() -> [TableViewSection] {
         switch state {
         case .loading:
             return loadingSections()
-        case let .filled(models):
-            return sections(for: models)
+        case let .filled(songs, albums):
+            return sections(songs: songs, albums: albums)
         }
     }
 
@@ -37,9 +36,9 @@ struct MeetupTableViewFactory {
 
     // MARK: - Filled
 
-    private func sections(for models: Models) -> [TableViewSection] {
-        let songBuilders = songCellBuilders(models.songs)
-        let albumBuilders = albumCellBuilders(models.albums)
+    private func sections(songs: [Song], albums: [Album]) -> [TableViewSection] {
+        let songBuilders = songCellBuilders(songs)
+        let albumBuilders = albumCellBuilders(albums)
 
         let firstSection = StaticSection(
             cellBuilders: songBuilders,

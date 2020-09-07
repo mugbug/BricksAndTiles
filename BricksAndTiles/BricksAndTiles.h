@@ -3,7 +3,7 @@
 //  BricksAndTiles
 //
 //  Created by Pedro Zaroni on 26/05/19.
-//  Copyright © 2019 Dextra. All rights reserved.
+//  Copyright © 2019 mugbug. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

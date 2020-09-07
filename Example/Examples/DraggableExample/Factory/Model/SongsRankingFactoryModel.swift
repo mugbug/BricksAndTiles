@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by Pedro M. Zaroni on 14/08/20.
-//  Copyright © 2020 Dextra. All rights reserved.
+//  Copyright © 2020 mugbug. All rights reserved.
 //
 
 struct SongsRankingFactoryModel {

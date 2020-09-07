@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by Pedro M. Zaroni on 16/05/20.
-//  Copyright © 2020 Dextra. All rights reserved.
+//  Copyright © 2020 mugbug. All rights reserved.
 //
 
 protocol ExampleListViewDelegate: AnyObject {

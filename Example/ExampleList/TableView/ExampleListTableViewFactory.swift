@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by Pedro M. Zaroni on 16/05/20.
-//  Copyright © 2020 Dextra. All rights reserved.
+//  Copyright © 2020 mugbug. All rights reserved.
 //
 
 import UIKit
@@ -26,7 +26,7 @@ struct ExampleListTableViewFactory {
         )
         let meetupSection = StaticSection(
             cellBuilders: meetupBuilders(),
-            header: SimpleHeader(title: "Dextra Meetup!"),
+            header: SimpleHeader(title: "mugbug Meetup!"),
             footer: UIView()
         )
         return [section, meetupSection]

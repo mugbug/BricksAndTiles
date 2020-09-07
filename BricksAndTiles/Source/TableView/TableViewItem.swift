@@ -2,7 +2,7 @@
 //  TableViewItem.swift
 //  BricksAndTiles
 //
-//  Copyright © 2019 Dextra. All rights reserved.
+//  Copyright © 2019 mugbug. All rights reserved.
 //
 
 import Foundation

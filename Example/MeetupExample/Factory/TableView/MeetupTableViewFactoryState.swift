@@ -3,22 +3,19 @@
 //  Example
 //
 //  Created by Pedro M. Zaroni on 05/09/20.
-//  Copyright © 2020 Dextra. All rights reserved.
+//  Copyright © 2020 mugbug. All rights reserved.
 //
 
 enum MeetupTableViewFactoryState {
-    typealias Models = (
-        songs: [Song],
-        albums: [Album]
-    )
-
     case loading
-    case filled(models: Models)
+    case filled(songs: [Song], albums: [Album])
 }
 
 extension MeetupTableViewFactoryState {
     static var mockFilled: Self {
-        let models = (SongService.availableSongs, SongService.availableAlbuns)
-        return .filled(models: models)
+        return .filled(
+            songs: SongService.availableSongs,
+            albums: SongService.availableAlbuns
+        )
     }
 }
