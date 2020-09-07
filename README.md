@@ -6,6 +6,8 @@
 
 - [Features](#features)
 - [Installation](#installation)
+    - [Swift Package Manager](#swift-package-manager)
+- [Contributing](#contributing)
 
 # Features
 ### UITableView
@@ -23,5 +25,33 @@
 # Installation
 
 _BricksAndTiles_ currently supports these installation options:
-- [x] Swift Package Manager
-- [ ] CocoaPods
+
+#### Swift Package Manager
+
+Add the following to your `Package.swift` file:
+
+```
+dependencies: [
+    .package(
+        url: "https://github.com/mugbug/BricksAndTiles.git", 
+        .branch:("master")
+    )
+]
+```
+
+If you're using SPM through Xcode:
+
+1. Go to `File > Swift Packages > Add Package Dependency` 
+2. Enter https://github.com/mugbug/BricksAndTiles
+3. Select the `branch` option, and type "master"
+
+For more information about how to get started with the Swift Package Manager, check out the [Official SPM website](https://swift.org/package-manager/) or the [SPM project on GitHub](https://github.com/apple/swift-package-manager).
+
+# Contributing
+
+Any kind of contributions would be highly appreciated! To start contributing, read the [Contributing Guideline](https://github.com/mugbug/BricksAndTiles/blob/master/CONTRIBUTING.md) for info on how to report issues, submit ideas and submit pull requests!
+
+# Authors
+
+- [@mugbug](https://github.com/mugbug)
+- [@emmendesf](https://github.com/emmendesf)
