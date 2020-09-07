@@ -8,6 +8,7 @@
 - [Installation](#installation)
     - [Swift Package Manager](#swift-package-manager)
 - [Contributing](#contributing)
+- [Authors](#authors)
 
 # Features
 ### UITableView
@@ -34,8 +35,8 @@ Add the following to your `Package.swift` file:
 dependencies: [
     .package(
         url: "https://github.com/mugbug/BricksAndTiles.git", 
-        .branch:("master")
-    )
+        from: "0.0.1"
+    ),
 ]
 ```
 
@@ -43,7 +44,7 @@ If you're using SPM through Xcode:
 
 1. Go to `File > Swift Packages > Add Package Dependency` 
 2. Enter https://github.com/mugbug/BricksAndTiles
-3. Select the `branch` option, and type "master"
+3. Choose a rule and submit.
 
 For more information about how to get started with the Swift Package Manager, check out the [Official SPM website](https://swift.org/package-manager/) or the [SPM project on GitHub](https://github.com/apple/swift-package-manager).
 
