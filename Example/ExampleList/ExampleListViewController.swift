@@ -17,7 +17,7 @@ final class ExampleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
-        title = "TableViewFactory"
+        title = "BricksAndTiles"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.view.addSubviewWithConstraints(subview: tableView)

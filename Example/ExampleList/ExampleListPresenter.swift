@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)

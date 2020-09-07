@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 import ViewCodeHelper
 
 typealias SelectableConfigurableCell = SelectableTableViewCell & CellConfigurable

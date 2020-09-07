@@ -6,7 +6,8 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
-import TableViewFactory
+import UIKit
+import BricksAndTiles
 
 struct SingleSelectionCellBuilder: TableViewSelectableCellBuilder {
 

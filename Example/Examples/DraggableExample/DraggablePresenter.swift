@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 
 protocol DraggableViewDelelgate: AnyObject {
     func reloadTableView()
