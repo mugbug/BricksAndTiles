@@ -1,6 +1,6 @@
 //
 //  UITableView+DefaultConfiguration.swift
-// BricksAndTiles
+//  BricksAndTiles
 //
 //  Created by Pedro M. Zaroni on 01/08/20.
 //  Copyright © 2020 Dextra. All rights reserved.

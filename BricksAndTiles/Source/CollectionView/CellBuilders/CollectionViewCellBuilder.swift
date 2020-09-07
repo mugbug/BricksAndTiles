@@ -1,6 +1,6 @@
 //
 //  CollectionViewCellBuilder.swift
-// BricksAndTiles
+//  BricksAndTiles
 //
 //  Created by Pedro M. Zaroni on 30/07/20.
 //  Copyright © 2020 Dextra. All rights reserved.
