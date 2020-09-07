@@ -26,7 +26,7 @@ struct ExampleListTableViewFactory {
         )
         let meetupSection = StaticSection(
             cellBuilders: meetupBuilders(),
-            header: SimpleHeader(title: "mugbug Meetup!"),
+            header: SimpleHeader(title: "Dextra Meetup!"),
             footer: UIView()
         )
         return [section, meetupSection]
