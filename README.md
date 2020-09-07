@@ -8,20 +8,20 @@
 - [Installation](#installation)
 
 # Features
-UITableView
+### UITableView
 - [x] Static cells
 - [x] Draggable cells
 - [x] Cells with actions on slide
 - [x] Single selection
 
-UICollectionView
+### UICollectionView
 - [x] Static collection cells
 
-UITableView + UICollectionView
+### UITableView + UICollectionView
 - [x] Horizontal list cells
 
 # Installation
 
-BricksAndTiles currently supports these dependency managers:
+_BricksAndTiles_ currently supports these dependency managers:
 - [x] Swift Package Manager
 - [ ] CocoaPods
