@@ -6,31 +6,18 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
-import UIKit
-import BricksAndTiles
-
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
     func showDraggableExample()
     func showCollectionExample()
+    func showFactoryExample()
 }
 
 class ExampleListPresenter {
 
-    var dataSource: TableViewDataSource?
-
     weak var view: ExampleListViewDelegate?
 
-    func setupDataSource(in tableView: UITableView) {
-        self.dataSource = TableViewDataSource(
-            sections: ExampleListTableViewFactory(didSelect: { [weak self] type in
-                self?.showExample(for: type)
-            }).make(),
-            tableView: tableView
-        )
-    }
-
-    private func showExample(for type: ExampleType) {
+    func showExample(for type: ExampleType) {
         switch type {
         case .draggable:
             view?.showDraggableExample()
@@ -38,6 +25,13 @@ class ExampleListPresenter {
             view?.showCollectionExample()
         default:
             view?.showExample(forType: type, isEditable: false)
+        }
+    }
+
+    func showMeetupExample(for type: MeetupExampleType) {
+        switch type {
+        case .factory:
+            view?.showFactoryExample()
         }
     }
 }
