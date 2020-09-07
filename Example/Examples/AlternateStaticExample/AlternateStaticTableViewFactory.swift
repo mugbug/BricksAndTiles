@@ -6,8 +6,9 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
+import UIKit
 import ViewCodeHelper
-import TableViewFactory
+import BricksAndTiles
 
 extension UIEdgeInsets: Builder {}
 

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 
 final class MeetupFactoryViewController: UIViewController {
 

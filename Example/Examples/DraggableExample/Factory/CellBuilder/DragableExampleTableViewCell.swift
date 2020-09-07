@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 import ViewCodeHelper
 
 class DragableExampleTableViewCell: LabelCell, CellConfigurable {

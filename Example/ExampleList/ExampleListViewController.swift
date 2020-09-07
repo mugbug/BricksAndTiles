@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 
 final class ExampleListViewController: UIViewController {
 
@@ -19,7 +19,7 @@ final class ExampleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.view = self
-        title = "TableViewFactory"
+        title = "BricksAndTiles"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.view.addSubviewWithConstraints(subview: tableView)
@@ -60,7 +60,6 @@ extension ExampleListViewController: ExampleListViewDelegate {
         let view = CollectionViewExampleViewController()
         self.navigationController?.pushViewController(view, animated: true)
     }
-
 
     func showFactoryExample() {
         let view = MeetupFactoryViewController()

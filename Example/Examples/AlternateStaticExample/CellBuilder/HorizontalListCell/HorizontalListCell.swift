@@ -8,7 +8,7 @@
 
 import UIKit
 import ViewCodeHelper
-import TableViewFactory
+import BricksAndTiles
 
 final class HorizontalListCell: UITableViewCell, Reusable {
 

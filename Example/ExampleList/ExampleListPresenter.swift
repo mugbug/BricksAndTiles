@@ -6,8 +6,6 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
-import UIKit
-
 protocol ExampleListViewDelegate: AnyObject {
     func showExample(forType type: ExampleType, isEditable: Bool)
     func showDraggableExample()

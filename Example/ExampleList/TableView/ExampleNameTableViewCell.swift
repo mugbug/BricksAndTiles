@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TableViewFactory
+import BricksAndTiles
 import ViewCodeHelper
 
 class ExampleNameTableViewCell<ViewModel: RawRepresentable>: LabelCell, CellConfigurable

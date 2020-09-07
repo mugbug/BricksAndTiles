@@ -6,7 +6,7 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
-import TableViewFactory
+import BricksAndTiles
 
 struct MeetupTableViewFactory {
     typealias Models = MeetupTableViewFactoryState.Models
