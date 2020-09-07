@@ -6,6 +6,7 @@
 //  Copyright © 2020 Dextra. All rights reserved.
 //
 
+import UIKit
 import BricksAndTiles
 import ViewCodeHelper
 
