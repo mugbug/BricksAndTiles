@@ -10,12 +10,13 @@ import UIKit
 import TableViewFactory
 import ViewCodeHelper
 
-class ExampleNameTableViewCell: LabelCell, CellConfigurable {
-    typealias ViewModel = ExampleType
+class ExampleNameTableViewCell<ViewModel: RawRepresentable>: LabelCell, CellConfigurable
+    where ViewModel.RawValue == String {
+    typealias ViewModel = ViewModel
 
     // MARK: - Setup
 
-    func configure(with model: ExampleType) {
+    func configure(with model: ViewModel) {
         textLabel?.text = model.rawValue
         self.accessoryType = .disclosureIndicator
     }

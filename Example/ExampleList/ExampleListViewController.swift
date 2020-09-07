@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import TableViewFactory
 
 final class ExampleListViewController: UIViewController {
 
     private lazy var tableView = UITableView.standard()
 
     private let presenter = ExampleListPresenter()
+    private var dataSource: TableViewDataSource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,21 @@ final class ExampleListViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.view.addSubviewWithConstraints(subview: tableView)
 
-        presenter.setupDataSource(in: tableView)
+        setupDataSource()
+    }
+
+    func setupDataSource() {
+        let factory = ExampleListTableViewFactory(
+            didSelect: { [weak self] type in
+                self?.presenter.showExample(for: type)
+            }, didSelectMeetupExample: { [weak self] type in
+                self?.presenter.showMeetupExample(for: type)
+            }
+        )
+        self.dataSource = TableViewDataSource(
+            sections: factory.make(),
+            tableView: tableView
+        )
     }
 }
 
@@ -42,6 +58,12 @@ extension ExampleListViewController: ExampleListViewDelegate {
 
     func showCollectionExample() {
         let view = CollectionViewExampleViewController()
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+
+
+    func showFactoryExample() {
+        let view = MeetupFactoryViewController()
         self.navigationController?.pushViewController(view, animated: true)
     }
 }
