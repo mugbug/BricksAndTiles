@@ -1,4 +1,4 @@
-![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
+![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-333333.svg) [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 # BricksAndTiles
 
@@ -22,6 +22,6 @@
 
 # Installation
 
-_BricksAndTiles_ currently supports these dependency managers:
+_BricksAndTiles_ currently supports these installation options:
 - [x] Swift Package Manager
 - [ ] CocoaPods
