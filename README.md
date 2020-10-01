@@ -4,10 +4,15 @@
 
 🧱 A composable solution for building reusable lists in Swift/UIKit. As easy as playing with Legos.
 
+- [BricksAndTiles](#bricksandtiles)
 - [Features](#features)
+    - [UITableView](#uitableview)
+    - [UICollectionView](#uicollectionview)
+    - [UITableView + UICollectionView](#uitableview--uicollectionview)
 - [Installation](#installation)
-    - [Swift Package Manager](#swift-package-manager)
+      - [Swift Package Manager](#swift-package-manager)
 - [Contributing](#contributing)
+- [Requirements](#requirements)
 - [Authors](#authors)
 
 # Features
@@ -52,6 +57,11 @@ For more information about how to get started with the Swift Package Manager, ch
 
 Any kind of contributions would be highly appreciated! To start contributing, read the [Contributing Guideline](https://github.com/mugbug/BricksAndTiles/blob/master/CONTRIBUTING.md) for info on how to report issues, submit ideas and submit pull requests!
 
+
+# Requirements
+ -  OS versions iOS 8.0+ / Mac OS X 10.10+
+ -  Xcode version 7.0+,8.0+,9.0+,10.0+,11.0+
+ -  Swift version 2.2/2.3 , 3.2+ /4.x
 # Authors
 
 - [@mugbug](https://github.com/mugbug)
