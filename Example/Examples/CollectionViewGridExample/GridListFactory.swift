@@ -24,19 +24,19 @@ struct GridListFactory {
             cellBuilders: cellBuilders(),
             numberOfItemsPerRow: 2,
             sectionInsets: sectionInsets,
-            spacingBetweenItems: (8.0, 8.0)
+            spacingBetweenItems: (horizontal: 8.0, vertical: 8.0)
         )
         let section2 = GridCollectionSection(
             cellBuilders: cellBuilders(),
             numberOfItemsPerRow: 3,
             sectionInsets: sectionInsets,
-            spacingBetweenItems: (8.0, 8.0)
+            spacingBetweenItems: (horizontal: 8.0, vertical: 8.0)
         )
         let section3 = GridCollectionSection(
             cellBuilders: cellBuilders(),
             numberOfItemsPerRow: 1,
             sectionInsets: sectionInsets,
-            spacingBetweenItems: (8.0, 8.0)
+            spacingBetweenItems: (horizontal: 8.0, vertical: 8.0)
         )
         return [section, section2, section3]
     }

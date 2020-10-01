@@ -17,12 +17,12 @@ struct HorizontalListFactory {
     func make() -> [CollectionViewSection] {
         let section = StaticCollectionSection(
             cellBuilders: cellBuilders(),
-            spacingBetweenItems: (5.0, 5.0),
+            spacingBetweenItems: (horizontal: 5.0, vertical: 5.0),
             sectionInsets: .zero
         )
         let section2 = StaticCollectionSection(
             cellBuilders: cellBuilders(),
-            spacingBetweenItems: (5.0, 5.0),
+            spacingBetweenItems: (horizontal: 5.0, vertical: 5.0),
             sectionInsets: UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
         )
         return [section, section2]
