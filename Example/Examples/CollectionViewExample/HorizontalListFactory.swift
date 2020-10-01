@@ -16,10 +16,14 @@ struct HorizontalListFactory {
 
     func make() -> [CollectionViewSection] {
         let section = StaticCollectionSection(
-            cellBuilders: cellBuilders()
+            cellBuilders: cellBuilders(),
+            spacingBetweenItems: (5.0, 5.0),
+            sectionInsets: .zero
         )
         let section2 = StaticCollectionSection(
-            cellBuilders: cellBuilders()
+            cellBuilders: cellBuilders(),
+            spacingBetweenItems: (5.0, 5.0),
+            sectionInsets: UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
         )
         return [section, section2]
     }
@@ -27,7 +31,6 @@ struct HorizontalListFactory {
     func cellBuilders() -> [CollectionViewCellBuilder] {
         return availableImages().map {
             HorizontalCellBuilder(imageName: $0, cellSize: cellSize)
-
         }
     }
 

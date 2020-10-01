@@ -80,4 +80,34 @@ extension CollectionViewDataSource: UICollectionViewDelegateFlowLayout {
             layout: collectionViewLayout
         )
     }
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sections[section].sectionBorderEdges(
+            at: section,
+            on: collectionView,
+            layout: collectionViewLayout
+        )
+    }
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sections[section].minimumVerticalItemSpacing(
+            at: section,
+            on: collectionView,
+            layout: collectionViewLayout
+        )
+    }
+
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return sections[section].minimumHorizontalItemSpacing(
+            at: section,
+            on: collectionView,
+            layout: collectionViewLayout
+        )
+    }
 }

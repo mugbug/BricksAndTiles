@@ -11,6 +11,7 @@ protocol ExampleListViewDelegate: AnyObject {
     func showDraggableExample()
     func showCollectionExample()
     func showFactoryExample()
+    func showGridColletionExample()
 }
 
 class ExampleListPresenter {
@@ -23,6 +24,8 @@ class ExampleListPresenter {
             view?.showDraggableExample()
         case .collectionView:
             view?.showCollectionExample()
+        case .gridColletion:
+            view?.showGridColletionExample()
         default:
             view?.showExample(forType: type, isEditable: false)
         }

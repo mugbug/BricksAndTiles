@@ -61,6 +61,11 @@ extension ExampleListViewController: ExampleListViewDelegate {
         self.navigationController?.pushViewController(view, animated: true)
     }
 
+    func showGridColletionExample() {
+        let view = CollectionViewGridExampleController()
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+
     func showFactoryExample() {
         let view = MeetupFactoryViewController()
         self.navigationController?.pushViewController(view, animated: true)
