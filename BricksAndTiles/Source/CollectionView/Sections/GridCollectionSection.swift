@@ -1,26 +1,29 @@
 //
-//  StaticCollectionSection.swift
+//  GridCollectionSection.swift
 //  BricksAndTiles
 //
-//  Created by Pedro M. Zaroni on 30/07/20.
-//  Copyright © 2020 mugbug. All rights reserved.
+//  Created by Tulio Bazan on 24/09/20.
+//  Copyright © 2020 TucoBZ. All rights reserved.
 //
 
 import UIKit
 
-public final class StaticCollectionSection: CollectionViewSection {
+public final class GridCollectionSection: CollectionViewSection {
 
-    public var spacingBetweenItems: ItemSpacing
-    public var sectionInsets: UIEdgeInsets
+    public let spacingBetweenItems: ItemSpacing
+    public let sectionInsets: UIEdgeInsets
 
+    private let numberOfItemsPerRow: UInt
     private var cellBuilders: [CollectionViewCellBuilder]
 
     public init(cellBuilders: [CollectionViewCellBuilder],
-                spacingBetweenItems: ItemSpacing,
-                sectionInsets: UIEdgeInsets) {
+                numberOfItemsPerRow: UInt,
+                sectionInsets: UIEdgeInsets,
+                spacingBetweenItems: ItemSpacing) {
         self.cellBuilders = cellBuilders
-        self.spacingBetweenItems = spacingBetweenItems
+        self.numberOfItemsPerRow = numberOfItemsPerRow
         self.sectionInsets = sectionInsets
+        self.spacingBetweenItems = spacingBetweenItems
     }
 
     public var numberOfItems: Int {
@@ -56,7 +59,27 @@ public final class StaticCollectionSection: CollectionViewSection {
     public func sizeForItem(at indexPath: IndexPath,
                             on collectionView: UICollectionView,
                             layout: UICollectionViewLayout) -> CGSize {
-        return self.row(at: indexPath).cellSize(collectionSize: collectionView.bounds.size)
+
+        let cellSize = self.row(at: indexPath).cellSize(collectionSize: collectionView.bounds.size)
+
+        let insetsHorizontalSpacing = sectionInsets.left + sectionInsets.right
+        let paddingSpace =  spacingBetweenItems.horizontal * (CGFloat(numberOfItemsPerRow) + 1)
+        let availableWidth = collectionView.frame.width - paddingSpace - insetsHorizontalSpacing
+        let widthPerItem = availableWidth / CGFloat(numberOfItemsPerRow)
+
+        return CGSize(width: widthPerItem, height: widthPerItem * cellSize.height / cellSize.width)
+    }
+
+    public func minimumVerticalItemSpacing(at section: Int,
+                                           on collectionView: UICollectionView,
+                                           layout: UICollectionViewLayout) -> CGFloat {
+        return spacingBetweenItems.vertical - 1
+    }
+
+    public func minimumHorizontalItemSpacing(at section: Int,
+                                             on collectionView: UICollectionView,
+                                             layout: UICollectionViewLayout) -> CGFloat {
+        return spacingBetweenItems.horizontal - 1
     }
 
     public func didSelectItem(at indexPath: IndexPath, on collectionView: UICollectionView) {

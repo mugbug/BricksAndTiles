@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59CA4F91251D09460096E22E /* GridCollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA4F90251D09460096E22E /* GridCollectionSection.swift */; };
+		59CA4F93251D0ED20096E22E /* CollectionViewGridExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA4F92251D0ED20096E22E /* CollectionViewGridExampleController.swift */; };
+		59CA4F95251D3DE90096E22E /* GridListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA4F94251D3DE90096E22E /* GridListFactory.swift */; };
 		731C9DF22503CA1500967DA4 /* MeetupExampleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */; };
 		731C9DF52503CEB300967DA4 /* MeetupFactoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9DF42503CEB300967DA4 /* MeetupFactoryViewController.swift */; };
 		731C9E0325043E2A00967DA4 /* MeetupTableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0225043E2A00967DA4 /* MeetupTableViewFactory.swift */; };
@@ -146,6 +149,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		59CA4F90251D09460096E22E /* GridCollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionSection.swift; sourceTree = "<group>"; };
+		59CA4F92251D0ED20096E22E /* CollectionViewGridExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewGridExampleController.swift; sourceTree = "<group>"; };
+		59CA4F94251D3DE90096E22E /* GridListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridListFactory.swift; sourceTree = "<group>"; };
 		731C9DF12503CA1500967DA4 /* MeetupExampleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupExampleType.swift; sourceTree = "<group>"; };
 		731C9DF42503CEB300967DA4 /* MeetupFactoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupFactoryViewController.swift; sourceTree = "<group>"; };
 		731C9E0225043E2A00967DA4 /* MeetupTableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupTableViewFactory.swift; sourceTree = "<group>"; };
@@ -266,6 +272,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59CA4F8F251D09130096E22E /* CollectionViewGridExample */ = {
+			isa = PBXGroup;
+			children = (
+				59CA4F92251D0ED20096E22E /* CollectionViewGridExampleController.swift */,
+				59CA4F94251D3DE90096E22E /* GridListFactory.swift */,
+			);
+			path = CollectionViewGridExample;
+			sourceTree = "<group>";
+		};
 		731C9DEE2503C82B00967DA4 /* MeetupExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +422,7 @@
 		73610D4524F1A8260070D724 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				59CA4F8F251D09130096E22E /* CollectionViewGridExample */,
 				73610D5324F1A8260070D724 /* GenericExamplePresenter.swift */,
 				73610D4B24F1A8260070D724 /* GenericExampleViewController.swift */,
 				73610D5924F1A8260070D724 /* AlternateStaticExample */,
@@ -611,6 +627,7 @@
 			children = (
 				736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */,
 				73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */,
+				59CA4F90251D09460096E22E /* GridCollectionSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -971,6 +988,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73610D7A24F1A8270070D724 /* SingleSelectionTableViewCell.swift in Sources */,
+				59CA4F93251D0ED20096E22E /* CollectionViewGridExampleController.swift in Sources */,
 				73610D8524F1A8270070D724 /* DraggableExampleTableViewFactory.swift in Sources */,
 				73610D8024F1A8270070D724 /* FirstStaticCell.swift in Sources */,
 				73610D7224F1A8270070D724 /* GenericExampleViewController.swift in Sources */,
@@ -1011,6 +1029,7 @@
 				731C9E0525043E8000967DA4 /* MeetupTableViewFactoryState.swift in Sources */,
 				73610D7624F1A8270070D724 /* HorizontalCell.swift in Sources */,
 				73610D2824F16B710070D724 /* ExampleListPresenter.swift in Sources */,
+				59CA4F95251D3DE90096E22E /* GridListFactory.swift in Sources */,
 				731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */,
 				73610D1E24F16B710070D724 /* AppDelegate.swift in Sources */,
 				73610D8624F1A8270070D724 /* DragableExampleCellBuilder.swift in Sources */,
@@ -1035,6 +1054,7 @@
 				EBF15B02229B3AD20055DF69 /* TableViewDataSource.swift in Sources */,
 				73B8FB2124D394F900B32167 /* StaticCollectionSection.swift in Sources */,
 				73B8FB2324D3957A00B32167 /* CollectionViewCellBuilder.swift in Sources */,
+				59CA4F91251D09460096E22E /* GridCollectionSection.swift in Sources */,
 				736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */,
 				EBF15B11229B3B190055DF69 /* TableViewCellBuilder.swift in Sources */,
 				EBF15B04229B3AD20055DF69 /* TableViewItem.swift in Sources */,
