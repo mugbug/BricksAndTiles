@@ -18,20 +18,25 @@
 ### UITableView
 - [x] Static cells
 - [x] Draggable cells
+
 ![](demoAssets/draggable.gif)
 
 - [x] Cells with actions on slide
+
 ![](demoAssets/slide_actions.gif)
 
 - [x] Single selection
+
 ![](demoAssets/selectable.gif)
 
 ### UICollectionView
 - [x] Static collection cells
+
 ![](demoAssets/collection.gif)
 
 ### UITableView + UICollectionView
 - [x] Horizontal list cells
+
 ![](demoAssets/horizontal_sliders.gif)
 
 ## Installation
