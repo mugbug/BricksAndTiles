@@ -4,26 +4,37 @@
 
 🧱 A composable solution for building reusable lists in Swift/UIKit. As easy as playing with Legos.
 
-- [Features](#features)
-- [Installation](#installation)
-    - [Swift Package Manager](#swift-package-manager)
-- [Contributing](#contributing)
-- [Authors](#authors)
+- [BricksAndTiles](#bricksandtiles)
+  - [Features](#features)
+    - [UITableView](#uitableview)
+    - [UICollectionView](#uicollectionview)
+    - [UITableView + UICollectionView](#uitableview--uicollectionview)
+  - [Installation](#installation)
+      - [Swift Package Manager](#swift-package-manager)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
 
-# Features
+## Features
 ### UITableView
 - [x] Static cells
 - [x] Draggable cells
+![](demoAssets/draggable.gif)
+
 - [x] Cells with actions on slide
+![](demoAssets/slide_actions.gif)
+
 - [x] Single selection
+![](demoAssets/selectable.gif)
 
 ### UICollectionView
 - [x] Static collection cells
+![](demoAssets/collection.gif)
 
 ### UITableView + UICollectionView
 - [x] Horizontal list cells
+![](demoAssets/horizontal_sliders.gif)
 
-# Installation
+## Installation
 
 _BricksAndTiles_ currently supports these installation options:
 
@@ -48,11 +59,11 @@ If you're using SPM through Xcode:
 
 For more information about how to get started with the Swift Package Manager, check out the [Official SPM website](https://swift.org/package-manager/) or the [SPM project on GitHub](https://github.com/apple/swift-package-manager).
 
-# Contributing
+## Contributing
 
 Any kind of contributions would be highly appreciated! To start contributing, read the [Contributing Guideline](https://github.com/mugbug/BricksAndTiles/blob/master/CONTRIBUTING.md) for info on how to report issues, submit ideas and submit pull requests!
 
-# Authors
+## Authors
 
 - [@mugbug](https://github.com/mugbug)
 - [@emmendesf](https://github.com/emmendesf)
