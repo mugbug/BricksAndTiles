@@ -4,7 +4,6 @@
 
 🧱 A composable solution for building reusable lists in Swift/UIKit. As easy as playing with Legos.
 
-- [BricksAndTiles](#bricksandtiles)
   - [Features](#features)
     - [UITableView](#uitableview)
     - [UICollectionView](#uicollectionview)
@@ -15,6 +14,7 @@
   - [Authors](#authors)
 
 ## Features
+
 ### UITableView
 - [x] Static cells
 - [x] Draggable cells
@@ -33,6 +33,10 @@
 - [x] Static collection cells
 
 ![](demoAssets/collection.gif)
+
+- [x] Grid collection cells
+
+![](demoAssets/grid.gif)
 
 ### UITableView + UICollectionView
 - [x] Horizontal list cells
