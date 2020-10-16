@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ViewCodeHelper
+import PaintAndBrush
 
 final class SimpleHeader: UIView {
     lazy var titleLabel = UILabel()

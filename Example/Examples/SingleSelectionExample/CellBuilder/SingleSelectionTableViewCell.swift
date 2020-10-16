@@ -8,7 +8,7 @@
 
 import UIKit
 import BricksAndTiles
-import ViewCodeHelper
+import PaintAndBrush
 
 typealias SelectableConfigurableCell = SelectableTableViewCell & CellConfigurable
 

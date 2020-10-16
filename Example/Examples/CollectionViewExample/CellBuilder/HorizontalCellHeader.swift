@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ViewCodeHelper
+import PaintAndBrush
 
 final class HorizontalCellHeader: UICollectionReusableView, Reusable {
 
@@ -26,7 +26,7 @@ final class HorizontalCellHeader: UICollectionReusableView, Reusable {
     }
 }
 
-#warning("Move to ViewCodeHelper")
+#warning("Move to PaintAndBrush")
 extension UIEdgeInsets {
     init(all value: CGFloat) {
         self.init(top: value, left: value, bottom: -value, right: -value)

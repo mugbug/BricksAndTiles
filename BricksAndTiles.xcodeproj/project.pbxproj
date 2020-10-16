@@ -20,9 +20,9 @@
 		731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */; };
 		731C9E112504551800967DA4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E102504551800967DA4 /* Song.swift */; };
 		731C9E132504556900967DA4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E122504556900967DA4 /* Album.swift */; };
-		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
 		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
 		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73393E12253A04E000306E6E /* PaintAndBrush in Frameworks */ = {isa = PBXBuildFile; productRef = 73393E11253A04E000306E6E /* PaintAndBrush */; };
 		7342B34E247082A000644987 /* BricksAndTiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */; };
 		7342B34F247082A000644987 /* BricksAndTiles.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73610C9124F167600070D724 /* SelectableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610C9024F167600070D724 /* SelectableCellBuilder.swift */; };
@@ -240,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */,
+				73393E12253A04E000306E6E /* PaintAndBrush in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +802,7 @@
 			);
 			name = ViewCodeHelper;
 			packageProductDependencies = (
-				733732AD24E20F2E008DAF3A /* ViewCodeHelper */,
+				73393E11253A04E000306E6E /* PaintAndBrush */,
 			);
 			productName = ViewCodeHelper;
 			productReference = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */;
@@ -1485,10 +1485,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		733732AD24E20F2E008DAF3A /* ViewCodeHelper */ = {
+		73393E11253A04E000306E6E /* PaintAndBrush */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */;
-			productName = ViewCodeHelper;
+			productName = PaintAndBrush;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

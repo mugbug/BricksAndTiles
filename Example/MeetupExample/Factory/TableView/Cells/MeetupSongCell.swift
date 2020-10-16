@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ViewCodeHelper
+import PaintAndBrush
 
 final class MeetupSongCell: UITableViewCell, Reusable {
     func configure(with model: Song) {
