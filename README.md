@@ -56,7 +56,7 @@ Add the following to your `Package.swift` file:
 dependencies: [
     .package(
         url: "https://github.com/mugbug/BricksAndTiles.git", 
-        from: "0.0.2"
+        from: "0.0.3"
     ),
 ]
 ```

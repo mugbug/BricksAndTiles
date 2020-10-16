@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/mugbug/view-code-helper",
-            from: "0.1.4"),
+            from: "0.2.0"),
     ],
     targets: [
         .target(
