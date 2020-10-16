@@ -10,6 +10,7 @@
     - [UITableView + UICollectionView](#uitableview--uicollectionview)
   - [Installation](#installation)
       - [Swift Package Manager](#swift-package-manager)
+  - [Dependencies](#dependencies)
   - [Contributing](#contributing)
   - [Authors](#authors)
 
@@ -55,7 +56,7 @@ Add the following to your `Package.swift` file:
 dependencies: [
     .package(
         url: "https://github.com/mugbug/BricksAndTiles.git", 
-        from: "0.0.1"
+        from: "0.0.2"
     ),
 ]
 ```
@@ -67,6 +68,10 @@ If you're using SPM through Xcode:
 3. Choose a rule and submit.
 
 For more information about how to get started with the Swift Package Manager, check out the [Official SPM website](https://swift.org/package-manager/) or the [SPM project on GitHub](https://github.com/apple/swift-package-manager).
+
+## Dependencies
+
+This package depends on [PaintAndBrush](https://github.com/mugbug/PaintAndBrush), which is a super lightweight package with helper extensions for building UIKit views in code.
 
 ## Contributing
 

@@ -8,7 +8,7 @@
 
 import UIKit
 import BricksAndTiles
-import ViewCodeHelper
+import PaintAndBrush
 
 struct MeetupAlbumCellBuilder: TableViewCellBuilder {
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ViewCodeHelper
+import PaintAndBrush
 import BricksAndTiles
 
 final class CollectionViewExampleViewController: UIViewController {

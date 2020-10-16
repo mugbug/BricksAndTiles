@@ -20,9 +20,7 @@
 		731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */; };
 		731C9E112504551800967DA4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E102504551800967DA4 /* Song.swift */; };
 		731C9E132504556900967DA4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E122504556900967DA4 /* Album.swift */; };
-		733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 733732AD24E20F2E008DAF3A /* ViewCodeHelper */; };
-		733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
-		733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73393E16253A09D700306E6E /* PaintAndBrush in Frameworks */ = {isa = PBXBuildFile; productRef = 73393E15253A09D700306E6E /* PaintAndBrush */; };
 		7342B34E247082A000644987 /* BricksAndTiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */; };
 		7342B34F247082A000644987 /* BricksAndTiles.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73610C9124F167600070D724 /* SelectableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610C9024F167600070D724 /* SelectableCellBuilder.swift */; };
@@ -65,9 +63,6 @@
 		73610D8B24F1B4F60070D724 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73610D8924F1B4F60070D724 /* LaunchScreen.storyboard */; };
 		736E6B8D24B219AF0086B985 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */; };
 		736E6B9324B21B7C0086B985 /* CollectionViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */; };
-		73B8FB0E24D38F2300B32167 /* ViewCodeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B8FB0C24D38F2300B32167 /* ViewCodeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B8FB1824D38F5200B32167 /* ViewCodeHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; };
-		73B8FB1924D38F5200B32167 /* ViewCodeHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73B8FB2124D394F900B32167 /* StaticCollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */; };
 		73B8FB2324D3957A00B32167 /* CollectionViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB2224D3957A00B32167 /* CollectionViewCellBuilder.swift */; };
 		73B8FB2724D3AB3600B32167 /* HorizontalCollectionViewCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B8FB2624D3AB3600B32167 /* HorizontalCollectionViewCellBuilder.swift */; };
@@ -92,26 +87,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		733732B124E20F3E008DAF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 73B8FB0924D38F2300B32167;
-			remoteInfo = ViewCodeHelper;
-		};
 		73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EBF15ADE229B3A630055DF69;
 			remoteInfo = TableViewFactory;
-		};
-		73B8FB1A24D38F5200B32167 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 73B8FB0924D38F2300B32167;
-			remoteInfo = ViewCodeHelper;
 		};
 		EBF15AEA229B3A630055DF69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -129,7 +110,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				733732B024E20F3E008DAF3A /* ViewCodeHelper.framework in Embed Frameworks */,
 				7342B34F247082A000644987 /* BricksAndTiles.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -141,7 +121,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				73B8FB1924D38F5200B32167 /* ViewCodeHelper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +182,6 @@
 		73610D8A24F1B4F60070D724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
-		73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewCodeHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B8FB0C24D38F2300B32167 /* ViewCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewCodeHelper.h; sourceTree = "<group>"; };
 		73B8FB0D24D38F2300B32167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionSection.swift; sourceTree = "<group>"; };
@@ -236,19 +214,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		73B8FB0724D38F2300B32167 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				733732AE24E20F2E008DAF3A /* ViewCodeHelper in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73D12D472470675D008B0AB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733732AF24E20F3E008DAF3A /* ViewCodeHelper.framework in Frameworks */,
 				7342B34E247082A000644987 /* BricksAndTiles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B8FB1824D38F5200B32167 /* ViewCodeHelper.framework in Frameworks */,
+				73393E16253A09D700306E6E /* PaintAndBrush in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +651,6 @@
 				EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */,
 				EBF15AE8229B3A630055DF69 /* BricksAndTilesTests.xctest */,
 				73D12D4A2470675D008B0AB9 /* Example.app */,
-				73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -768,14 +736,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		73B8FB0524D38F2300B32167 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				73B8FB0E24D38F2300B32167 /* ViewCodeHelper.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBF15ADA229B3A630055DF69 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -787,27 +747,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		73B8FB0924D38F2300B32167 /* ViewCodeHelper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 73B8FB1324D38F2300B32167 /* Build configuration list for PBXNativeTarget "ViewCodeHelper" */;
-			buildPhases = (
-				73B8FB0524D38F2300B32167 /* Headers */,
-				73B8FB0624D38F2300B32167 /* Sources */,
-				73B8FB0724D38F2300B32167 /* Frameworks */,
-				73B8FB0824D38F2300B32167 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ViewCodeHelper;
-			packageProductDependencies = (
-				733732AD24E20F2E008DAF3A /* ViewCodeHelper */,
-			);
-			productName = ViewCodeHelper;
-			productReference = 73B8FB0A24D38F2300B32167 /* ViewCodeHelper.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		73D12D492470675D008B0AB9 /* Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73D12D6A2470675F008B0AB9 /* Build configuration list for PBXNativeTarget "Example" */;
@@ -822,7 +761,6 @@
 			);
 			dependencies = (
 				73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */,
-				733732B224E20F3E008DAF3A /* PBXTargetDependency */,
 			);
 			name = Example;
 			packageProductDependencies = (
@@ -844,10 +782,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				73B8FB1B24D38F5200B32167 /* PBXTargetDependency */,
 			);
 			name = BricksAndTiles;
 			packageProductDependencies = (
+				73393E15253A09D700306E6E /* PaintAndBrush */,
 			);
 			productName = TableViewFactory;
 			productReference = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */;
@@ -881,9 +819,6 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Dextra;
 				TargetAttributes = {
-					73B8FB0924D38F2300B32167 = {
-						CreatedOnToolsVersion = 11.5;
-					};
 					73D12D492470675D008B0AB9 = {
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1150;
@@ -916,19 +851,11 @@
 				73D12D492470675D008B0AB9 /* Example */,
 				EBF15ADE229B3A630055DF69 /* BricksAndTiles */,
 				EBF15AE7229B3A630055DF69 /* BricksAndTilesTests */,
-				73B8FB0924D38F2300B32167 /* ViewCodeHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		73B8FB0824D38F2300B32167 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73D12D482470675D008B0AB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -976,13 +903,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		73B8FB0624D38F2300B32167 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73D12D462470675D008B0AB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1077,20 +997,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		733732B224E20F3E008DAF3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 73B8FB0924D38F2300B32167 /* ViewCodeHelper */;
-			targetProxy = 733732B124E20F3E008DAF3A /* PBXContainerItemProxy */;
-		};
 		73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBF15ADE229B3A630055DF69 /* BricksAndTiles */;
 			targetProxy = 73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */;
-		};
-		73B8FB1B24D38F5200B32167 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 73B8FB0924D38F2300B32167 /* ViewCodeHelper */;
-			targetProxy = 73B8FB1A24D38F5200B32167 /* PBXContainerItemProxy */;
 		};
 		EBF15AEB229B3A630055DF69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1111,56 +1021,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		73B8FB1424D38F2300B32167 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VC5347Z9AZ;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ViewCodeHelper/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mugbug.ViewCodeHelper;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		73B8FB1524D38F2300B32167 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VC5347Z9AZ;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ViewCodeHelper/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.mugbug.ViewCodeHelper;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		73D12D662470675F008B0AB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1426,15 +1286,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		73B8FB1324D38F2300B32167 /* Build configuration list for PBXNativeTarget "ViewCodeHelper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				73B8FB1424D38F2300B32167 /* Debug */,
-				73B8FB1524D38F2300B32167 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		73D12D6A2470675F008B0AB9 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1485,10 +1336,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		733732AD24E20F2E008DAF3A /* ViewCodeHelper */ = {
+		73393E15253A09D700306E6E /* PaintAndBrush */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */;
-			productName = ViewCodeHelper;
+			productName = PaintAndBrush;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
