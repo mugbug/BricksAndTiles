@@ -4,27 +4,47 @@
 
 🧱 A composable solution for building reusable lists in Swift/UIKit. As easy as playing with Legos.
 
-- [Features](#features)
-- [Installation](#installation)
-    - [Swift Package Manager](#swift-package-manager)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [Authors](#authors)
+  - [Features](#features)
+    - [UITableView](#uitableview)
+    - [UICollectionView](#uicollectionview)
+    - [UITableView + UICollectionView](#uitableview--uicollectionview)
+  - [Installation](#installation)
+      - [Swift Package Manager](#swift-package-manager)
+  - [Dependencies](#dependencies)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
 
-# Features
+## Features
+
 ### UITableView
 - [x] Static cells
 - [x] Draggable cells
+
+![](demoAssets/draggable.gif)
+
 - [x] Cells with actions on slide
+
+![](demoAssets/slide_actions.gif)
+
 - [x] Single selection
+
+![](demoAssets/selectable.gif)
 
 ### UICollectionView
 - [x] Static collection cells
 
+![](demoAssets/collection.gif)
+
+- [x] Grid collection cells
+
+![](demoAssets/grid.gif)
+
 ### UITableView + UICollectionView
 - [x] Horizontal list cells
 
-# Installation
+![](demoAssets/horizontal_sliders.gif)
+
+## Installation
 
 _BricksAndTiles_ currently supports these installation options:
 
@@ -53,11 +73,11 @@ For more information about how to get started with the Swift Package Manager, ch
 
 This package depends on [PaintAndBrush](https://github.com/mugbug/PaintAndBrush), which is a super lightweight package with helper extensions for building UIKit views in code.
 
-# Contributing
+## Contributing
 
 Any kind of contributions would be highly appreciated! To start contributing, read the [Contributing Guideline](https://github.com/mugbug/BricksAndTiles/blob/master/CONTRIBUTING.md) for info on how to report issues, submit ideas and submit pull requests!
 
-# Authors
+## Authors
 
 - [@mugbug](https://github.com/mugbug)
 - [@emmendesf](https://github.com/emmendesf)
