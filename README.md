@@ -69,7 +69,7 @@ If you're using SPM through Xcode:
 
 For more information about how to get started with the Swift Package Manager, check out the [Official SPM website](https://swift.org/package-manager/) or the [SPM project on GitHub](https://github.com/apple/swift-package-manager).
 
-# Dependencies
+## Dependencies
 
 This package depends on [PaintAndBrush](https://github.com/mugbug/PaintAndBrush), which is a super lightweight package with helper extensions for building UIKit views in code.
 
