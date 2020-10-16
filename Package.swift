@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/mugbug/view-code-helper",
+            url: "https://github.com/mugbug/PaintAndBrush",
             from: "0.2.0"),
     ],
     targets: [
