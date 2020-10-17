@@ -26,7 +26,7 @@ public protocol CollectionViewCellBuilder {
     func collectionViewDidSelectCell(_ collectionView: UICollectionView, at indexPath: IndexPath)
 }
 
-public extension TableViewCellBuilder {
+public extension CollectionViewCellBuilder {
     func collectionViewDidSelectCell(_ collectionView: UICollectionView, at indexPath: IndexPath) {
         print("Default implementation")
     }
