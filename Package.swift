@@ -20,7 +20,7 @@ let package = Package(
     targets: [
         .target(
             name: "BricksAndTiles",
-            dependencies: ["ViewCodeHelper"],
+            dependencies: ["PaintAndBrush"],
             path: "BricksAndTiles/Source"),
         .testTarget(
             name: "BricksAndTilesTests",

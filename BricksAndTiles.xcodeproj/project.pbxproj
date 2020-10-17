@@ -20,9 +20,7 @@
 		731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */; };
 		731C9E112504551800967DA4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E102504551800967DA4 /* Song.swift */; };
 		731C9E132504556900967DA4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E122504556900967DA4 /* Album.swift */; };
-		73393E16253A09D700306E6E /* PaintAndBrush in Frameworks */ = {isa = PBXBuildFile; productRef = 73393E15253A09D700306E6E /* PaintAndBrush */; };
-		7342B34E247082A000644987 /* BricksAndTiles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */; };
-		7342B34F247082A000644987 /* BricksAndTiles.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73393E1C253B17A400306E6E /* BricksAndTiles in Frameworks */ = {isa = PBXBuildFile; productRef = 73393E1B253B17A400306E6E /* BricksAndTiles */; };
 		73610C9124F167600070D724 /* SelectableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610C9024F167600070D724 /* SelectableCellBuilder.swift */; };
 		73610D1E24F16B710070D724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610CDE24F16B710070D724 /* AppDelegate.swift */; };
 		73610D1F24F16B710070D724 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610CE024F16B710070D724 /* SongService.swift */; };
@@ -87,13 +85,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EBF15ADE229B3A630055DF69;
-			remoteInfo = TableViewFactory;
-		};
 		EBF15AEA229B3A630055DF69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EBF15AD6229B3A630055DF69 /* Project object */;
@@ -104,17 +95,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7342B352247082A000644987 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7342B34F247082A000644987 /* BricksAndTiles.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73B8FB1C24D38F5200B32167 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,7 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7342B34E247082A000644987 /* BricksAndTiles.framework in Frameworks */,
+				73393E1C253B17A400306E6E /* BricksAndTiles in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +206,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73393E16253A09D700306E6E /* PaintAndBrush in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,15 +734,14 @@
 				73D12D462470675D008B0AB9 /* Sources */,
 				73D12D472470675D008B0AB9 /* Frameworks */,
 				73D12D482470675D008B0AB9 /* Resources */,
-				7342B352247082A000644987 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */,
 			);
 			name = Example;
 			packageProductDependencies = (
+				73393E1B253B17A400306E6E /* BricksAndTiles */,
 			);
 			productName = Example;
 			productReference = 73D12D4A2470675D008B0AB9 /* Example.app */;
@@ -785,7 +763,6 @@
 			);
 			name = BricksAndTiles;
 			packageProductDependencies = (
-				73393E15253A09D700306E6E /* PaintAndBrush */,
 			);
 			productName = TableViewFactory;
 			productReference = EBF15ADF229B3A630055DF69 /* BricksAndTiles.framework */;
@@ -842,7 +819,7 @@
 			);
 			mainGroup = EBF15AD5229B3A630055DF69;
 			packageReferences = (
-				73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */,
+				73393E1A253B17A400306E6E /* XCRemoteSwiftPackageReference "BricksAndTiles" */,
 			);
 			productRefGroup = EBF15AE0229B3A630055DF69 /* Products */;
 			projectDirPath = "";
@@ -997,11 +974,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		73AB8F9C24706FAC000A7BF5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EBF15ADE229B3A630055DF69 /* BricksAndTiles */;
-			targetProxy = 73AB8F9B24706FAC000A7BF5 /* PBXContainerItemProxy */;
-		};
 		EBF15AEB229B3A630055DF69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EBF15ADE229B3A630055DF69 /* BricksAndTiles */;
@@ -1325,21 +1297,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */ = {
+		73393E1A253B17A400306E6E /* XCRemoteSwiftPackageReference "BricksAndTiles" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mugbug/view-code-helper";
+			repositoryURL = "git@github.com:mugbug/BricksAndTiles.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				branch = spm;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		73393E15253A09D700306E6E /* PaintAndBrush */ = {
+		73393E1B253B17A400306E6E /* BricksAndTiles */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 73B8FAF724D3891400B32167 /* XCRemoteSwiftPackageReference "view-code-helper" */;
-			productName = PaintAndBrush;
+			package = 73393E1A253B17A400306E6E /* XCRemoteSwiftPackageReference "BricksAndTiles" */;
+			productName = BricksAndTiles;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
