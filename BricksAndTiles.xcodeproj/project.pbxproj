@@ -1301,8 +1301,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:mugbug/BricksAndTiles.git";
 			requirement = {
-				branch = spm;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
