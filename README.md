@@ -10,6 +10,7 @@
     - [UITableView + UICollectionView](#uitableview--uicollectionview)
   - [Installation](#installation)
       - [Swift Package Manager](#swift-package-manager)
+      - [CocoaPods](#cocoapods)
   - [Dependencies](#dependencies)
   - [Contributing](#contributing)
   - [Authors](#authors)
@@ -49,10 +50,11 @@
 _BricksAndTiles_ currently supports these installation options:
 
 #### Swift Package Manager
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
 
-Add the following to your `Package.swift` file:
+Once you have your Swift package set up, adding BricksAndTiles as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
 
-```
+```swift
 dependencies: [
     .package(
         url: "https://github.com/mugbug/BricksAndTiles.git", 
@@ -67,7 +69,21 @@ If you're using SPM through Xcode:
 2. Enter https://github.com/mugbug/BricksAndTiles
 3. Choose a rule and submit.
 
-For more information about how to get started with the Swift Package Manager, check out the [Official SPM website](https://swift.org/package-manager/) or the [SPM project on GitHub](https://github.com/apple/swift-package-manager).
+#### CocoaPods
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate BricksAndTiles into your Xcode project using CocoaPods, specify it in your Podfile:
+```ruby
+pod 'BricksAndTiles', '0.0.3'
+```
+
+BricksAndTiles is also available as subspecs:
+- For only UITableView features:
+```ruby
+pod 'BricksAndTiles/TableView', '0.0.3'
+```
+- For only UICollectionView features:
+```ruby
+pod 'BricksAndTiles/CollectionView', '0.0.3'
+```
 
 ## Dependencies
 
