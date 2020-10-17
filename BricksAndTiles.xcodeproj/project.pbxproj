@@ -162,8 +162,6 @@
 		73610D8A24F1B4F60070D724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736E6B8C24B219AF0086B985 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		736E6B9224B21B7C0086B985 /* CollectionViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSection.swift; sourceTree = "<group>"; };
-		73B8FB0C24D38F2300B32167 /* ViewCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewCodeHelper.h; sourceTree = "<group>"; };
-		73B8FB0D24D38F2300B32167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73B8FB2024D394F900B32167 /* StaticCollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticCollectionSection.swift; sourceTree = "<group>"; };
 		73B8FB2224D3957A00B32167 /* CollectionViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBuilder.swift; sourceTree = "<group>"; };
 		73B8FB2624D3AB3600B32167 /* HorizontalCollectionViewCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCellBuilder.swift; sourceTree = "<group>"; };
@@ -561,15 +559,6 @@
 			path = CellBuilders;
 			sourceTree = "<group>";
 		};
-		73B8FB0B24D38F2300B32167 /* ViewCodeHelper */ = {
-			isa = PBXGroup;
-			children = (
-				73B8FB0C24D38F2300B32167 /* ViewCodeHelper.h */,
-				73B8FB0D24D38F2300B32167 /* Info.plist */,
-			);
-			path = ViewCodeHelper;
-			sourceTree = "<group>";
-		};
 		73B8FB1F24D394E200B32167 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -618,7 +607,6 @@
 				73D12D4B2470675D008B0AB9 /* Example */,
 				EBF15AE1229B3A630055DF69 /* BricksAndTiles */,
 				EBF15AEC229B3A630055DF69 /* BricksAndTilesTests */,
-				73B8FB0B24D38F2300B32167 /* ViewCodeHelper */,
 				EBF15AE0229B3A630055DF69 /* Products */,
 				7342B34D247082A000644987 /* Frameworks */,
 			);

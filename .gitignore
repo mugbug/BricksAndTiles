@@ -15,6 +15,9 @@ xcuserdata
 Pods/
 Podfile.lock
 
+## SPM
+Package.resolved
+
 ## Other
 *.xccheckout
 *.moved-aside
