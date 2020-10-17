@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		731C9E0F2504442B00967DA4 /* MeetupAlbumCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E0E2504442B00967DA4 /* MeetupAlbumCellBuilder.swift */; };
 		731C9E112504551800967DA4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E102504551800967DA4 /* Song.swift */; };
 		731C9E132504556900967DA4 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C9E122504556900967DA4 /* Album.swift */; };
+		73393E1C253B17A400306E6E /* BricksAndTiles in Frameworks */ = {isa = PBXBuildFile; productRef = 73393E1B253B17A400306E6E /* BricksAndTiles */; };
 		73610C9124F167600070D724 /* SelectableCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610C9024F167600070D724 /* SelectableCellBuilder.swift */; };
 		73610D1E24F16B710070D724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610CDE24F16B710070D724 /* AppDelegate.swift */; };
 		73610D1F24F16B710070D724 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73610CE024F16B710070D724 /* SongService.swift */; };
@@ -197,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73393E1C253B17A400306E6E /* BricksAndTiles in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +741,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
+				73393E1B253B17A400306E6E /* BricksAndTiles */,
 			);
 			productName = Example;
 			productReference = 73D12D4A2470675D008B0AB9 /* Example.app */;
@@ -816,6 +819,7 @@
 			);
 			mainGroup = EBF15AD5229B3A630055DF69;
 			packageReferences = (
+				73393E1A253B17A400306E6E /* XCRemoteSwiftPackageReference "BricksAndTiles" */,
 			);
 			productRefGroup = EBF15AE0229B3A630055DF69 /* Products */;
 			projectDirPath = "";
@@ -1291,6 +1295,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		73393E1A253B17A400306E6E /* XCRemoteSwiftPackageReference "BricksAndTiles" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:mugbug/BricksAndTiles.git";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73393E1B253B17A400306E6E /* BricksAndTiles */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73393E1A253B17A400306E6E /* XCRemoteSwiftPackageReference "BricksAndTiles" */;
+			productName = BricksAndTiles;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBF15AD6229B3A630055DF69 /* Project object */;
 }
